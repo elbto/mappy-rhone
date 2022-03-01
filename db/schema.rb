@@ -17,11 +17,12 @@ ActiveRecord::Schema.define(version: 2022_03_01_135519) do
 
   create_table "communes", force: :cascade do |t|
     t.string "name"
-    t.integer "zipcod"
     t.integer "zipinsee"
     t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "latitude"
+    t.decimal "longitude"
   end
 
   create_table "ecoles", force: :cascade do |t|
