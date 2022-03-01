@@ -1,0 +1,2 @@
+class Pharmacie < ApplicationRecord
+end
