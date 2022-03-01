@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_03_01_132432) do
 
   # These are extensions that must be enabled in order to support this database
@@ -34,4 +35,5 @@ ActiveRecord::Schema.define(version: 2022_03_01_132432) do
   end
 
   add_foreign_key "gares", "communes"
+
 end
