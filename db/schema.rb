@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_134214) do
+ActiveRecord::Schema.define(version: 2022_03_01_164153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "communes", force: :cascade do |t|
     t.string "name"
-    t.integer "zipcod"
     t.integer "zipinsee"
     t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "latitude"
+    t.decimal "longitude"
   end
 
   create_table "ecoles", force: :cascade do |t|
@@ -44,6 +45,19 @@ ActiveRecord::Schema.define(version: 2022_03_01_134214) do
     t.index ["commune_id"], name: "index_gares_on_commune_id"
   end
 
+  create_table "pharmacies", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.integer "zip_code"
+    t.decimal "lattitude"
+    t.decimal "longitude"
+    t.bigint "commune_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["commune_id"], name: "index_pharmacies_on_commune_id"
+  end
+
   add_foreign_key "ecoles", "communes"
   add_foreign_key "gares", "communes"
+  add_foreign_key "pharmacies", "communes"
 end
