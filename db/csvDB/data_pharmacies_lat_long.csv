@@ -1,0 +1,589 @@
+name;address;zip_code;Latitude;Longitude
+Pharmacie des 2 Rives;13 rue Germain;69250 Albigny-sur-Saône;45.8654583;4.8324387
+Pharmacie Barbason;30 rue Thimonier;69550 Amplepuis;45.972231;4.331531099999999
+Pharmacie Catala Olivier;20 rue de Viderie;69550 Amplepuis;45.9737427;4.3329368
+Pharmacie Centrale;Rue Francois Mitterrand;69550 Amplepuis;45.9726212;4.3323727
+Pharmacie d'Ampuis;1 place de l'Eglise;69420 Ampuis;45.4883344;4.807762299999999
+Pharmacie des Pierres Dorees;790 route de Lyon;69480 Anse;45.9363924;4.7201091
+Pharmacie du Village;101 impasse de Verdun;69480 Anse;45.9367934;4.717611199999999
+Pharmacie d'Arnas;31 rue Pre du Moulin;69400 Arnas;46.0247879;4.703418
+Pharmacie Burnand;59, rue de la Republique;69430 Beaujeu;46.1549006;4.587809399999999
+Pharmacie de la Tour;1 place de la Liberte;69430 Beaujeu;46.1553185;4.5857395
+Pharmacie Bandel Bardonnet;9 rue du 14 Juillet;69220 Belleville;46.1068346;4.7385057
+Pharmacie Gody;39 rue de la Republique;69220 Belleville;46.1086446;4.7498432
+Pharmacie Ludmer;65, rue de la Republique;69220 Belleville;46.1089353;4.7482419
+Pharmacie Lombard;9 place du Marche;69690 Bessenay;45.7758854;4.5536427
+Pharmacie Caulier-Daeuble;Le Bourg;69460 Blacé;46.0316462;4.644407200000001
+Pharmacie Zamuth Sarry;5 place Aristide Briand;69240 Bourg-de-Thizy;46.0346278;4.3016441
+Pharmacie Barral;52 rue du General de Gaulle;69530 Brignais;45.6746937;4.7556891
+Pharmacie Collin;13, place Gamboni;69530 Brignais;45.6738918;4.754591599999999
+Pharmacie du Garel;162 rue du General de Gaulle;69530 Brignais;45.6721151;4.7532236
+Pharmacie du Soleil;123 rue du General de Gaulle;69530 Brignais;45.6732185;4.7536645
+Pharmacie de l'Obeance;06 place de Verdun;69126 Brindas;45.7207587;4.6944034
+Pharmacie des Muriers;Place de la Paix;69126 Brindas;45.7195824;4.693874
+Pharmacie Accueil;4 rue Louis Maggiorini;69500 Bron;45.7285882;4.9073378
+Pharmacie Bron-Genas;312 route Genas;69500 Bron;45.7501164;4.9109774
+Pharmacie Centrale;159 avenue Franklin Roosevelt;69500 Bron;45.733287;4.9097892
+Pharmacie Chamoux;37 avenue de Lattre de Tassigny;69500 Bron;45.734094;4.917241400000001
+Pharmacie de l'Eglise;9 place de l'Eglise;69500 Bron;45.7375392;4.9168218
+Pharmacie de la Cite;4 rue Paul Pic;69500 Bron;45.7295099;4.9023416
+Pharmacie de la Mairie;146 avenue Franklin Roosevelt;69500 Bron;45.7333987;4.908669499999999
+Pharmacie de la Poste;45 avenue Camille Rousset;69500 Bron;45.7356919;4.909966499999999
+Pharmacie des Alizes;210bis avenue Franklin Roosevelt;69500 Bron;45.7310676;4.914435399999999
+Pharmacie des Hopitaux;30 avenue Franklin Roosevelt;69500 Bron;45.7375593;4.8956609
+Pharmacie du Marche;73 avenue Pierre Brossolette;69500 Bron;45.7430742;4.9198197
+Pharmacie Fournier;121, rue Pierre Brossolette;69500 Bron;45.7402023;4.9208976
+Pharmacie le Bonheur;356 route de Genas;69500 Bron;45.7482761;4.9201798
+Pharmacie Robin Malachane;213 boulevard Pinel;69500 Bron;45.7313447;4.8898019
+Pharmacie Leylavergne;191 route de Noailleux;69270 Cailloux-sur-Fontaines;45.8503931;4.8711344
+Pharmacie Bellevue;1 Grande rue de Saint Clair;69300 Caluire-et-Cuire;45.7861974;4.8486821
+Pharmacie Boyer M-Josette;4 rue Francois Peissel;69300 Caluire-et-Cuire;45.7919404;4.8380133
+Pharmacie Caluire 2as;10 chemin Petit;69300 Caluire-et-Cuire;45.8049201;4.8591351
+Pharmacie Cretin;22 rue Pierre Brunier;69300 Caluire-et-Cuire;45.7856861;4.830038
+Pharmacie de la Montee des Soldats;13 avenue Pierre Terrasse;69300 Caluire-et-Cuire;45.79830949999999;4.8507172
+Pharmacie de la Voie Verte;85 rue Pasteur;69300 Caluire-et-Cuire;45.7931225;4.844738
+Pharmacie de Montessuy;1 place Louis Braille;69300 Caluire-et-Cuire;45.7941568;4.8509984
+Pharmacie du Clos Bissardon;2 rue Royet;69300 Caluire-et-Cuire;45.7819899;4.8393273
+Pharmacie du Vernay;73 avenue General de Gaulle;69300 Caluire-et-Cuire;45.809085;4.8567463
+Pharmacie du Vieux Crepieux;109 route de Strasbourg;69300 Caluire-et-Cuire;45.7998216;4.8767647
+Pharmacie Jean Moulin;37bis rue Jean Moulin;69300 Caluire-et-Cuire;45.7996327;4.847101299999999
+Pharmacie le Tessier;17 Quai Clemenceau;69300 Caluire-et-Cuire;45.7914659;4.823786699999999
+Pharmacie Pasteur;74 rue Pasteur;69300 Caluire-et-Cuire;45.7904937;4.842226999999999
+Pharmacie Pharmacie de Margnolles;28 rue des Margnolles;69300 Caluire-et-Cuire;45.78469;4.8368557
+Pharmacie Saint Clair;77 Grande rue Saint Clair;69300 Caluire-et-Cuire;45.7888013;4.853383099999999
+Pharmacie de Cercie;31 Grande rue;69220 Cercié;46.119673;4.6715252
+Pharmacie de l'avenue;42 avenue Lanessan;69410 Champagne-au-Mont-d'Or;45.7948733;4.7928729
+Pharmacie du Mont d'Or;56 avenue Lanessan;69410 Champagne-au-Mont-d'Or;45.7958704;4.7918553
+Pharmacie Achard - Brun;Place Charles de Gaulle;69970 Chaponnay;45.6281052;4.9343349
+Pharmacie de l'Aqueduc;61 avenue Paul Doumerc;69630 Chaponost;45.7121092;4.747236399999999
+Pharmacie de l'Eglise;16 place Marechal Foch;69630 Chaponost;45.7104277;4.7446247
+Pharmacie des Cedres;33 avenue de Verdun;69630 Chaponost;45.716738;4.752567
+Pharmacie Jouve;2 place de l'Eglise;69260 Charbonnières-les-Bains;45.7784795;4.7441382
+Pharmacie Justamon;36 avenue General de Gaulle;69260 Charbonnières-les-Bains;45.7828332;4.7358211
+Pharmacie de Charly;Le Bourg;69390 Charly;45.6492;4.794608
+Pharmacie de Chasselay;172 le Promenoir;69380 Chasselay;45.872817;4.771440399999999
+Pharmacie Cote Golf;28 route de Lyon;69680 Chassieu;45.7378131;4.957625999999999
+Pharmacie de Chassieu;62 rue de la Republique;69680 Chassieu;45.7441284;4.9726948
+Pharmacie du Centre;6 rue de la Republique;69680 Chassieu;45.73922;4.9699712
+Pharmacie de Chazay;5 allee Benoit Raclet;69380 Chazay-d'Azergues;45.876757;4.710251
+Pharmacie Finas;Place Centrale;69380 Chessy;45.888734;4.605977
+Pharmacie Beraud;5 rue de la Republique;69660 Collonges-au-Mont-d'Or;45.81607320000001;4.8391208
+Pharmacie Legrand;179 route du Dauphine;69124 Colombier-Saugnieu;45.7111768;5.1130698
+Pharmacie Raffin;31 route de Ternay;69360 Communay;45.6045674;4.8270456
+Pharmacie des Lones;20 Grande rue;69420 Condrieu;45.4624834;4.7666911
+Pharmacie de l'Europe;35 avenue du 08 Mai 1945;69960 Corbas;45.6673055;4.8992109
+Pharmacie des Balmes;Centre Commercial des Balmes;69960 Corbas;45.6644644;4.8955021
+Pharmacie du Village;8 rue de la Republique;69960 Corbas;45.6712919;4.8984222
+Pharmacie de la place;7 place de la Republique;69470 Cours-la-Ville;46.0994448;4.321037
+Pharmacie Goddard;31 rue Georges Clemenceau;69470 Cours-la-Ville;46.1001489;4.3212362
+Pharmacie Thimonier;45 B, rue Georges Clemenceau;69470 Cours-la-Ville;46.10034510000001;4.321978
+Pharmacie de Couzon;4 rue Claudius Moiroux;69270 Couzon-au-Mont-d'Or;45.8453235;4.8320171
+Pharmacie Centrale de Craponne;86 avenue Edouard Millaud;69290 Craponne;45.7475822;4.7232115
+Pharmacie de la Tourette;15 avenue Edouard Millaud;69290 Craponne;45.7471776;4.7419537
+Pharmacie du Village;15 place Charles de Gaulle;69290 Craponne;45.7434559;4.722529499999999
+Pharmacie Marchand;Le Barriot-Chem Pierre Blanche;69570 Dardilly;45.8201532;4.7504262
+Pharmacie Mathiot;59 avenue de Verdun;69570 Dardilly;45.8089871;4.7516365
+Pharmacie Porte de Lyon;Centre Commercial;69570 Dardilly;45.82001899999999;4.7678088
+Pharmacie Achard;205, avenue Jean Jaures;69150 Décines-Charpieu;45.7710608;4.9575403
+Pharmacie Daronnat;109 rue de l'Egalite;69150 Décines-Charpieu;45.76373640000001;4.966247399999999
+Pharmacie de Montaberlet;33bis avenue Jean Jaures;69150 Décines-Charpieu;45.7684376;4.9395513
+Pharmacie du Mollard;299, avenue Jean Jaures;69150 Décines-Charpieu;45.77174960000001;4.967329299999999
+Pharmacie du Sablon;23 avenue Edouard Herriot;69150 Décines-Charpieu;45.7730932;4.962354599999999
+Pharmacie Frechet;374 avenue Jean Jaures;69150 Décines-Charpieu;45.7720717;4.975366000000001
+Pharmacie Jouty;180 rue Emile Zola;69150 Décines-Charpieu;45.76349810000001;4.9621148
+Pharmacie Kalfon;127 avenue Jean Jaures;69150 Décines-Charpieu;45.76975820000001;4.9488348
+Pharmacie de Dommartin;1799 route des Bois;69380 Dommartin;45.8358783;4.7141099
+Pharmacie Cuer;34 chemin des Cerisiers;69130 Écully;45.7856923;4.7906304
+Pharmacie de l'Eglise;8 avenue Edouard Aynard;69130 Écully;45.77494739999999;4.7790497
+Pharmacie de la Charriere Blanche;24 chemin de Charriere Blanche;69130 Écully;45.7797085;4.7734802
+Pharmacie de la Forestiere;65 avenue du Professseur Paul Santy;69130 Écully;45.7685231;4.769351299999999
+Pharmacie du Val Vert;02 rue Benoit Tabard;69130 Écully;45.7737133;4.7782179
+Pharmacie du Village;6 place Charles de Gaulle;69130 Écully;45.7745188;4.778203299999999
+Pharmacie Roset Petit;Centre Commercial du Perollier;69130 Écully;45.78886300000001;4.775018
+Pharmacie de la Begude;20 route de Lyon;69320 Feyzin;45.67461;4.8608147
+Pharmacie Fiume;16 rue des Razes;69320 Feyzin;45.6656519;4.851564799999999
+Pharmacie Menard;7, place Claudius Bery;69320 Feyzin;45.6665224;4.8502161
+Pharmacie de Fleurie;Rue des Vendanges;69820 Fleurie;46.1905324;4.6956658
+Pharmacie des Abeilles;46 rue du Jardin;69210 Fleurieux-sur-l'Arbresle;45.8363662;4.6512444
+Pharmacie Vincent;15 place du 8 Mai;69270 Fontaines-Saint-Martin;45.8448895;4.8545549
+Pharmacie Bouju Elisabeth;19 rue Pierre Carbon;69270 Fontaines-sur-Saône;45.83350859999999;4.847704999999999
+Pharmacie des Marronniers;3 allee de la Chardonniere;69270 Fontaines-sur-Saône;45.82183380000001;4.8627644
+Pharmacie Perolini Olivier;3 rue Pierre Bouvier;69270 Fontaines-sur-Saône;45.834663;4.84809
+Pharmacie de l'avenue;29 avenue du Chater;69340 Francheville;45.7426436;4.7724782
+Pharmacie du Chater;31 Grande rue;69340 Francheville;45.73845499999999;4.7715277
+Pharmacie Rouge Bouquet;74 Grande rue;69340 Francheville;45.7365665;4.7645973
+Pharmacie Table de Pierre;24 avenue de la Table de Pierre;69340 Francheville;45.7475178;4.7565403
+Pharmacie d'Azieu;1 bis rue Jean Jaures;69740 Genas;45.7350141;5.0178576
+Pharmacie de la Tour;38 route de Lyon;69740 Genas;45.732313;4.9952549
+Pharmacie Faccioli;19 rue de la Republique;69740 Genas;45.731936;4.9989645
+Pharmacie Pezet;66 rue de la Republique;69740 Genas;45.7312967;5.0032293
+Pharmacie des Charmes;92 rue de la Gare;69730 Genay;45.89851600000001;4.839982
+Pharmacie Grande Pharmacie Centrale;9 place Verdun;69730 Genay;45.8972619;4.8415777
+Pharmacie Abboud;Centre Commercial Plaine Robinson rue Yves Farges;69700 Givors;45.59291020000001;4.7677665
+Pharmacie Badey;5 rue Louis Michel;69700 Givors;45.6054268;4.762612799999999
+Pharmacie Centrale;6 place Carnot;69700 Givors;45.586025;4.771656
+Pharmacie de l'Hotel de Ville;21 place Henri Barbusse;69700 Givors;45.5817641;4.7739337
+Pharmacie du Canal;5 rue Victor Hugo;69700 Givors;45.5876796;4.770822000000001
+Pharmacie Dumoulin;Centre Commercial du Gier;69700 Givors;45.5841879;4.7532481
+Pharmacie Gambetta;5 rue Gambetta;69700 Givors;45.5821561;4.7747275
+Pharmacie Victor Hugo;25 rue Victor Hugo;69700 Givors;45.58905360000001;4.770676799999999
+Pharmacie de la Chapelle;1000 route de Montmelas;69400 Gleizé;46.0013294;4.706968
+Pharmacie de la Claire;130 rue Jb Martini;69400 Gleizé;45.9870576;4.7096195
+Pharmacie des Acacias;277 rue des Acacias;69400 Gleizé;45.9936499;4.7051134
+Pharmacie de Grandris;Place de l'Eglise;69870 Grandris;46.0384115;4.475253200000001
+Pharmacie Battin Ciceron;1 place de Tous les Anciens;69290 Grézieu-la-Varenne;45.7470268;4.6913794
+Pharmacie de la Garenne;Avenue Benoit Launay;69290 Grézieu-la-Varenne;45.7419273;4.690581
+Pharmacie de Bel Air;9 rue Andre Sabatier;69520 Grigny;45.6093828;4.7871701
+Pharmacie de la Tour;10 place Jean Jaures;69520 Grigny;45.6096641;4.7924926
+Pharmacie des Arboras;17 rue Francis de Pressense;69520 Grigny;45.6029487;4.779529
+Pharmacie du Jayon;Centre Commercial du Jayon;69520 Grigny;45.6053869;4.7822401
+Pharmacie des Grands Chenes;Place de la Foire;69610 Haute-Rivoire;45.7160327;4.3960038
+Pharmacie d'Yvours;Allee de la Fibre Francaise;69540 Irigny;45.6884152;4.828285
+Pharmacie Lhuillier;16 avenue de Bezange;69540 Irigny;45.6728065;4.8233969
+Pharmacie Wildenthaler;15 place de la Croix Jaune;69540 Irigny;45.6726716;4.8213268
+Pharmacie de la Poste;67bis, route Nationale;69330 Jonage;45.7597696;5.0623277
+Pharmacie du Centre;69 route Nationale;69330 Jonage;45.7597043;5.062323399999999
+Pharmacie de Julienas;Place du Marche;69840 Juliénas;46.236722;4.7090269
+Pharmacie Badout Casagrande;1 place Carnot;69210 L'Arbresle;45.8353542;4.6162851
+Pharmacie Centrale;5 rue de la Mairie;69210 L'Arbresle;45.8358978;4.6159892
+Pharmacie de la Brevenne;3 place de la Liberte;69210 L'Arbresle;45.8354199;4.6179071
+Pharmacie du Roule;4 avenue Laurent Bonnevay;69350 La Mulatière;45.730978;4.8101957
+Pharmacie Olivier;79 rue Grande Roule;69350 La Mulatière;45.7291739;4.8071768
+Pharmacie Troupel;Centre Commercial de la Bastero;69350 La Mulatière;45.7268293;4.8114485
+Pharmacie Tourelloise;4 rue de Lyon;69890 La Tour-de-Salvagny;45.8148876;4.7181218
+Pharmacie de Lacenas;Le Bourg;69640 Lacenas;46.003633;4.645913
+Pharmacie de Lamure;Place de la Mairie;69870 Lamure-sur-Azergues;46.0632502;4.4921627
+Pharmacie du Marche;Place du Marche;69620 Le Bois-d'Oingt;45.946568;4.582758999999999
+Pharmacie du Sarment;219 place Bernigal Guillermin;69620 Le Bois-d'Oingt;45.9206943;4.5854174
+Pharmacie Sotty;Le Bourg;69460 Le Perréon;46.063353;4.602889
+Pharmacie de Lentilly;2 rue de la Mairie;69210 Lentilly;45.8192055;4.6623732
+Pharmacie Egal;958 route de Pouilly;69400 Liergues;45.9682993;4.6688162
+Pharmacie de Belleroche;405, rue de Belleroche;69400 Limas;45.982372;4.707167999999999
+Pharmacie de la Mairie;02 bis rue Ponot;69400 Limas;45.9751941;4.7067325
+Pharmacie Fargier;1 place du Griffon;69760 Limonest;45.8374713;4.7712524
+Pharmacie Reynaud;Le Bourg RN 6;69380 Lissieu;45.87070320000001;4.7444881
+Pharmacie Stefani;926 route Beaucaire;69700 Loire-sur-Rhône;45.5621431;4.8061416
+Pharmacie du Val d'Azergue;262 route de Lyon;69380 Lozanne;45.8550447;4.6835179
+Grande Pharmacie de l'Ouest Lyonnais;52 avenue du Pont du Jour;69005 Lyon;45.7569674;4.7989831
+Grande Pharmacie de la Part Dieu;10 12 boulevard Marius Vivier Merle;69393 Lyon;45.7622967;4.8571178
+Pharmacie Ambroise Pare;43 boulevard Ambroise Pare;69008 Lyon;45.7358997;4.883458399999999
+Pharmacie Anchierri Piazza;61 rue de la Part Dieu;69003 Lyon;45.759694;4.8469527
+Pharmacie Anstett;90 rue Vendome;69006 Lyon;45.7678658;4.8451114
+Pharmacie Balmont;46 boulevard de Balmont;69009 Lyon;45.7889407;4.800404599999999
+Pharmacie Bange;8 rue Marie Madeleine Fourcade;69007 Lyon;45.7370509;4.8380873
+Pharmacie Barrat;26 rue Vaubecour;69002 Lyon;45.7539636;4.826046
+Pharmacie Becamel;108 rue Jean Fournier;69009 Lyon;45.7804994;4.7953948
+Pharmacie Bellecour;37 place Bellecour;69002 Lyon;45.758731;4.8305675
+Pharmacie Berthelot;25 avenue Berthelot;69007 Lyon;45.7469666;4.8371178
+Pharmacie Bonglet Djian;221 avenue Jean Jaures;69007 Lyon;45.7344236;4.8357155
+Pharmacie Bouvier;154 rue Marcel Merieux;69007 Lyon;45.7359358;4.8293343
+Pharmacie Breffeilh;7 rue Jacques Monod;69007 Lyon;45.7307233;4.8286738
+Pharmacie Briand A;59  cours Gambetta;69003 Lyon;45.75286149999999;4.8505715
+Pharmacie Carre Vendome;19 cours Franklin Roosevelt;69006 Lyon;45.7691028;4.845613999999999
+Pharmacie Charlemagne;11 cours Charlemagne;69002 Lyon;45.7463855;4.8242334
+Pharmacie Chatelon;37 rue Auguste Comte;69002 Lyon;45.7530508;4.8303219
+Pharmacie Cherpin Alibert;78 cours Vitton;69006 Lyon;45.769855;4.857651
+Pharmacie Croix Paquet;1 place Croix Paquet;69001 Lyon;45.769659;4.835981299999999
+Pharmacie Cueilleron;6 place de Sathonay;69001 Lyon;45.7688735;4.829979799999999
+Pharmacie Dahan Albert;25 cours Lafayette;69006 Lyon;45.7637456;4.845480999999999
+Pharmacie de Bourgogne;4 rue de Bourgogne;69009 Lyon;45.7757259;4.805267
+Pharmacie de Champvert;153 avenue Barthelemy Buyer;69005 Lyon;45.7629448;4.7975791
+Pharmacie de l'Abeille;1 rue de Marseille;69007 Lyon;45.75425629999999;4.8421746
+Pharmacie de l'Abondance;64 cours Gambetta;69007 Lyon;45.7531057;4.8487007
+Pharmacie de l'Aigle;26 avenue Jean Jaures;69007 Lyon;45.7520347;4.8455696
+Pharmacie de l'Ambre;2 rue Henon;69004 Lyon;45.7796914;4.8322283
+Pharmacie de l'Europe;71 rue Bugeaud;69006 Lyon;45.7666327;4.850006
+Pharmacie de l'Hotel Dieu;57 place de la Republique;69002 Lyon;45.7599898;4.8359669
+Pharmacie de l'Ile Barbe;3 place Henri Barbusse;69009 Lyon;45.7982314;4.8298665
+Pharmacie de l'Isle;171 avenue Felix Faure;69003 Lyon;45.7548222;4.8677369
+Pharmacie de l'Opera;3 rue de la Republique;69001 Lyon;45.7669971;4.8362273
+Pharmacie de l'Universite;08 avenue Berthelot;69007 Lyon;45.74732299999999;4.8346534
+Pharmacie de la Colombe;228 route de Vienne;69008 Lyon;45.7299453;4.8534465
+Pharmacie de la Croix Rousse;1 place de la Croix Rousse;69004 Lyon;45.7748964;4.8315012
+Pharmacie de la Gare d'Eau;3 rue Masaryk;69009 Lyon;45.7785056;4.807385399999999
+Pharmacie de la Grande Poste;10 rue de la Charite;69002 Lyon;45.7554054;4.8327284
+Pharmacie de la Guillotiere;16 Cour Gambetta;69007 Lyon;45.7552064;4.842387899999999
+Pharmacie de la Licorne;99 avenue Jean Mermoz;69008 Lyon;45.73294809999999;4.8810291
+Pharmacie de la Passerelle;34  rue du Plat;69002 Lyon;45.75656;4.827882799999999
+Pharmacie de la place de Paris;40 rue de la Claire;69009 Lyon;45.7790583;4.8036379
+Pharmacie de la place Ronde;58 cours Richard Vitton;69003 Lyon;45.7531414;4.891305
+Pharmacie de la Prefecture;84 avenue du Marechal de Saxe;69003 Lyon;45.7607506;4.8453594
+Pharmacie de la Rize;150 rue Paul Bert;69003 Lyon;45.7569229;4.8562917
+Pharmacie de la Roseraie;13 rue de Crequi;69006 Lyon;45.7753592;4.844963
+Pharmacie de la Sirene;208 avenue des Freres Lumiere;69008 Lyon;45.7426841;4.8774921
+Pharmacie de la Soie;9 rue de Belfort;69004 Lyon;45.7763177;4.8347604
+Pharmacie de la Tete d'Or;125 cours Lafayette;69006 Lyon;45.76383329999999;4.852602399999999
+Pharmacie de la Villette;211 rue Paul Bert;69003 Lyon;45.7572188;4.8628618
+Pharmacie de Lyon;99 avenue Felix Faure;69003 Lyon;45.7538414;4.858954
+Pharmacie de Menival;10 avenue de Menival;69005 Lyon;45.756885;4.7862674
+Pharmacie de Paris;09 avenue Jean Jaures;69007 Lyon;45.75296950000001;4.846828299999999
+Pharmacie de Saint Paul;Rue Octavio Mey;69005 Lyon;45.7661281;4.828189399999999
+Pharmacie de Seze;119 rue de Seze;69006 Lyon;45.76899359999999;4.8548886
+Pharmacie de Trion;91 rue de Trion;69005 Lyon;45.7579873;4.813561
+Pharmacie Defaux;26 rue Victor Hugo;69002 Lyon;45.7548402;4.830121699999999
+Pharmacie des Aqueducs;43 rue des Aqueducs;69005 Lyon;45.7588113;4.792174699999999
+Pharmacie des Archers;07 rue des Archers;69002 Lyon;45.7595979;4.833099499999999
+Pharmacie des Battieres;23 avenue Eisenhower;69005 Lyon;45.7556522;4.7823958
+Pharmacie des Canuts;47 rue Henon;69004 Lyon;45.779439;4.827217
+Pharmacie des Charmettes;289 cours Lafayette;69006 Lyon;45.7639155;4.8681331
+Pharmacie des Charmilles;137 cours Docteur Long;69003 Lyon;45.7517608;4.8910048
+Pharmacie des Deux Amants;27 rue du Professeur Patel;69009 Lyon;45.765913;4.7921425
+Pharmacie des Etats Unis;68 boulevard des Etats Unis;69008 Lyon;45.7332822;4.8639426
+Pharmacie des Facultes;27 cours Gambetta;69003 Lyon;45.7548908;4.8447129
+Pharmacie des Lions;9 place de la Croix Rousse;69004 Lyon;45.7761319;4.832129399999999
+Pharmacie des Lumieres;69 avenue des Freres Lumiere;69008 Lyon;45.7450397;4.8670136
+Pharmacie des Maisons Neuves;242 avenue Felix Faure;69003 Lyon;45.7555184;4.8757815
+Pharmacie des Terreaux;9 place des Terreaux;69001 Lyon;45.7677468;4.8329021
+Pharmacie des Voutes;5 cours Charlemagne;69002 Lyon;45.7471184;4.8249631
+Pharmacie Drillat;195 avenue Paul Santy;69008 Lyon;45.7239958;4.883875499999999
+Pharmacie du 6eme;53 cours Vitton;69006 Lyon;45.7698742;4.8549916
+Pharmacie du 8eme;88 rue Marius Berlietnce;69008 Lyon;45.7404793;4.8635158
+Pharmacie du 9eme;86 rue de Saint Cyr;69009 Lyon;45.7858506;4.8080915
+Pharmacie du Bachut;13 place du 11 Novembre 1918;69008 Lyon;45.7367047;4.8693655
+Pharmacie du Bd des Brotteaux;38 boulevard des Brotteaux;69006 Lyon;45.7668099;4.8563581
+Pharmacie du Cap Vaise;49 bis rue du Sergent Berthet;69009 Lyon;45.767829;4.8057748
+Pharmacie du Centre;44 rue de Brest;69002 Lyon;45.762905;4.833279699999999
+Pharmacie du Clos Jouve;30  boulevard de la Croix Rousse;69001 Lyon;45.772805;4.8213531
+Pharmacie du Coteau;9 place Lieutenant More;69001 Lyon;45.7719623;4.8264355
+Pharmacie du cours;49 cours Docteur Long;69003 Lyon;45.7496108;4.8844501
+Pharmacie du Gros Caillou;163/165 boulevard de la Croix Rousse;69004 Lyon;45.7747769;4.8330113
+Pharmacie du Mail;1 rue Dumenge;69004 Lyon;45.77681459999999;4.833179599999999
+Pharmacie du Midi;31 avenue Berthelot;69007 Lyon;45.74674;4.837695
+Pharmacie du Moulin A Vent;168 rue Challemel Lacour;69008 Lyon;45.7292616;4.8529534
+Pharmacie du Peintre Villon;93bis rue Villon;69008 Lyon;45.73757639999999;4.8623793
+Pharmacie du Point du Jour;4  rue Joliot Curie;69005 Lyon;45.7566065;4.7964368
+Pharmacie du Pont Mouton;41 Grande rue de Vaise;69009 Lyon;45.7738744;4.8086324
+Pharmacie du Prado;37 rue de l'Universite;69007 Lyon;45.7496824;4.8414046
+Pharmacie du Progres;41 route de Vienne;69007 Lyon;45.7426879;4.8507719
+Pharmacie du Rhone;9 cours Lafayette;69006 Lyon;45.7636406;4.8427063
+Pharmacie du Serpent;14 rue Paul Chenavard;69002 Lyon;45.7660393;4.832898999999999
+Pharmacie du Transvaal;34 rue Longefer;69008 Lyon;45.7383956;4.878457699999999
+Pharmacie du Vergoin;25 rue Charles Porcher;69009 Lyon;45.8041432;4.8349844
+Pharmacie du Vieux Lyon;7  avenue Doyenne;69005 Lyon;45.7596085;4.8264212
+Pharmacie Duguesclin;75 rue Duguesclin;69006 Lyon;45.7706714;4.847138
+Pharmacie Duquesne;36 rue Duquesne;69006 Lyon;45.7726755;4.8471426
+Pharmacie Felix Faure;56  avenue Felix Faure;69003 Lyon;45.7527294;4.853218399999999
+Pharmacie Fenouil;285 avenue Jean Jaures;69007 Lyon;45.7298473;4.8329941
+Pharmacie Foch;42 avenue Marechal Foch;69006 Lyon;45.770497;4.8431901
+Pharmacie Foraz;63 rue Victor Hugo;69002 Lyon;45.751951;4.8286907
+Pharmacie Franklin;22 rue Franklin;69002 Lyon;45.7526369;4.8278221
+Pharmacie Gambetta;100  cours Gambetta;69007 Lyon;45.7516622;4.8528595
+Pharmacie Gare de Perrache;Cours de Verdun;69002 Lyon;45.74863329999999;4.828331299999999
+Pharmacie Garibaldi;191 rue de Garibaldi;69003 Lyon;45.7584884;4.8529878
+Pharmacie Gaucher;24 Quai Augagneur;69003 Lyon;45.7579431;4.8410494
+Pharmacie Gibert;17 place Lyautey;69006 Lyon;45.767672;4.842365
+Pharmacie Gorge de Loup;26 rue Louis Loucheur;69009 Lyon;45.768187;4.80274
+Pharmacie Goyat;1 bis Quai de la Pecherie;69001 Lyon;45.7669429;4.8304643
+Pharmacie Grande de la Plaine;136 avenue Paul Santy;69008 Lyon;45.7271809;4.8783224
+Pharmacie Grande de Monchat;42 cours Richard Vitton;69003 Lyon;45.7535287;4.8897639
+Pharmacie Grande de Monplaisir;116 avenue des Freres Lumiere;69008 Lyon;45.7442039;4.8692186
+Pharmacie Grande de Saxe;124 avenue du Marechal de Saxe;69003 Lyon;45.7568574;4.8461792
+Pharmacie Grande du Parc;46 rue de la Tete d'Or;69006 Lyon;45.7693434;4.8521964
+Pharmacie Grande Pharmacie de la place;4 place de la Croix Rousse;69004 Lyon;45.77541230000001;4.8320287
+Pharmacie Grande Pharmacie du Plateau;7 place Abbe Pierre;69009 Lyon;45.7865385;4.795792800000001
+Pharmacie Grande Saint Rambert;35 rue Hector Berlioz;69009 Lyon;45.8006999;4.8262584
+Pharmacie Grange Blanche;107 cours Albert Thomas;69003 Lyon;45.7455435;4.872087899999999
+Pharmacie Guy;26 rue Commandant Charcot;69005 Lyon;45.7555515;4.8079575
+Pharmacie Hacker;95 boulevard de l Europe;69008 Lyon;45.7401863;4.8594835
+Pharmacie Jean Jaures;52 avenue Jean Jaures;69007 Lyon;45.7495384;4.8441976
+Pharmacie Jean Mace;73 avenue Jean Jaures;69007 Lyon;45.74759359999999;4.8435594
+Pharmacie Jean Mermoz;8 place Andre Latarget;69008 Lyon;45.73042119999999;4.8853541
+Pharmacie Jeantet;78 cours de la Liberte;69003 Lyon;45.756449;4.8430168
+Pharmacie Kahn Didier;19 rue Terme;69001 Lyon;45.76865919999999;4.8319765
+Pharmacie Keller;31 Grande rue la Croix Rousse;69004 Lyon;45.7777484;4.8320884
+Pharmacie Khalatbari;44 rue Victor Hugo;69002 Lyon;45.7535754;4.8291014
+Pharmacie Kleber;45 cours Franklin Roosevelt;69006 Lyon;45.7693897;4.8493527
+Pharmacie Kroener;16 rue de la Barre;69002 Lyon;45.757287;4.8358781
+Pharmacie l'l;76 boulevard des Etats Unis;69008 Lyon;45.7323052;4.8646771
+Pharmacie la Madeleine;11  rue de la Madeleine;69007 Lyon;45.7487287;4.8481155
+Pharmacie Labbe Dutilleul;26 avenue Rockefeller;69008 Lyon;45.7417941;4.8842237
+Pharmacie Lacassagne;44 avenue Lacassagne;69003 Lyon;45.75315699999999;4.868638499999999
+Pharmacie Lacombe;3 place du Change;69005 Lyon;45.764291;4.8284193
+Pharmacie Lacroix;42 avenue Georges Pompidou;69003 Lyon;45.7591869;4.8674857
+Pharmacie Lafayette Florit;11 rue Grenette;69002 Lyon;45.7634091;4.833927099999999
+Pharmacie Lejeune;10 rue du Dauphine;69003 Lyon;45.7499581;4.8648658
+Pharmacie Lestaevel;204 Gde rue Guillotiere;69007 Lyon;45.7481977;4.8551232
+Pharmacie Limonne;60 rue Auguste Comte;69002 Lyon;45.7523464;4.8297346
+Pharmacie Lyon Confluence;4 rue Casimir Perier;69002 Lyon;45.7437927;4.8176178
+Pharmacie Lyon Grand Trou;3 impasse Presbytere;69008 Lyon;45.7353269;4.8527741
+Pharmacie Marietton;55bis rue Marietton;69009 Lyon;45.7756924;4.801656899999999
+Pharmacie Masselot;112 rue Moncey;69003 Lyon;45.7610741;4.8498489
+Pharmacie Mathey;179  cours Lafayette;69006 Lyon;45.763804;4.8567906
+Pharmacie Moncozet Clement;52 rue Philippe de Lassalle;69004 Lyon;45.77861770000001;4.820726899999999
+Pharmacie Moreau;115 117boulevard de la Croix Rousse;69004 Lyon;45.7742052;4.8267729
+Pharmacie Nesme Didier;30  rue Chevreul;69007 Lyon;45.7486006;4.839576699999999
+Pharmacie Normale de Vaise;15 Grande rue Vaise;69009 Lyon;45.7745875;4.8070566
+Pharmacie Nouvelle Pharmacie des Halles;90 cours Lafayette;69003 Lyon;45.7628937;4.8493822
+Pharmacie Paul Santy;83 avenue Paul Santy;69008 Lyon;45.7295526;4.876289
+Pharmacie Perard;139 rue du Pr Beauvisage;69008 Lyon;45.7286925;4.8663452
+Pharmacie Philibert;12  rue Imbert Colomes;69001 Lyon;45.7713213;4.8330975
+Pharmacie Poilroux;111 rue Professeur Beauvisage;69008 Lyon;45.730304;4.870941999999999
+Pharmacie Quinet J-Marc;154  boulevard Yves Farge;69007 Lyon;45.7351152;4.8263694
+Pharmacie Reboul;97  rue Pdt Herriot;69002 Lyon;45.7590504;4.8341021
+Pharmacie Rive Gauche;5 cours Franklin Roosevelt;69006 Lyon;45.7690189;4.8440903
+Pharmacie Roosevelt;40 cours Franklin Roosevelt;69006 Lyon;45.7688707;4.8475873
+Pharmacie Saint Gabriel;5 rue Servient;69003 Lyon;45.7600614;4.8417281
+Pharmacie Saint Just;43 rue de Trion;69005 Lyon;45.7569266;4.8158861
+Pharmacie Saint Louis;44 avenue Jean-Jaures;69007 Lyon;45.7506754;4.8448152
+Pharmacie Saint Nizier;1 place Saint Nizier;69001 Lyon;45.7649503;4.8328522
+Pharmacie Saint Pierre de Vaise;3 rue Saint Pierre de Vaise;69009 Lyon;45.77346499999999;4.808338099999999
+Pharmacie Saint Vincent;1  rue de la Martiniere;69001 Lyon;45.768352;4.828029
+Pharmacie Sainte Anne;228/230 rue Paul Bert;69003 Lyon;45.7567704;4.8655529
+Pharmacie Sainte Blandine;60 cours Charlemagne;69002 Lyon;45.7445681;4.8221035
+Pharmacie Sautot Vial;119 rue des Freres Lumiere;69008 Lyon;45.7437604;4.872664299999999
+Pharmacie Saxe Quinet;32 avenue du Marechal de Saxe;69006 Lyon;45.7657673;4.8441888
+Pharmacie Tarak;28 rue Paul Bert;69003 Lyon;45.7560397;4.8460603
+Pharmacie Ternamian;6 place Henri;69003 Lyon;45.7482263;4.881127999999999
+Pharmacie Tinland;248 cours Lafayette;69003 Lyon;45.7635627;4.8642143
+Pharmacie Tondeur;76 rue de la Part Dieu;69003 Lyon;45.7594664;4.8486287
+Pharmacie Tracol;14 place Marcel Bertone;69004 Lyon;45.7778121;4.8349047
+Pharmacie Triolaire;125 route de Vienne;69008 Lyon;45.7369596;4.852899499999999
+Pharmacie Vendome;268 rue Vendome;69003 Lyon;45.7563732;4.847211
+Pharmacie Victor Hugo;14 rue Victor Hugo;69002 Lyon;45.7558542;4.8307121
+Pharmacie Vighetti;2 place des Tapis;69004 Lyon;45.77478420000001;4.8293232
+Pharmacie Vigier;55 rue Auguste Comte;69002 Lyon;45.7514545;4.8294656
+Pharmacie Vitti;576  avenue de la Sauvegarde;69009 Lyon;45.7890229;4.7898383
+Pharmacie Vitton;2  cours Vitton;69006 Lyon;45.7691105;4.8505569
+Pharmacie Vitton-Zola;91 cours Vitton;69006 Lyon;45.7704495;4.8611083
+Pharmacie Voltaire;69 bis place Voltaire;69003 Lyon;45.757025;4.849184
+Pharmacie Lasbazeilles;47, place de la Mairie;69280 Marcy-l'Étoile;45.7809752;4.7054493
+Pharmacie la Chaussonniere;9 avenue des Alpes;69510 Messimy;45.69799159999999;4.6756836
+Pharmacie de la Boule;118 avenue de Verdun;69330 Meyzieu;45.7798348;4.998184999999999
+Pharmacie des Lumieres;67 rue de la Republique;69330 Meyzieu;45.7669248;5.001795
+Pharmacie des Terrasses;45 rue Jean Jaures;69330 Meyzieu;45.7761533;5.0191457
+Pharmacie Diarra;39 bis rue Gambetta;69330 Meyzieu;45.7625241;4.995456
+Pharmacie du Centre;47 rue Louis Saulnier;69330 Meyzieu;45.7628689;5.0024519
+Pharmacie du Grand Large;69 avenue de Verdun;69330 Meyzieu;45.7777773;4.9932278
+Pharmacie Gicquel Garnier;3 rue Louis Saulnier;69330 Meyzieu;45.7665268;5.0036816
+Pharmacie Jacquet;40, rue de la Republique;69330 Meyzieu;45.7665367;4.9991742
+Pharmacie Majolane;Centre Commercial Leclerc;69330 Meyzieu;45.7671181;4.9882801
+Pharmacie Nouvelle des Plantees;Centre Commercial des Plantes;69330 Meyzieu;45.767843;5.000964
+Pharmacie Tanji;80 rue Josepharmacie Desbois;69330 Meyzieu;45.7816727;5.0063639
+Pharmacie Millery;17 rue du Sentier;69390 Millery;45.633708;4.782890699999999
+Pharmacie des Arcades;100 rue du 23 Aout 1944;69780 Mions;45.664366;4.9523995
+Pharmacie des Halles;Rue du 19 Mars 1962;69780 Mions;45.6656323;4.9576083
+Pharmacie du Pont de Mions;2 rue du 23 Aout 1944;69780 Mions;45.6801829;4.9494213
+Pharmacie du Village;9 place de la Republique;69700 Mions;45.6638343;4.9565698
+Pharmacie Nodin;Place de la Faontaine;69860 Monsols;46.21989989999999;4.5208449
+Pharmacie de Montagny;51 route du Batard;69700 Montagny;45.6215015;4.7472689
+Pharmacie de Montanay;Place de la Poype;69250 Montanay;45.880698;4.8631056
+Pharmacie Cuny;Place du Centre;69770 Montrottier;45.7902011;4.4665674
+Pharmacie de Morance;1 allee du Coteau;69480 Morancé;45.8994537;4.7000112
+Pharmacie de la place;2 place de la Liberte;69440 Mornant;45.6193915;4.6719862
+Pharmacie de Tour Ronde;6 rue Jean Condamin;69440 Mornant;45.6187207;4.672869299999999
+Pharmacie de la place;14 rue Louis Blanc;69250 Neuville-sur-Saône;45.8766768;4.8392336
+Pharmacie Principale;3 rue Victor Hugo;69250 Neuville-sur-Saône;45.8772295;4.839057599999999
+Pharmacie Gervais;31 place de l'Eglise;69530 Orliénas;45.658962;4.718522699999999
+Grande Pharmacie d'Oullins;23 avenue Jean Jaures;69600 Oullins;45.7172259;4.818870299999999
+Pharmacie Azoulai;92 Grande rue;69600 Oullins;45.7156669;4.808757600000001
+Pharmacie Bouvier Barbe;74 rue Chartron;69600 Oullins;45.7121581;4.811533799999999
+Pharmacie de la Buissiere;91 boulevard Emile Zola;69600 Oullins;45.71951869999999;4.8022323
+Pharmacie de la Mairie;125 Grand rue d Oullins;69600 Oullins;45.7157524;4.808889199999999
+Pharmacie de la Poste;81 Grande rue;69600 Oullins;45.7161035;4.809834899999999
+Pharmacie des Celestins;19 boulevard Kennedy;69600 Oullins;45.7186396;4.7912098
+Pharmacie du Pont d'Oullins;65 Grande rue;69600 Oullins;45.71719909999999;4.809789299999999
+Pharmacie l'Oasis;15 rue Francisque Jomard;69600 Oullins;45.7155318;4.7984854
+Pharmacie Pomathios;Centre Commercial de Montmein;69600 Oullins;45.70845509999999;4.805979499999999
+Pharmacie Servillat;157 Grande rue;69600 Oullins;45.7129176;4.8044892
+Pharmacie Ampere;59 rue Vaillant Couturier;69310 Pierre-Bénite;45.70611539999999;4.8159526
+Pharmacie des Hautes Roches;2 allee du Chateau;69310 Pierre-Bénite;45.6987403;4.8290697
+Pharmacie du Centre;81 rue Roger Salengro;69310 Pierre-Bénite;45.7032943;4.8230882
+Pharmacie Voltaire;21 rue Voltaire;69310 Pierre-Bénite;45.7030506;4.820736399999999
+Pharmacie de Pommiers;Le Bourg-Chemin de Trezette;69480 Pommiers;45.9554836;4.6926742
+Pharmacie de la Turdine;4 rue Jean Moulin;69490 Pontcharra-sur-Turdine;45.8744149;4.489379
+Pharmacie Garcin;Le Bourg;69870 Poule-les-Écharmeaux;46.1483156;4.4565788
+Pharmacie de Pusignan;C.cial Clos du Vallon rue du Vallon;69330 Pusignan;45.7592814;5.061984799999999
+Pharmacie Thevenard;Square du Centre;69650 Quincieux;45.9147628;4.7774627
+Pharmacie Adam;Place Boileau;69140 Rillieux-la-Pape;45.8124577;4.8878629
+Pharmacie Canellas;20 route de Geneve;69140 Rillieux-la-Pape;45.80505669999999;4.885041999999999
+Pharmacie de l'Europe;81 avenue de l Europe;69140 Rillieux-la-Pape;45.8180012;4.9026743
+Pharmacie de la Poste;18 rue Jacques Prevert;69140 Rillieux-la-Pape;45.81700130000001;4.902243299999999
+Pharmacie de la Roue;5 place du Chateau;69140 Rillieux-la-Pape;45.82471450000001;4.8943653
+Pharmacie des Allagniers;28 avenue de l'Europe;69140 Rillieux-la-Pape;45.8142253;4.8947641
+Pharmacie des Vercheres;62b avenue de l'Europe;69140 Rillieux-la-Pape;45.8178042;4.9039532
+Pharmacie Dubuis;25 rue Michelet;69140 Rillieux-la-Pape;45.816238;4.892091
+Pharmacie Dunand;Place de Verdun;69140 Rillieux-la-Pape;45.8208952;4.8968552
+Pharmacie Saussier;627 rue du Capitaine Julien;69140 Rillieux-la-Pape;45.82294539999999;4.890795
+Pharmacie Sain Beloise;15 rue Josepharmacie Volay;69210 Sain-Bel;45.810474;4.598726
+Pharmacie des Engrives;Centre Commercial;69720 Saint-Bonnet-de-Mure;45.70087059999999;5.0096923
+Pharmacie du Petit Bourg;41 route Nationale 6;69720 Saint-Bonnet-de-Mure;45.6931331;5.028923799999999
+Pharmacie de Saint Cyr Village;5 place de la Republique;69450 Saint-Cyr-au-Mont-d'Or;45.81405650000001;4.8182539
+Pharmacie du Vallon;13 route de Lyon;69450 Saint-Cyr-au-Mont-d'Or;45.8008317;4.8198307
+Pharmacie des Monts d'Or;57 avenue de la Republique;69370 Saint-Didier-au-Mont-d'Or;45.8102074;4.7985603
+Pharmacie Guibard;1, rue de la Resistance;69370 Saint-Didier-au-Mont-d'Or;45.8119867;4.7985646
+Pharmacie Duverdy;Le Bourg;69460 Saint-Étienne-des-Oullières;46.05290470000001;4.6376614
+Pharmacie Carnot;32 rue Carnot;69190 Saint-Fons;45.7078823;4.8587412
+Pharmacie Centrale;97 avenue Jean Jaures;69190 Saint-Fons;45.7086002;4.8553678
+Pharmacie de l'Arsenal;46 rue Emile Zola;69190 Saint-Fons;45.7105685;4.8611132
+Pharmacie de la Poste;70 avenue Jean Jaures;69190 Saint-Fons;45.7105282;4.854921
+Pharmacie Lievin;93 avenue Jean Jaures;69190 Saint-Fons;45.7089156;4.8553586
+Pharmacie Mattei;1 bis rue Gambetta;69190 Saint-Fons;45.7085901;4.8538592
+Pharmacie Mekrez;8 rue de la Rochette;69190 Saint-Fons;45.69523969999999;4.8570937
+Pharmacie Rosso;4 avenue Henri Barbusse;69190 Saint-Fons;45.7066779;4.8556944
+Pharmacie Ctre Cial de Saint Genis Laval;Centre Commercial  Saint Genis 2;69230 Saint-Genis-Laval;45.6804435;4.792025
+Pharmacie de la place;03 place Mathieu Jaboulay;69230 Saint-Genis-Laval;45.6949345;4.7926664
+Pharmacie des Basse Barolles;40 avenue Ch.de Gaulle;69230 Saint-Genis-Laval;45.680475;4.786760999999999
+Pharmacie des Collonges;84 rue des Collonges;69230 Saint-Genis-Laval;45.6923377;4.806943299999999
+Pharmacie des Tilleuls;9 place Marechal Joffre;69230 Saint-Genis-Laval;45.6942224;4.7929206
+Pharmacie du Champlong;2 place des Collanges;69230 Saint-Genis-Laval;45.6928033;4.8047624
+Pharmacie Magnat;85 avenue Clemenceau;69230 Saint-Genis-Laval;45.6957581;4.7938735
+Pharmacie de Saint Genis;1 place Georges Pompidou;69290 Saint-Genis-les-Ollières;45.7574193;4.7257576
+Pharmacie du Village;23 rue Marius Poncet;69290 Saint-Genis-les-Ollières;45.7576983;4.7315733
+Pharmacie Brun Raymond;161 avenue Charles de Gaulle;69830 Saint-Georges-de-Reneins;46.0634621;4.722968
+Pharmacie de Saint Germain;4 place du 11 Novembre 1918;69650 Saint-Germain-au-Mont-d'Or;45.8837567;4.8036063
+Pharmacie de la Croisee;25 route des Beaujolais;69220 Saint-Jean-d'Ardières;46.1123834;4.7317726
+Pharmacie Tournier;Place du Platre;69930 Saint-Laurent-de-Chamousset;45.7387099;4.4644295
+Grande Pharmacie Laurentinoise;102 avenue Jean Moulin;69720 Saint-Laurent-de-Mure;45.687723;5.0464877
+Pharmacie de Chassieres;Centre Commercial de Chassieres RN 6;69720 Saint-Laurent-de-Mure;45.697436;5.016922999999999
+Pharmacie Deruaz;1 place Neuve;69850 Saint-Martin-en-Haut;45.6605625;4.5600608
+Pharmacie Saint Pierreas;5 rue de Frindeau;69780 Saint-Pierre-de-Chandieu;45.6458638;5.012848099999999
+Pharmacie de Saint Pierre;08 rue Josepharmacie Gay;69210 Saint-Pierre-la-Palud;45.789732;4.612083
+Pharmacie Beauvallon;46 bis Grande rue;69800 Saint-Priest;45.70143520000001;4.9420457
+Pharmacie Bel Air;1 rue du 8 Mai 1945;69800 Saint-Priest;45.69106050000001;4.9472725
+Pharmacie de l'Hotel de Ville;40 place Charles Ottina;69800 Saint-Priest;45.6944218;4.936866999999999
+Pharmacie de la Gare;19 boulevard des Roses;69800 Saint-Priest;45.6868051;4.9359416
+Pharmacie de Saythe;60 rue de l'Egalite;69800 Saint-Priest;45.687764;4.9463197
+Pharmacie du Chateau;60 rue Henri Marechal;69800 Saint-Priest;45.69508870000001;4.941587
+Pharmacie du Marche;10 rue Henri Marechal;69800 Saint-Priest;45.6907742;4.9379896
+Pharmacie Dubost;Rue Louis Braille;69800 Saint-Priest;45.6957313;4.952666
+Pharmacie Dussauchoy-Raynal;36 Huitieme rue Cite Berliet;69800 Saint-Priest;45.7055608;4.9005488
+Pharmacie Jaillot;52 rue Jules Verne;69800 Saint-Priest;45.7018259;4.9771474
+Pharmacie Keugne-Talla-Mukam;6 rue Alain Fournier;69800 Saint-Priest;45.6920812;4.9551302
+Pharmacie Porte des Alpes;Centre Commercial Auchan;69800 Saint-Priest;45.7224133;4.9266266
+Pharmacie Saint Damien;6 place Jean Moulin;69800 Saint-Priest;45.7035073;4.932572899999999
+Pharmacie Soleil;1 place de l'Ancienne Mairie;69800 Saint-Priest;45.6990056;4.9428923
+Pharmacie Viret;33 rue du 11 Novembre;69800 Saint-Priest;45.69818720000001;4.9276599
+Pharmacie Jalles;2 route Departementale;69560 Saint-Romain-en-Gal;45.5324213;4.8630929
+Pharmacie Boulant Dusonchet;2 avenue de la Colombiere;69360 Saint-Symphorien-d'Ozon;45.6325223;4.8551974
+Pharmacie de l'Eglise;19 avenue Colombiere;69360 Saint-Symphorien-d'Ozon;45.6317529;4.8550704
+Pharmacie Collinet Vericel;13 place du Marche;69590 Saint-Symphorien-sur-Coise;45.6328726;4.455430799999999
+Pharmacie du Marche;57 place du Mezel;69590 Saint-Symphorien-sur-Coise;45.6319421;4.4550995
+Pharmacie Lemeunier Magimel;2 rue Centrale;69240 Saint-Vincent-de-Reins;46.0181939;4.3777346
+Pharmacie Mathan Viannay;23 Grande rue;69610 Sainte-Foy-l'Argentière;45.70947;4.4691898
+Grande Pharmacie de Sainte Foy;46 Grande rue;69110 Sainte-Foy-lès-Lyon;45.73457880000001;4.803888499999999
+Pharmacie Charcot;87 rue du Commandant Charcot;69110 Sainte-Foy-lès-Lyon;45.7470891;4.7900024
+Pharmacie de l'Eglise;8 place Xavier Ricard;69110 Sainte-Foy-lès-Lyon;45.73622169999999;4.804935899999999
+Pharmacie de la Graviere;7 avenue de Limburg;69110 Sainte-Foy-lès-Lyon;45.7338394;4.7800907
+Pharmacie de la Plaine;125 rue du Cdt Cahrcot;69110 Sainte-Foy-lès-Lyon;45.74450100000001;4.7843981
+Pharmacie Demont;Centre Commercial Chavril;69110 Sainte-Foy-lès-Lyon;45.7616995;4.856256
+Pharmacie des Bruyeres;4 place Saint Luc;69110 Sainte-Foy-lès-Lyon;45.7501171;4.8004269
+Pharmacie du Vallon;16 avenue du Général de Gaulle;69110 Sainte-Foy-lès-Lyon;45.7408902;4.7970994
+Pharmacie les Nympheas;78 avenue Foch;69110 Sainte-Foy-lès-Lyon;45.7451368;4.7984403
+Pharmacie Castellane;35 boulevard Castellane;69580 Sathonay-Camp;45.8224561;4.8729915
+Pharmacie Jay Forest;5 rue de la Republique;69580 Sathonay-Camp;45.8256111;4.873508699999999
+Pharmacie de l'Ozon;25 avenue du Dauphine;69360 Sérézin-du-Rhône;45.6292238;4.8254139
+Pharmacie de Solaize;118 place de la Mairie;69360 Solaize;45.6207998;4.8719771
+Pharmacie Dupre la Tour;8 place du 11 Novembre 1918;69510 Soucieu-en-Jarrest;45.6777492;4.7029499
+Pharmacie Blanc;14 rue Pecherie;69170 Tarare;45.8958997;4.4324997
+Pharmacie Favre Tranchand;21 rue Pecherie;69170 Tarare;45.896181;4.432918799999999
+Pharmacie Principale;32 rue Anna Bibert;69170 Tarare;45.8961745;4.4338326
+Pharmacie Republique Convert;48 rue de la Republique;69170 Tarare;45.8955974;4.4330994
+Pharmacie Victor Hugo;11 place Victor Hugo;69170 Tarare;45.8984609;4.4336062
+Grande Pharmacie de la Mairie;101 avenue Charles de Gaulle;69160 Tassin-la-Demi-Lune;45.7629804;4.7804594
+Pharmacie d'Alai;206 avenue Charles de Gaulle;69160 Tassin-la-Demi-Lune;45.7511805;4.766452999999999
+Pharmacie Dallemagne;49 avenue de la Republique;69160 Tassin-la-Demi-Lune;45.7637793;4.779421600000001
+Pharmacie de l'Horloge;14 place Pierre Vauboin;69160 Tassin-la-Demi-Lune;45.7643147;4.7815679
+Pharmacie du Bourg;11 avenue Honore Esplette;69160 Tassin-la-Demi-Lune;45.7631236;4.7599968
+Pharmacie du Vitrail;84 avenue de la Republique;69160 Tassin-la-Demi-Lune;45.7639165;4.7761375
+Pharmacie Picard;3 avenue du General Brosset;69160 Tassin-la-Demi-Lune;45.7582336;4.7767152
+Pharmacie de Ternand;Les Grandes Planches;69620 Ternand;45.9471105;4.5384133
+Pharmacie des Pierres;Centre Commercial des Pierres;69360 Ternay;45.6061409;4.8106937
+Pharmacie Maurines;38, rue de Chassagne;69360 Ternay;45.5968467;4.807966
+Pharmacie Centrale;2 4 rue Eugene Edouard Dechavanne;69240 Thizy;46.032274;4.3106411
+Pharmacie Fontaine Detemple;22 rue Jean Baptiste Fournier;69240 Thizy;46.0314577;4.312532
+Pharmacie de Thurins;16 place Dugas;69510 Thurins;45.6820449;4.639974
+Pharmacie Magnien;Place de la Mairie;69780 Toussieu;45.654136;4.9855902
+Pharmacie de Vaugneray;4 place du 8 Mai 1945;69670 Vaugneray;45.7370531;4.6574332
+Pharmacie Bejuy;61 route de Genas;69120 Vaulx-en-Velin;45.7473508;4.924588099999999
+Pharmacie Carre Tasse;3 avenue de Bohlen;69120 Vaulx-en-Velin;45.765072;4.9209127
+Pharmacie de Bony-Duval;131 rue de la Republique;69120 Vaulx-en-Velin;45.7849753;4.9321757
+Pharmacie de l'Hotel de Ville;10 rue Maurice Audin;69120 Vaulx-en-Velin;45.7782425;4.9196782
+Pharmacie des 7 Chemins;232 avenue Franklin Roosevelt;69120 Vaulx-en-Velin;45.7476056;4.9329431
+Pharmacie du Carre de la Soie;86 bis avenue Roger Salengro;69120 Vaulx-en-Velin;45.7562806;4.9281162
+Pharmacie du Centre;15 rue Emile Zola;69120 Vaulx-en-Velin;45.777749;4.9178513
+Pharmacie du Mas;Centre Commercial le Mas du Taureau;69120 Vaulx-en-Velin;45.7852737;4.9115579
+Pharmacie du Village;60 rue de la Republique;69120 Vaulx-en-Velin;45.78611410000001;4.9257842
+Pharmacie Guinet;7 rue Victor Hugo;69120 Vaulx-en-Velin;45.7859864;4.9215745
+Pharmacie Jarret;71 rue Paul Teste;69120 Vaulx-en-Velin;45.7735441;4.9137675
+Pharmacie Kadri;18 avenue Georges Dimitrov;69120 Vaulx-en-Velin;45.7782673;4.9265111
+Pharmacie Partouche;86 avenue du 8 Mai 1945;69120 Vaulx-en-Velin;45.7882588;4.911868999999999
+Pharmacie Ramon;134 avenue du 8 Mai 1945;69120 Vaulx-en-Velin;45.786032;4.917751
+Grande Pharmacie du C.c. Carrefour;136 boulevard Joliot Curie;69200 Vénissieux;45.7158649;4.8758848
+Pharmacie Bonneau;20 route de Corbas;69200 Vénissieux;45.6919151;4.8898861
+Pharmacie Bousquet Fassi Fehri;26 rue Saint Exupery;69200 Vénissieux;45.699056;4.8946482
+Pharmacie Brisson;67 boulevard Laurent Gerin;69200 Vénissieux;45.7006481;4.883863
+Pharmacie Chevalier;72 avenue Francis de Pressense;69200 Vénissieux;45.7268689;4.8621387
+Pharmacie Coche Maison;20 avenue de Pressense;69200 Vénissieux;45.730194;4.859814
+Pharmacie de la Rotonde;Centre Commercial la Rotonde;69200 Vénissieux;45.6928393;4.8632497
+Pharmacie des Marronniers;118 rue Gabriel Peri;69200 Vénissieux;45.7029384;4.8764876
+Pharmacie des Portes du Sud;49 boulevard Lenine;69200 Vénissieux;45.6925523;4.864561
+Pharmacie du Stade;5 avenue de la Republique;69200 Vénissieux;45.7079682;4.864572
+Pharmacie Duport;120 avenue Jules Guesde;69200 Vénissieux;45.7089142;4.8870059
+Pharmacie Ferry;68 avenue Viviani;69200 Vénissieux;45.7237491;4.8727087
+Pharmacie Fond;62 rue du Professeur Roux;69200 Vénissieux;45.7250417;4.8580162
+Pharmacie Frandon;87, boulevard Ambroise Croizat;69200 Vénissieux;45.697514;4.8880807
+Pharmacie Grande des Minguettes;19 avenue Jean Cagne;69200 Vénissieux;45.6958289;4.874164899999999
+Pharmacie Jeannin Chirol;5 rue Gambetta;69200 Vénissieux;45.6993811;4.883417
+Pharmacie Mermet Bouvier;Rue des Martyres de la Resistance;69200 Vénissieux;45.6913385;4.871440499999999
+Pharmacie Moliere;45 rue Carnot;69200 Vénissieux;45.7018965;4.8813677
+Pharmacie Panisset;287 route Vienne;69200 Vénissieux;45.7261438;4.8543294
+Pharmacie Plasse Demule;25 rue Anatole France;69200 Vénissieux;45.7221258;4.8916229
+Pharmacie Vieilly;26 avenue Jules Guesde;69200 Vénissieux;45.7157719;4.8876988
+Pharmacie Yacoub;68 avenue Jean Jaures;69200 Vénissieux;45.7003577;4.8822439
+Pharmacie de la Mairie;47 rue du Pont;69390 Vernaison;45.64756190000001;4.812625199999999
+Pharmacie Guimet;336 rue de la Fee des Eaux;69390 Vernaison;45.6521923;4.7980241
+Pharmacie Beaujolaise;39 rue d'Anse;69400 Villefranche-sur-Saône;45.98526;4.718274900000001
+Pharmacie Centrale;893 rue Nationale;69400 Villefranche-sur-Saône;45.9873224;4.7185865
+Pharmacie de Beligny;1520 route de Frans;69400 Villefranche-sur-Saône;45.9838259;4.7404727
+Pharmacie de l'Eden;332 rue Nationale;69400 Villefranche-sur-Saône;45.9923513;4.718675699999999
+Pharmacie du Garet;926 boulevard Burdeau;69400 Villefranche-sur-Saône;45.997186;4.731044
+Pharmacie Dupuy-Rodriguez;986-996 rue Nationale;69400 Villefranche-sur-Saône;45.9864427;4.7180703
+Pharmacie Grande Pharmacie des Marais;676 rue Nationale;69400 Villefranche-sur-Saône;45.9892557;4.7184084
+Pharmacie Pharma b bis;377 rue d'Anse;69400 Villefranche-sur-Saône;45.98226160000001;4.7179571
+Pharmacie Poulain;31 rue de Belleville;69400 Villefranche-sur-Saône;45.9957284;4.718973600000001
+Pharmacie Regionale;477 rue Jules Ferry;69400 Villefranche-sur-Saône;45.9804052;4.7363028
+Pharmacie Savigny;590 rue J.m Savigny;69400 Villefranche-sur-Saône;45.9793441;4.7117574
+Pharmacie Vial;460, rue Nationale;69400 Villefranche-sur-Saône;45.9912122;4.7185844
+Grande Pharmacie des Buers;38 rue du 8 Mai;69100 Villeurbanne;45.7800552;4.891348
+Pharmacie  Guillermin Guilemette;02 avenue Salvador Allende;69100 Villeurbanne;45.7760826;4.8625025
+Pharmacie  Isoard;291 Quater route de Genas;69100 Villeurbanne;45.7492261;4.9146015
+Pharmacie Attal;35 rue Racine;69100 Villeurbanne;45.7670691;4.8781729
+Pharmacie Bailly David;172 cours Emile Zola;69100 Villeurbanne;45.7692618;4.8800705
+Pharmacie Brahic;28 bis avenue Gabriel Peri;69100 Villeurbanne;45.7717256;4.8653109
+Pharmacie Campredon;146bis, cours Tolstoi;69100 Villeurbanne;45.7634939;4.875902
+Pharmacie Condorcet;15 avenue Condorcet;69100 Villeurbanne;45.7779508;4.866927
+Pharmacie Cyprian;243bis, route de Genas;69100 Villeurbanne;45.7521857;4.902961299999999
+Pharmacie Daien Gilles;100 rue du 04 Aout 1789;69100 Villeurbanne;45.76458030000001;4.8842995
+Pharmacie Daviet;204, cours Emile Zola;69100 Villeurbanne;45.7684589;4.884540299999999
+Pharmacie de Croix Luizet;151 avenue Roger Salengro;69100 Villeurbanne;45.7802152;4.8823911
+Pharmacie de Cusset;261 rue du 4 Aout;69100 Villeurbanne;45.7661909;4.900860499999999
+Pharmacie de Fontanieres;32 rue de Fontanieres;69100 Villeurbanne;45.7756864;4.8832198
+Pharmacie de l'Iris;337 rue Francis de Pressense;69100 Villeurbanne;45.7663257;4.898141499999999
+Pharmacie de la Cite;17 cours Tolstoi;69100 Villeurbanne;45.7639325;4.872260799999999
+Pharmacie de la Perraliere;150 rue du 4 Aout;69100 Villeurbanne;45.7638442;4.8898111
+Pharmacie de la place Wilson;21 place Wilson;69100 Villeurbanne;45.7738173;4.867185099999999
+Pharmacie des Arts;29 rue de la Doua;69100 Villeurbanne;45.776977;4.8745034
+Pharmacie des Gentianes;68 place Jules Grandclement;69100 Villeurbanne;45.7590055;4.8892767
+Pharmacie des Gratte-Ciel;28 avenue Henri Barbusse;69100 Villeurbanne;45.76779;4.879328999999999
+Pharmacie des Marronniers;33 avenue de Saint Exupery;69100 Villeurbanne;45.7589044;4.879043999999999
+Pharmacie du 8 Mai;120 rue du 8 Mai 1945;69100 Villeurbanne;45.7741349;4.8940756
+Pharmacie du cours;304 cours Emile Zola;69100 Villeurbanne;45.7665888;4.8946248
+Pharmacie du Lycee;144 cours Emile Zola;69100 Villeurbanne;45.7696595;4.8774823
+Pharmacie du Metro;407 cours Emile Zola;69100 Villeurbanne;45.7647025;4.9084452
+Pharmacie du Theatre;35 rue Paul Verlaine;69100 Villeurbanne;45.7664888;4.880465399999999
+Pharmacie du Totem;83 cours de la Republique;69100 Villeurbanne;45.76412500000001;4.874317899999999
+Pharmacie Flachet;271 cours Emile Zola;69100 Villeurbanne;45.76770070000001;4.8903243
+Pharmacie Grandclement;2 rue Leon Blum;69100 Villeurbanne;45.7593697;4.8908947
+Pharmacie Guillermond Guichard;170 rue Francis de Pressens;69100 Villeurbanne;45.7712391;4.884518
+Pharmacie Laporte Deminjon;1 cours Tolstoi;69100 Villeurbanne;45.763904;4.870144499999999
+Pharmacie Lerey Dome Curely;2 rue Jean Jaures;69100 Villeurbanne;45.7562784;4.8784068
+Pharmacie Nigoghossian;60 cours Emile Zola;69100 Villeurbanne;45.7708555;4.8683023
+Pharmacie Republique;109 cours Emile Zola;69100 Villeurbanne;45.77081279999999;4.8735041
+Pharmacie Reynes;30 allee des Cedres;69100 Villeurbanne;45.7562041;4.910375
+Pharmacie Sorlin Allabert;18 rue de la Cite Saint Jean;69100 Villeurbanne;45.7763909;4.9013259
+Pharmacie Tolstoi;124 cours Tolstoi;69100 Villeurbanne;45.76146259999999;4.8821449
+Pharmacie Van Straaten Lafond;12 ter rue d'Inkermann;69100 Villeurbanne;45.76974939999999;4.8653517
+Pharmacie Vieux Marandet;99 bis rue Leon Blum;69100 Villeurbanne;45.7603459;4.8995773
+Pharmacie Villegas;166 avenue Roger Salengro;69100 Villeurbanne;45.780974;4.885216
+Pharmacie Calot;Le Bourg;69910 Villié-Morgon;46.1459037;4.6758207
+Pharmacie Boyer Gasne;9-11 rue Louis Vernay;69390 Vourles;45.6590316;4.7743841
