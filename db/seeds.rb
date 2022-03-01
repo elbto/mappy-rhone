@@ -5,9 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'csv'
+
+require "csv"
 
 Commune.destroy_all
+filepath = "db/csvDB/pharmacies.csv"
+
+CSV.foreach(filepath, headers: :first_row) do |row|
+  #dans chaque row on a le nom, l'adresse, le cp, lattitude et longitude de la pharamcie
+  #il faut attendre de créer les zones pour ensuite lié les pharmacie à la zone
+end
 
 csv_text = File.read(Rails.root.join('db', 'csvDB', 'data_commune.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
@@ -23,3 +30,4 @@ csv.each do |row|
 end
 
 puts "SEEDS COMMUNES OK"
+
