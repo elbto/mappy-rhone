@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_135519) do
+
+ActiveRecord::Schema.define(version: 2022_03_01_164153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +22,16 @@ ActiveRecord::Schema.define(version: 2022_03_01_135519) do
     t.float "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "polygon", default: [], array: true
   end
 
   create_table "ecoles", force: :cascade do |t|
     t.string "type"
     t.string "statut"
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.bigint "commune_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -37,8 +39,8 @@ ActiveRecord::Schema.define(version: 2022_03_01_135519) do
   end
 
   create_table "gares", force: :cascade do |t|
-    t.decimal "latitude"
-    t.decimal "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.bigint "commune_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,11 +51,12 @@ ActiveRecord::Schema.define(version: 2022_03_01_135519) do
     t.string "name"
     t.string "address"
     t.integer "zip_code"
-    t.decimal "lattitude"
-    t.decimal "longitude"
+    t.float "lattitude"
+    t.float "longitude"
     t.bigint "commune_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "city"
     t.index ["commune_id"], name: "index_pharmacies_on_commune_id"
   end
 

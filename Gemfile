@@ -55,3 +55,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "geocoder"
+gem 'rgeo-geojson'
+gem 'georuby'
+gem 'json_pure'
+
+gem "awesome_print", "~> 1.9"
