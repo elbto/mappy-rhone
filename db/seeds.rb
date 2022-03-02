@@ -162,6 +162,3 @@ csv.each do |row|
 end
 
 puts "Gares were created"
-
-
-
