@@ -83,7 +83,6 @@ GEM
     erubi (1.10.0)
     ffi (1.15.5)
     geocoder (1.7.3)
-    geojson (1.0.0)
     georuby (2.5.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -221,7 +220,6 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   geocoder
-  geojson
   georuby
   jbuilder (~> 2.7)
   json_pure
