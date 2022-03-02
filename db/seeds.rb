@@ -3,7 +3,7 @@ require 'rgeo/geo_json'
 require 'json'
 
 
- Pharmacie.destroy_all
+Pharmacie.destroy_all
 Gare.destroy_all
 Commune.destroy_all
 
@@ -29,7 +29,7 @@ end
 puts "SEEDS COMMUNES OK"
 
 # #-----------------------------------------------------------------------
-# #-------------------------SEEDS FOR COORONATES----------------------------
+# #-------------------------SEEDS FOR COORDONATES----------------------------
 # #-----------------------------------------------------------------------
 coo = 0
 
