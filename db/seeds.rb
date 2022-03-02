@@ -2,8 +2,8 @@ require 'csv'
 require 'rgeo/geo_json'
 require 'json'
 
-
- Pharmacie.destroy_all
+Ecole.destroy_all
+Pharmacie.destroy_all
 Gare.destroy_all
 Commune.destroy_all
 
@@ -161,3 +161,32 @@ csv.each do |row|
 end
 
 puts "Gares were created"
+
+
+file_ecole = 'DB/csvDB/ecoles.csv'
+
+cont = 1
+CSV.foreach(file_ecole, headers: :first_row, col_sep: ";") do |row|
+  lat = row["Latitude"]
+  long = row["Longitude"]
+  code_zip = row["Code commune"]
+  type = row["Secteur Public/Privé"]
+  nom = row["Appellation officielle"]
+  address = "#{row["Adresse"]} #{row["Commune"]} #{row["Code postal"]}"
+  commune = Commune.find_by(zipinsee: code_zip)
+  if commune
+    school = Ecole.new(
+      name: nom,
+      latitude: lat,
+      longitude: long,
+      statut: type,
+      address: address
+    )
+    school.commune = commune
+    p school.name
+    school.save!
+    cont += 1
+  end
+end
+
+p "il y a eu #{cont} ecole créee"
