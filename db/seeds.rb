@@ -1,24 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-require "csv"
+require 'csv'
 require 'geojson'
 require 'rgeo/geo_json'
 
+Gare.destroy_all
 Commune.destroy_all
 
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR COMMUNES----------------------------
+#-----------------------------------------------------------------------
+
+puts "STARTING SEEDS FOR COMMUNE"
 
 csv_text = File.read(Rails.root.join('db', 'csvDB', 'data_commune.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 csv.each do |row|
   puts row.to_hash
   commune = Commune.new
-  commune.name = row['nom_commune']
+  commune.name = row['nom_commune'].downcase
   commune.zipinsee = row['code_commune']
   commune.price = row['carre']
 
@@ -27,8 +25,6 @@ csv.each do |row|
 end
 
 puts "SEEDS COMMUNES OK"
-
-
 
 file_geo = "db/csvDB/69commune.geojson"
 geo_data = File.read(file_geo)
@@ -44,8 +40,26 @@ geom.each do |x|
     p commune.name
   end
 end
-
 p "lat & long added"
+
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR GARES-------------------------------
+#-----------------------------------------------------------------------
+
+csv_text = File.read(Rails.root.join('db', 'csvDB', 'data_gares_rhone.csv'))
+csv = CSV.parse(csv_text, :headers => true, :col_sep => ";",:encoding => 'UTF-8')
+csv.each do |row|
+  x = row['COMMUNE'].downcase
+  commune = Commune.find_by(name: x)
+  gare = Gare.new
+  if commune
+    gare.commune = commune
+    gare.latitude = row['LATITUDE']
+    gare.longitude = row['LONGITUDE']
+    gare.save!
+    puts "#{gare.latitude}, #{gare.longitude} #{gare.commune.name}---saved"
+  end
+end
 
 
 # filepath = "db/csvDB/pharmacies.csv"
