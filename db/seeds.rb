@@ -1,15 +1,15 @@
-require "csv"
+require 'csv'
 require 'rgeo/geo_json'
 require 'json'
 
 
-Pharmacie.destroy_all
+ Pharmacie.destroy_all
 Gare.destroy_all
 Commune.destroy_all
 
-#-----------------------------------------------------------------------
-#-------------------------SEEDS FOR COMMUNES----------------------------
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
+# #-------------------------SEEDS FOR COMMUNES----------------------------
+# #-----------------------------------------------------------------------
 
 puts "STARTING SEEDS FOR COMMUNE"
 
@@ -28,9 +28,9 @@ end
 
 puts "SEEDS COMMUNES OK"
 
-#-----------------------------------------------------------------------
-#-------------------------SEEDS FOR COORONATES----------------------------
-#-----------------------------------------------------------------------
+# #-----------------------------------------------------------------------
+# #-------------------------SEEDS FOR COORONATES----------------------------
+# #-----------------------------------------------------------------------
 coo = 0
 
 file_geo = "db/csvDB/69commune.geojson"
@@ -63,43 +63,43 @@ geom['features'].each do |x|
     coo += 1
   end
 end
- p "#{coo} coordonées ont été ajoutées"
+p "#{coo} coordonées ont été ajoutées"
 
- p "ADD coordinates to Lyon 1 a 9e arrondissement"
+p "ADD coordinates to Lyon 1 a 9e arrondissement"
 
-lyon1 = Commune.find_by(name: "Lyon 1e Arrondissement")
+lyon1 = Commune.find_by(name: "lyon 1e arrondissement")
 lyon1.latitude = "45.7695061"
 lyon1.longitude = "4.8301275"
 lyon1.save!
-lyon2 = Commune.find_by(name: "Lyon 2e Arrondissement")
+lyon2 = Commune.find_by(name: "lyon 2e arrondissement")
 lyon2.latitude ="45.7532826"
 lyon2.longitude ="4.8268726"
 lyon2.save!
-lyon3 = Commune.find_by(name: "Lyon 3e Arrondissement")
+lyon3 = Commune.find_by(name: "lyon 3e arrondissement")
 lyon3.latitude = "45.7600589"
 lyon3.longitude = "4.8495363"
 lyon3.save!
-lyon4 = Commune.find_by(name: "Lyon 4e Arrondissement")
+lyon4 = Commune.find_by(name: "lyon 4e arrondissement")
 lyon4.latitude = "45.774330139160156"
 lyon4.longitude = "4.827831268310547"
 lyon4.save!
-lyon5 = Commune.find_by(name: "Lyon 5e Arrondissement")
+lyon5 = Commune.find_by(name: "lyon 5e arrondissement")
 lyon5.latitude = "45.76359558105469"
 lyon5.longitude = "4.827502727508545"
 lyon5.save!
-lyon6 = Commune.find_by(name: "Lyon 6e Arrondissement")
+lyon6 = Commune.find_by(name: "lyon 6e arrondissement")
 lyon6.latitude = "45.76831817626953"
 lyon6.longitude = "4.849535942077637"
 lyon6.save!
-lyon7 = Commune.find_by(name: "Lyon 7e Arrondissement")
+lyon7 = Commune.find_by(name: "lyon 7e arrondissement")
 lyon7.latitude = "45.746299743652344"
 lyon7.longitude = "4.841841220855713"
 lyon7.save!
-lyon8 = Commune.find_by(name: "Lyon 8e Arrondissement")
+lyon8 = Commune.find_by(name: "lyon 8e arrondissement")
 lyon8.latitude = "45.736366271972656"
 lyon8.longitude = "4.869597911834717"
 lyon8.save!
-lyon9 = Commune.find_by(name: "Lyon 9e Arrondissement")
+lyon9 = Commune.find_by(name: "lyon 9e arrondissement")
 lyon9.latitude = "45.77389144897461"
 lyon9.longitude = "4.805800437927246"
 lyon9.save!
@@ -113,31 +113,30 @@ pharma_created = 0
 filepath = "db/csvDB/pharmacies.csv"
 CSV.foreach(filepath) do |row|
   a = row[0].split(';')
-  p a
   pharma_name = a[0]
   pharma_address = a[1]
   pharma_zip_code = a[2].split[0]
-  name = a[2].split[1..-1].join(' ')
-  p name
+  name = a[2].split[1..-1].join(' ').downcase
   lat = a[3]
   long = a[4]
-  if name != "Lyon"
+  if name != "lyon"
     commune = Commune.find_by(name: name)
   else
-    commune = Commune.find_by(name: "Lyon #{pharma_zip_code[-1]}e Arrondissement")
+    commune = Commune.find_by(name: "lyon #{pharma_zip_code[-1]}e arrondissement")
   end
   if commune != nil
     pharmacie = Pharmacie.new(
       name: pharma_name,
       address: pharma_address,
       zip_code: pharma_zip_code,
-      lattitude: lat,
-      longitude: long,
+      lattitude: lat.to_f,
+      longitude: long.to_f,
       city: name
       )
     pharmacie.commune = commune
+    p pharmacie.name
     pharmacie.save!
-     pharma_created += 1
+    pharma_created += 1
   end
 end
 
@@ -162,6 +161,3 @@ csv.each do |row|
 end
 
 puts "Gares were created"
-
-
-
