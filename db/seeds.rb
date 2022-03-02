@@ -1,18 +1,24 @@
-
 require "csv"
 require 'rgeo/geo_json'
 require 'json'
 
+
 Pharmacie.destroy_all
+Gare.destroy_all
 Commune.destroy_all
 
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR COMMUNES----------------------------
+#-----------------------------------------------------------------------
+
+puts "STARTING SEEDS FOR COMMUNE"
 
 csv_text = File.read(Rails.root.join('db', 'csvDB', 'data_commune.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'UTF-8')
 csv.each do |row|
   puts row.to_hash
   commune = Commune.new
-  commune.name = row['nom_commune']
+  commune.name = row['nom_commune'].downcase
   commune.zipinsee = row['code_commune']
   commune.price = row['carre']
 
@@ -22,7 +28,11 @@ end
 
 puts "SEEDS COMMUNES OK"
 
- coo = 0
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR COORONATES----------------------------
+#-----------------------------------------------------------------------
+coo = 0
+
 file_geo = "db/csvDB/69commune.geojson"
 geo_data = File.read(file_geo)
 geom = RGeo::GeoJSON.decode(geo_data)
@@ -38,8 +48,6 @@ geom.each do |x|
     coo += 1
   end
 end
-
-p "lat & long added"
 
 file_geo = "db/csvDB/adr_voie_lieu.json"
 geo_data = File.read(file_geo)
@@ -95,7 +103,11 @@ lyon9 = Commune.find_by(name: "Lyon 9e Arrondissement")
 lyon9.latitude = "45.77389144897461"
 lyon9.longitude = "4.805800437927246"
 lyon9.save!
-p "END coordinates to Lyon 1 a 9e arrondissement"
+puts "END coordinates to Lyon 1 a 9e arrondissement SAVED"
+
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR PHARMACIES----------------------------
+#-----------------------------------------------------------------------
 
 pharma_created = 0
 filepath = "db/csvDB/pharmacies.csv"
@@ -129,4 +141,27 @@ CSV.foreach(filepath) do |row|
   end
 end
 
-p "#{pharma_created} ont ete crée"
+puts "#{pharma_created} ont ete crée"
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR GARES-------------------------------
+#-----------------------------------------------------------------------
+
+csv_text = File.read(Rails.root.join('db', 'csvDB', 'data_gares_rhone.csv'))
+csv = CSV.parse(csv_text, :headers => true, :col_sep => ";",:encoding => 'UTF-8')
+csv.each do |row|
+  x = row['COMMUNE'].downcase
+  commune = Commune.find_by(name: x)
+  gare = Gare.new
+  if commune
+    gare.commune = commune
+    gare.latitude = row['LATITUDE']
+    gare.longitude = row['LONGITUDE']
+    gare.save!
+    puts "#{gare.latitude}, #{gare.longitude} #{gare.commune.name}---saved"
+  end
+end
+
+puts "Gares were created"
+
+
+
