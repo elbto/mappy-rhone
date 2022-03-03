@@ -1,9 +1,13 @@
 <h1>This is the home page</h1>
 <h3>Display the search bar bellow</h3>
-<div>
-  <%= form_tag communes_path, method: :get do %>
-    nom de la commune <%= text_field_tag :name_query %>
-    prix m^2 <%= text_field_tag :price_query %>
-    <%= submit_tag "Search" %>
+
+<div data-controller="geocoder">
+  <%= form_with url: communes_path, method: :get do |f| %>
+      <%= f.text_field :address,
+                         placeholder: 'Trouve une adresse',
+                         value: params[:address],
+                         id: 'geo-address' %>
+      <%= f.text_field :price_query %>
+      <%= f.submit "Search" %>
   <% end %>
 </div>
