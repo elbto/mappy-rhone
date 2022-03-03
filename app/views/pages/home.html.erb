@@ -1,21 +1,18 @@
-
 <section class="section-hero">
-   <div class="search-form container" data-controller="geocoder">
-    <%= form_with url: communes_path, method: :get do |f| %>
-      <div class="search-input-prim">
-        <%= f.text_field :address,
-                          placeholder: 'Trouve une adresse',
-                          value: params[:address],
-                          id: 'geo-address' %>
-      </div>
-      <div class="search-input">
-        <%= f.text_field :price_query %>
-      </div>
-      <div class="search-input">
-        <%= f.submit "Search" %>
-      </div>
-    <% end %>
-  </div>
+   <div class="search-from container" data-controller="geocoder">
+  <%= form_with url: communes_path, method: :get do |f| %>
+      <%= f.label :address, 'Où est ton bar préféré ?' %>
+      <%= f.text_field :address,
+                         placeholder: 'Trouve une adresse',
+                         value: params[:address],
+                         id: 'geo-address' %>
+      <%= f.label :price, 'Quel budget veux-tu mettre ?' %>
+      <%= f.text_field :price_query %><br/>
+      <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?' %>
+      <%= f.number_field :km %><br/>
+      <%= f.submit "Search" %>
+  <% end %>
+</div>
   <div class="hero container p-4">
     <div class="hero-title text-light">
       <h1>This is the home page</h1>
