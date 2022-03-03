@@ -1,4 +1,5 @@
 <h1>Display map bellow</h1>
+<% if @commune %>
 <%= @commune.name %>
 <%= @commune.latitude %>
 <%= @commune.longitude.class %>
@@ -10,3 +11,11 @@
      data-mapbox-latitude-value="<%= @commune.latitude %>"
      data-mapbox-longitude-value="<%= @commune.longitude %>">
 </div>
+<%end %>
+
+<% if @communes %>
+    <p><%= @communes.length %></p>
+  <% @communes.each do |commune|  %>
+    <%= commune.name %>
+  <%end  %>
+<%end  %>
