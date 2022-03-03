@@ -3,11 +3,15 @@
 
 <div data-controller="geocoder">
   <%= form_with url: communes_path, method: :get do |f| %>
+      <%= f.label :address, 'Où est ton bar préféré ?' %>
       <%= f.text_field :address,
                          placeholder: 'Trouve une adresse',
                          value: params[:address],
                          id: 'geo-address' %>
-      <%= f.text_field :price_query %>
+      <%= f.label :price, 'Quel budget veux-tu mettre ?' %>
+      <%= f.text_field :price_query %><br/>
+      <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?' %>
+      <%= f.number_field :km %><br/>
       <%= f.submit "Search" %>
   <% end %>
 </div>

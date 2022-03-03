@@ -1,9 +1,14 @@
 class CommunesController < ApplicationController
   def index
+
+  end
+
+
   end
 
   def geojson
     @communes = display_comune
+
     json = {
       'type': 'Feature',
       'geometry': {
