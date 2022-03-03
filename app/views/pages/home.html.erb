@@ -1,13 +1,29 @@
-<h1>This is the home page</h1>
-<h3>Display the search bar bellow</h3>
 
-<div data-controller="geocoder">
-  <%= form_with url: communes_path, method: :get do |f| %>
-      <%= f.text_field :address,
-                         placeholder: 'Trouve une adresse',
-                         value: params[:address],
-                         id: 'geo-address' %>
-      <%= f.text_field :price_query %>
-      <%= f.submit "Search" %>
-  <% end %>
-</div>
+<section class="section-hero">
+   <div class="search-form container" data-controller="geocoder">
+    <%= form_with url: communes_path, method: :get do |f| %>
+      <div class="search-input-prim">
+        <%= f.text_field :address,
+                          placeholder: 'Trouve une adresse',
+                          value: params[:address],
+                          id: 'geo-address' %>
+      </div>
+      <div class="search-input">
+        <%= f.text_field :price_query %>
+      </div>
+      <div class="search-input">
+        <%= f.submit "Search" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="hero container p-4">
+    <div class="hero-title text-light">
+      <h1>This is the home page</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut a dolorem ab ex totam, itaque consequatur eveniet magni dolore eligendi!</p>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="image de carte">
+    </div>
+  </div>
+</section>

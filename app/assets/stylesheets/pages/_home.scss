@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.section-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background-color: #2a6f97;
+
+  .hero {
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.6rem;
+    align-items: center;
+
+    .hero-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .hero-title {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}
