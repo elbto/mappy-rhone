@@ -62,6 +62,8 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.4.2.0)
+      execjs (~> 2)
     awesome_print (1.9.2)
     bindex (0.8.1)
     bootsnap (1.10.3)
@@ -81,7 +83,10 @@ GEM
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
+    execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (5.6.1)
+      sassc (>= 1.11)
     geocoder (1.7.3)
     georuby (2.5.2)
     globalid (1.0.0)
@@ -174,6 +179,9 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     spring (4.0.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -216,10 +224,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  autoprefixer-rails
   awesome_print (~> 1.9)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  font-awesome-sass (~> 5.6.1)
   geocoder
   georuby
   jbuilder (~> 2.7)
@@ -232,6 +242,7 @@ DEPENDENCIES
   rgeo-geojson
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   turbolinks (~> 5)
   tzinfo-data
