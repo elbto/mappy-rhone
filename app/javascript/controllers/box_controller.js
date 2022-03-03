@@ -52,7 +52,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log(this.addressValue);
     mapboxgl.accessToken = token
 
     this.map = new mapboxgl.Map({
