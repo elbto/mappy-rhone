@@ -163,7 +163,7 @@ end
 puts "Gares were created"
 
 
-file_ecole = 'DB/csvDB/ecoles.csv'
+file_ecole = 'db/csvDB/ecoles.csv'
 
 cont = 1
 CSV.foreach(file_ecole, headers: :first_row, col_sep: ";") do |row|
