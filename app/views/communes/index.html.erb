@@ -1,7 +1,9 @@
+
 <main>
   <div class="criteres">
     <div>
       <h1>Display map bellow</h1>
+      <% if @commune %>
       <%= @commune.name %>
       <%= @commune.latitude %>
       <%= @commune.longitude.class %>
@@ -16,5 +18,14 @@
      data-mapbox-longitude-value="<%= @commune.longitude %>"
      data-mapbox-address-value="<%= @address %>">
     </div>
+    <%end %>
   </div>
 </main>
+
+<% if @communes %>
+  <div data-controller="box"
+       data-box-target="mapContainer"
+       data-box-price-query-value="<%= params[:price_query] %>"
+       style="width: 1000px; height: 500px;"></div>
+<%end  %>
+
