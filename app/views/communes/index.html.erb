@@ -1,21 +1,21 @@
-<h1>Display map bellow</h1>
-<% if @commune %>
-<%= @commune.name %>
-<%= @commune.latitude %>
-<%= @commune.longitude.class %>
+<main class="flex">
+  <div class="criteres">
+    <div class="content">
+      <h1>Display map bellow</h1>
+        <%= @commune.name %>
+        <%= @commune.latitude %>
+        <%= @commune.longitude.class %>
+    </div>
 
-<div id="map"
-     style="width: 1000px; height: 500px;"
-     data-controller="mapbox"
-     data-mapbox-coordinates-value="<%= @commune.polygon %>"
-     data-mapbox-latitude-value="<%= @commune.latitude %>"
-     data-mapbox-longitude-value="<%= @commune.longitude %>">
-</div>
-<%end %>
+  </div>
+  <div class="mapbox-section">
+    <div class="mapbox" id="map"
+        style="width: 100%; height: 100vh"
+        data-controller="mapbox"
+        data-mapbox-coordinates-value="<%= @commune.polygon %>"
+        data-mapbox-latitude-value="<%= @commune.latitude %>"
+        data-mapbox-longitude-value="<%= @commune.longitude %>">
+    </div>
+  </div>
+</main>
 
-<% if @communes %>
-    <p><%= @communes.length %></p>
-  <% @communes.each do |commune|  %>
-    <%= commune.name %>
-  <%end  %>
-<%end  %>
