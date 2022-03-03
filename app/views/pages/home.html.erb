@@ -1,3 +1,9 @@
 
 <h1>This is the home page</h1>
 <h3>Display the search bar bellow</h3>
+<div>
+  <%= form_tag communes_path, method: :get do %>
+      <%= text_field_tag :query %>
+      <%= submit_tag "Search" %>
+  <% end %>
+</div>

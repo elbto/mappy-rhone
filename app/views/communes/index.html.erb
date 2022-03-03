@@ -1,5 +1,12 @@
 <h1>Display map bellow</h1>
+<%= @commune.name %>
+<%= @commune.latitude %>
+<%= @commune.longitude.class %>
+
 <div id="map"
      style="width: 1000px; height: 500px;"
-     data-controller="mapbox">
+     data-controller="mapbox"
+     data-mapbox-coordinates-value="<%= @commune.polygon %>"
+     data-mapbox-latitude-value="<%= @commune.latitude %>"
+     data-mapbox-longitude-value="<%= @commune.longitude %>">
 </div>
