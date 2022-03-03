@@ -8,6 +8,54 @@ export default class extends Controller {
     address: String,
     distance: Number,
   }
+
+  fetchGeoJson() {
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
+    .then(response => response.json())
+    .then((data) => {
+      const long = data.features[0].center[0];
+      const lat = data.features[0].center[1];
+      new mapboxgl.Marker()
+        .setLngLat([long, lat])
+        .addTo(this.map);
+        fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`)
+          .then(response => response.json())
+          .then(data => {
+            this.geojson = data
+            this.addData()
+          })
+    });
+  }
+  // fetchCenter(){
+  //   fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
+  //   .then(response => response.json())
+  //   .then((data) => {
+  //     const long = data.features[0].center[0];
+  //     const lat = data.features[0].center[1];
+  //     console.log(long)
+  //     console.log(lat)
+  //     new mapboxgl.Marker()
+  //       .setLngLat([long, lat])
+  //       .addTo(this.map);
+  //   });
+  // }
+
+  connect() {
+    console.log(this.addressValue);
+    console.log(this.priceQuery);
+    console.log(this.distanceValue);
+
+    mapboxgl.accessToken = token
+    this.map = new mapboxgl.Map({
+      container: this.mapContainerTarget,
+      style: 'mapbox://styles/mapbox/light-v10',
+      zoom: 9,
+      center: [4.835659, 45.764043],
+    })
+    this.fetchGeoJson()
+    // this.fetchCenter()
+
+  }
   addData() {
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
@@ -37,39 +85,6 @@ export default class extends Controller {
               'line-width': 3
           }
       });
-    });
-  }
-  fetchGeoJson() {
-    fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&distance=${this.distanceValue}`)
-      .then(response => response.json())
-      .then(data => {
-        this.geojson = data
-        this.addData()
-      })
-  }
-  connect() {
-    console.log(this.addressValue);
-    console.log(this.priceQuery);
-    console.log(this.distanceValue);
-
-    mapboxgl.accessToken = token
-    this.map = new mapboxgl.Map({
-      container: this.mapContainerTarget,
-      style: 'mapbox://styles/mapbox/light-v10',
-      zoom: 9,
-      center: [4.835659, 45.764043]
-    })
-    this.fetchGeoJson()
-    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
-    .then(response => response.json())
-    .then((data) => {
-      const long = data.features[0].center[0];
-      const lat = data.features[0].center[1];
-      console.log(long)
-      console.log(lat)
-      new mapboxgl.Marker()
-        .setLngLat([long, lat])
-        .addTo(this.map);
     });
   }
 }

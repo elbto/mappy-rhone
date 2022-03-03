@@ -1,19 +1,15 @@
 class CommunesController < ApplicationController
   def index
-
-  end
-
-
   end
 
   def geojson
     @communes = display_comune
-
+    communes = distance_bet(@communes)
     json = {
       'type': 'Feature',
       'geometry': {
         'type': 'Polygon',
-        'coordinates': coordonnes_display(@communes)
+        'coordinates': coordonnes_display(communes)
       }
     }
     render json: json
@@ -21,10 +17,25 @@ class CommunesController < ApplicationController
 
   private
 
-  def distance_between
-    a = [4.8268726, 45.7532826]
-    center = [4.835659, 45.764043]
-    Geocoder::Calculations.to_kilometers(Geocoder::Calculations.distance_between(center,a))
+  def display_comune
+    @communes = Commune.all
+    @communes = @communes.where('price <= ?', params[:price_query]) if params[:price_query].present?
+  end
+
+  def distance_bet(communes)
+    final_communes = []
+    distance = params[:distance].to_f
+    lat = params[:lat].to_f
+    long = params[:long].to_f
+    center = [long, lat]
+    p distance
+    communes.each do |commune|
+      commune_center = [commune.longitude, commune.latitude]
+      if Geocoder::Calculations.to_kilometers(Geocoder::Calculations.distance_between(center, commune_center)) <= distance
+        final_communes << commune
+      end
+    end
+    final_communes
   end
 
   def coordonnes_display(communes)
@@ -35,10 +46,6 @@ class CommunesController < ApplicationController
     coordonnes
   end
 
-  def display_comune
-    @communes = Commune.all
-    @communes = @communes.where('price <= ?', params[:price_query]) if params[:price_query].present?
-    @communes
-  end
+
 
 end
