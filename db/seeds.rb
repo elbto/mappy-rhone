@@ -7,9 +7,9 @@ Pharmacie.destroy_all
 Gare.destroy_all
 Commune.destroy_all
 
-# #-----------------------------------------------------------------------
-# #-------------------------SEEDS FOR COMMUNES----------------------------
-# #-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR COMMUNES----------------------------
+#-----------------------------------------------------------------------
 
 puts "STARTING SEEDS FOR COMMUNE"
 
@@ -28,9 +28,9 @@ end
 
 puts "SEEDS COMMUNES OK"
 
-# #-----------------------------------------------------------------------
-# #-------------------------SEEDS FOR COORONATES----------------------------
-# #-----------------------------------------------------------------------
+#-----------------------------------------------------------------------
+#-------------------------SEEDS FOR COORONATES----------------------------
+#-----------------------------------------------------------------------
 coo = 0
 
 file_geo = "db/csvDB/69commune.geojson"
@@ -55,6 +55,7 @@ geom = JSON.parse(geo_data)
 geom['features'].each do |x|
   zip = x['properties']["insee"] #la j'ai code insée
   coordonnes = x["geometry"]["coordinates"] #la j'ai coordoné
+  p coordonnes
   commune = Commune.find_by(zipinsee: zip)
   if commune != nil
     commune.polygon = coordonnes
@@ -63,7 +64,7 @@ geom['features'].each do |x|
     coo += 1
   end
 end
-p "#{coo} coordonées ont été ajoutées"
+ p "#{coo} coordonées ont été ajoutées"
 
 p "ADD coordinates to Lyon 1 a 9e arrondissement"
 
