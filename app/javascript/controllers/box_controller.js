@@ -1,15 +1,13 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNrejhpZmQ5aDFqajUyd3J4OG15bnh6Y3AifQ.BF_g1YetHVCKTbtg3PUpyA"
-
-
 export default class extends Controller {
   static targets = ['mapContainer']
   static values = {
     priceQuery: Number,
-    address: String
+    address: String,
+    distance: Number,
   }
-
   addData() {
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
@@ -41,27 +39,25 @@ export default class extends Controller {
       });
     });
   }
-
   fetchGeoJson() {
-    fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}`)
+    fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&distance=${this.distanceValue}`)
       .then(response => response.json())
       .then(data => {
         this.geojson = data
         this.addData()
       })
   }
-
   connect() {
     console.log(this.addressValue);
+    console.log(this.priceQuery);
+    console.log(this.distanceValue);
     mapboxgl.accessToken = token
-
     this.map = new mapboxgl.Map({
       container: this.mapContainerTarget,
       style: 'mapbox://styles/mapbox/light-v10',
       zoom: 9,
       center: [4.835659, 45.764043]
     })
-
     this.fetchGeoJson()
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
     .then(response => response.json())
@@ -70,7 +66,6 @@ export default class extends Controller {
       const lat = data.features[0].center[1];
       console.log(long)
       console.log(lat)
-
       new mapboxgl.Marker()
         .setLngLat([long, lat])
         .addTo(this.map);

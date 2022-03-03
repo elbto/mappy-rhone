@@ -1,17 +1,10 @@
 class CommunesController < ApplicationController
   def index
-    # if params[:address].present?
-    #   @address = params[:address]
-    # else
-    #   @communes = Commune.all
-    # end
-    # if params[:price_query].present?
-    #   @communes = @communes.where("price < ?", params[:price_query])
-    # end
-    @communes = 1
+
   end
 
   def geojson
+    @distance = params[:km]
     @address = params[:address]
     coordonnes = []
     @communes = Commune.all
