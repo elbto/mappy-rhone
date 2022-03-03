@@ -4,6 +4,8 @@
 <%= @commune.latitude %>
 <%= @commune.longitude.class %>
 
+
+
 <div id="map"
      style="width: 1000px; height: 500px;"
      data-controller="mapbox"
@@ -14,8 +16,8 @@
 <%end %>
 
 <% if @communes %>
-    <p><%= @communes.length %></p>
-  <% @communes.each do |commune|  %>
-    <%= commune.name %>
-  <%end  %>
+  <div data-controller="box"
+       data-box-target="mapContainer"
+       data-box-price-query-value="<%= params[:price_query] %>"
+       style="width: 1000px; height: 500px;"></div>
 <%end  %>
