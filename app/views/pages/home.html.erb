@@ -2,7 +2,8 @@
 <h3>Display the search bar bellow</h3>
 <div>
   <%= form_tag communes_path, method: :get do %>
-      <%= text_field_tag :query %>
-      <%= submit_tag "Search" %>
+    nom de la commune <%= text_field_tag :name_query %>
+    prix m^2 <%= text_field_tag :price_query %>
+    <%= submit_tag "Search" %>
   <% end %>
 </div>
