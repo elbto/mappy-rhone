@@ -1,13 +1,10 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
-const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNrejhpZmQ5aDFqajUyd3J4OG15bnh6Y3AifQ.BF_g1YetHVCKTbtg3PUpyA"
-
 
 export default class extends Controller {
   static targets = ['mapContainer']
   static values = {
-    priceQuery: Number,
-    address: String
+    priceQuery: Number
   }
 
   addData() {
@@ -24,7 +21,7 @@ export default class extends Controller {
           'source': 'maine',
           'layout': {},
           'paint': {
-              'fill-color': 'grey',
+              'fill-color': '#0080ff',
               'fill-opacity': 0.5
           }
       });
@@ -43,7 +40,7 @@ export default class extends Controller {
   }
 
   fetchGeoJson() {
-    fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}`)
+    fetch(`/results/geojson?price_query=${this.priceQueryValue}`)
       .then(response => response.json())
       .then(data => {
         this.geojson = data
@@ -52,8 +49,8 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log(this.addressValue);
-    mapboxgl.accessToken = token
+
+    mapboxgl.accessToken = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNrejhpZmQ5aDFqajUyd3J4OG15bnh6Y3AifQ.BF_g1YetHVCKTbtg3PUpyA"
 
     this.map = new mapboxgl.Map({
       container: this.mapContainerTarget,
@@ -63,17 +60,6 @@ export default class extends Controller {
     })
 
     this.fetchGeoJson()
-    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
-    .then(response => response.json())
-    .then((data) => {
-      const long = data.features[0].center[0];
-      const lat = data.features[0].center[1];
-      console.log(long)
-      console.log(lat)
 
-      new mapboxgl.Marker()
-        .setLngLat([long, lat])
-        .addTo(this.map);
-    });
   }
 }
