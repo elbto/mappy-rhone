@@ -1,8 +1,7 @@
 class CommunesController < ApplicationController
   def index
-    if params[:name_query].present?
-      @commune = Commune.find_by(name: params[:name_query])
-      @gares = @commune.gares
+    if params[:address].present?
+      @address = params[:address]
     else
       @communes = Commune.all
     end

@@ -60,3 +60,6 @@ gem 'georuby'
 gem 'json_pure'
 
 gem "awesome_print", "~> 1.9"
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'

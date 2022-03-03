@@ -5,17 +5,12 @@ const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNrejhpZmQ5aDFqajUyd3J4OG15bnh6Y3AifQ
 
 export default class extends Controller {
   static values = {
-    coordinates: Array,
-    latitude: Number,
-    longitude: Number
+    address: String
   }
 
   connect() {
-    console.log(this.coordinatesValue)
-    console.log(this)
-    console.log(this.latitudeValue)
-    console.log(this.longitudeValue)
-    window.aaa = this
+    console.log(this.addressValue)
+
     mapboxgl.accessToken = token
 
     this.map = new mapboxgl.Map({
@@ -25,8 +20,18 @@ export default class extends Controller {
       center: [4.835659, 45.764043]
     })
 
-    new mapboxgl.Marker()
-      .setLngLat([this.longitudeValue, this.latitudeValue])
-      .addTo(this.map);
+    fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
+      .then(response => response.json())
+      .then((data) => {
+        const long = data.features[0].center[0];
+        const lat = data.features[0].center[1];
+        console.log(long)
+        console.log(lat)
+
+        new mapboxgl.Marker()
+          .setLngLat([long, lat])
+          .addTo(this.map);
+      });
+
   }
 }
