@@ -1,56 +1,29 @@
 // Place all the styles related to the communes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.grid {
-  display: grid;
-  column-gap: 6.4rem;
-  row-gap: 9.6rem;
 
-  /* margin-bottom: 9.6rem; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* .grid:last-child {
-  margin-bottom: 0;
-} */
-
-.flex {
+main {
   display: flex;
-  gap: 2rem;
+
+  .mapbox-section {
+    flex: 1;
+    #map {
+      height: 100vh;
+    }
+  }
+
+  .criteres {
+    height: 100vh;
+    width: 15vw;
+    background-color: lightblue;
+    padding: 0 2.4rem;
+  }
 }
 
-.mapbox {
-  flex-grow: 2;
-}
-.grid:not(:last-child) {
-  margin-bottom: 9.6rem;
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--2-cols-map {
-  grid-template-columns: 1fr 3fr;
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* .grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
-} */
-
-.grid--center-v {
-  align-items: center;
-}
 // ---------------------------------------------------------------
-
-.criteres {
-  grid-auto-columns: 50vmax;
-  background-color: green;
-}

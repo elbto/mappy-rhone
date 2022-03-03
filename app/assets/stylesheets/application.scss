@@ -1,3 +1,6 @@
 @import "mapbox-gl/dist/mapbox-gl";
-@import "pages.scss";
-@import "communes.scss";
+@import "bootstrap/scss/bootstrap";
+
+@import "pages";
+@import "communes";
+@import "components/navbar";
