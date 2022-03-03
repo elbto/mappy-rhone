@@ -51,6 +51,7 @@ export default class extends Controller {
     console.log(this.addressValue);
     console.log(this.priceQuery);
     console.log(this.distanceValue);
+
     mapboxgl.accessToken = token
     this.map = new mapboxgl.Map({
       container: this.mapContainerTarget,
