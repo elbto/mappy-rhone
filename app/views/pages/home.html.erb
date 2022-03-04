@@ -1,26 +1,35 @@
 <section class="section-hero">
-   <div class="search-from container" data-controller="geocoder">
-  <%= form_with url: communes_path, method: :get do |f| %>
-      <%= f.label :address, 'Où est ton bar préféré ?' %>
-      <%= f.text_field :address,
-                         placeholder: 'Trouve une adresse',
-                         value: params[:address],
-                         id: 'geo-address' %>
-      <%= f.label :price, 'Quel budget veux-tu mettre ?' %>
-      <%= f.text_field :price_query %><br/>
-      <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?' %>
-      <%= f.number_field :km %><br/>
-      <%= f.submit "Search" %>
-  <% end %>
-</div>
+
   <div class="hero container p-4">
     <div class="hero-title text-light">
       <h1>This is the home page</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut a dolorem ab ex totam, itaque consequatur eveniet magni dolore eligendi!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti deleniti amet doloribus aut nulla numquam dicta veniam magni sint omnis in eius, earum, velit tempore ullam hic dolor animi architecto?</p>
     </div>
 
     <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="image de carte">
+      <div class="search-form container card" style="width:600px" data-controller="geocoder">
+        <div class="card-body from-group p-4">
+          <%= form_with url: communes_path, method: :get do |f| %>
+           <div class="label my-3">
+              <%= f.label :address, 'Où est ton bar préféré ?', class: "p-2" %>
+              <%= f.text_field :address,
+                                placeholder: 'Trouve une adresse',
+                                value: params[:address],
+                                id: 'geo-address',
+                                class:"form-control p-3" %>
+           </div>
+           <div class="label my-3">
+              <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
+              <%= f.text_field :price_query, class:"form-control " %>
+           </div>
+           <div class="label my-3"">
+              <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
+              <%= f.range_field :km, in: 0..20 ,class:"form-range p-3", min:"0", max:"50", step:"2" %>
+           </div>
+            <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </section>
