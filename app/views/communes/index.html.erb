@@ -1,3 +1,24 @@
+<%
+  legends = [
+    {
+      color: '#05361A',
+      label: 'Un peu au dessus du budget',
+      description: 'Frère, il va falloir négocier'
+    },
+    {
+      color: '#096A32',
+      label: 'Dans le budget',
+      description: 'C\'est bueno, tu peux y aller gros !'
+    },
+    {
+      color: '#5B8A73',
+      label: 'En dessous du budget',
+      description: 'C\'est cheap mon gars, fonce !'
+    }
+  ]
+%>
+
+
 <main>
   <div class="criteres">
     <div>
@@ -18,7 +39,7 @@
               <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
               <%= f.text_field :price_query, class:"form-control " %>
            </div>
-           <div class="label my-3"">
+           <div class="label my-3">
               <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
               <%= f.range_field :km, in: 0..20 ,class:"form-range p-3", min:"0", max:"50", step:"2" %>
            </div>
@@ -27,6 +48,23 @@
         </div>
       </div>
     </div>
+
+    <div class="search-form container card mt-4" style="width:400px">
+      <div class="legend" style="padding: 1em; display: grid;  grid-template-columns: 60px auto;
+    align-items: center;    row-gap: 12px;">
+
+          <% legends.each do |legend| %>
+            <div style="background: <%= legend[:color] %>; width: 40px; height: 20px; "></div>
+            <div>
+              <p style="padding: 0; margin: 0; font-weight: bold;"><%= legend[:label] %></p>
+              <p style="padding: 0; margin: 0; font-size: 0.8em;
+    color: #5c5c5c;"><%= legend[:description] %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
     </div>
   </div>
   <div class="mapbox-section">
