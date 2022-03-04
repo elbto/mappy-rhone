@@ -81,7 +81,7 @@ export default class extends Controller {
         console.log(e.features[0])
         new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML(e.features[0].properties.com_name, e.features[0].properties.price)
+        .setHTML(e.features[0].properties.description, e.features[0].properties.price)
         .addTo(this.map);
       });
 

@@ -16,9 +16,8 @@ class CommunesController < ApplicationController
           'coordinates': commune.polygon
         },
         'properties': {
-          'com_name': commune.name,
-          'color': color_get(commune),
-          'price': commune.price
+          'description': "<strong>#{commune.name.capitalize}</strong> <div> 💰 : #{commune.price.to_i} € m² </div> <div> 🏥 : #{commune.pharmacies.count} </div> <div>🚉 : #{commune.gares.count}</div> <div> 🏫 : #{commune.ecoles.count}</div>",
+          'color': color_get(commune)
         }
       }
     end
@@ -72,9 +71,9 @@ class CommunesController < ApplicationController
     if price / max_price >= 0.98
       return '#05361a'
     elsif price / max_price <= 0.88
-      return '#096a32'
-    else
       return '#5b8a73'
+    else
+      return '#096a32'
     end
   end
 end
