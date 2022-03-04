@@ -21,7 +21,7 @@ export default class extends Controller {
       this.map = new mapboxgl.Map({
         container: this.mapContainerTarget,
         style: 'mapbox://styles/mapbox/light-v10',
-        zoom: 11,
+        zoom: 10,
         center: [long, lat], // center based on typed address
       })
 
@@ -62,7 +62,7 @@ export default class extends Controller {
           'layout': {},
           'paint': {
               'fill-color': ['get', 'color'],
-              'fill-opacity': 0.5
+              'fill-opacity': 0.7
           }
       });
       // Add a black outline around the polygon.
