@@ -62,7 +62,7 @@ export default class extends Controller {
           'layout': {},
           'paint': {
               'fill-color': ['get', 'color'],
-              'fill-opacity': 0.7
+              'fill-opacity': 0.8
           }
       });
       // Add a black outline around the polygon.
@@ -81,7 +81,7 @@ export default class extends Controller {
         console.log(e.features[0])
         new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML(e.features[0].properties.com_name)
+        .setHTML(e.features[0].properties.com_name, e.features[0].properties.price)
         .addTo(this.map);
       });
 

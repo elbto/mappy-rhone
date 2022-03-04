@@ -69,12 +69,12 @@ class CommunesController < ApplicationController
     p max_price
     price = commune.price
     p price
-    if price/max_price >= 0.98
-      return '#1D2D50'
-    elsif price/max_price <= 0.88
-      return '#1E5F74'
+    if price / max_price >= 0.98
+      return '#05361a'
+    elsif price / max_price <= 0.88
+      return '#096a32'
     else
-      return '#133B5C'
+      return '#5b8a73'
     end
   end
 end
