@@ -36,7 +36,7 @@ class CommunesController < ApplicationController
 
   def display_commune
     @communes = Commune.all
-    max_price = params[:price_query].to_f * 1.05
+    max_price = params[:price_query].to_f * 1.10
     @communes = @communes.where('price <= ?', max_price) if params[:price_query].present?
     return @communes
   end
@@ -65,13 +65,13 @@ class CommunesController < ApplicationController
   end
 
   def color_get(commune)
-    max_price = params[:price_query].to_f * 1.05
+    max_price = params[:price_query].to_f * 1.10
     p max_price
     price = commune.price
     p price
-    if price / max_price >= 0.95
+    if price / max_price >= 0.98
       return '#05361a'
-    elsif price / max_price <= 0.85
+    elsif price / max_price <= 0.88
       return '#096a32'
     else
       return '#5b8a73'
