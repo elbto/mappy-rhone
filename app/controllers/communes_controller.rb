@@ -28,7 +28,6 @@ class CommunesController < ApplicationController
     lat = params[:lat].to_f
     long = params[:long].to_f
     center = [long, lat]
-    p distance
     communes.each do |commune|
       commune_center = [commune.longitude, commune.latitude]
       if Geocoder::Calculations.to_kilometers(Geocoder::Calculations.distance_between(center, commune_center)) <= distance
@@ -45,7 +44,4 @@ class CommunesController < ApplicationController
     end
     coordonnes
   end
-
-
-
 end
