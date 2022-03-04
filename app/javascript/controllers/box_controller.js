@@ -15,13 +15,15 @@ export default class extends Controller {
     .then((data) => {
       const long = data.features[0].center[0];
       const lat = data.features[0].center[1];
+      console.log(long);
+      console.log(lat);
 
       // creating the map in the dom
       mapboxgl.accessToken = token
       this.map = new mapboxgl.Map({
         container: this.mapContainerTarget,
         style: 'mapbox://styles/mapbox/light-v10',
-        zoom: 9,
+        zoom: 11,
         center: [long, lat], // center based on typed address
       })
 
@@ -41,6 +43,7 @@ export default class extends Controller {
 
 
   connect() {
+    console.log(this.addressValue);
     this.fetchGeoJson()
   }
 
@@ -60,7 +63,7 @@ export default class extends Controller {
           'source': 'maine',
           'layout': {},
           'paint': {
-              'fill-color': 'grey',
+              'fill-color': '',
               'fill-opacity': 0.5
           }
       });
@@ -72,7 +75,7 @@ export default class extends Controller {
           'layout': {},
           'paint': {
               'line-color': '#000',
-              'line-width': 3
+              'line-width': 1
           }
       });
     });
