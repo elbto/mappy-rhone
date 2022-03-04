@@ -64,7 +64,7 @@ export default class extends Controller {
           'source': 'maine',
           'layout': {},
           'paint': {
-              'fill-color': '',
+              'fill-color': 'red',
               'fill-opacity': 0.5
           }
       });
