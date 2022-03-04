@@ -31,25 +31,26 @@ export default class extends Controller {
       new mapboxgl.Marker()
         .setLngLat([long, lat])
         .addTo(this.map);
+
         // Fetch the coordonnes with the conditions and display them on the index
-        fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`)
-          .then(response => response.json())
-          .then(data => {
-            this.geojson = data
-            this.addData()
-          })
+      fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          this.geojson = data
+          this.addData()
+        })
     });
   }
-
 
   connect() {
     console.log(this.addressValue);
     this.fetchGeoJson()
   }
 
-
-
   addData() {
+    console.log("je suis dans add data")
+    console.log(this.geojson)
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
       this.map.addSource('maine', {
@@ -78,6 +79,22 @@ export default class extends Controller {
               'line-width': 1
           }
       });
+
+      this.map.on('click', 'maine', (e) => {
+        console.log(e.features[0])
+        new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(e.features[0].properties.com_name)
+        .addTo(this.map);
+      });
+
+        this.map.on('mouseenter', 'maine', () => {
+          this.map.getCanvas().style.cursor = 'pointer';
+        });
+
+        this.map.on('mouseleave', 'maine', () => {
+          this.map.getCanvas().style.cursor = '';
+        });
     });
   }
 }
