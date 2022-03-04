@@ -15,9 +15,21 @@ export default class extends Controller {
     .then((data) => {
       const long = data.features[0].center[0];
       const lat = data.features[0].center[1];
+
+      // creating the map in the dom
+      mapboxgl.accessToken = token
+      this.map = new mapboxgl.Map({
+        container: this.mapContainerTarget,
+        style: 'mapbox://styles/mapbox/light-v10',
+        zoom: 9,
+        center: [long, lat], // center based on typed address
+      })
+
+      // adding the markers on the map
       new mapboxgl.Marker()
         .setLngLat([long, lat])
         .addTo(this.map);
+        // Fetch the coordonnes with the conditions and display them on the index
         fetch(`/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`)
           .then(response => response.json())
           .then(data => {
@@ -26,36 +38,14 @@ export default class extends Controller {
           })
     });
   }
-  // fetchCenter(){
-  //   fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`)
-  //   .then(response => response.json())
-  //   .then((data) => {
-  //     const long = data.features[0].center[0];
-  //     const lat = data.features[0].center[1];
-  //     console.log(long)
-  //     console.log(lat)
-  //     new mapboxgl.Marker()
-  //       .setLngLat([long, lat])
-  //       .addTo(this.map);
-  //   });
-  // }
+
 
   connect() {
-    console.log(this.addressValue);
-    console.log(this.priceQuery);
-    console.log(this.distanceValue);
-
-    mapboxgl.accessToken = token
-    this.map = new mapboxgl.Map({
-      container: this.mapContainerTarget,
-      style: 'mapbox://styles/mapbox/light-v10',
-      zoom: 9,
-      center: [4.835659, 45.764043],
-    })
     this.fetchGeoJson()
-    // this.fetchCenter()
-
   }
+
+
+
   addData() {
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
