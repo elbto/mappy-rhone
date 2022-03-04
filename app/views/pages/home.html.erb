@@ -7,10 +7,10 @@
     </div>
 
     <div class="hero-image">
-      <div class="search-form container card" style="width:600px" data-controller="geocoder">
+      <div class="search-form container card" style="width:600px">
         <div class="card-body from-group p-4">
           <%= form_with url: communes_path, method: :get do |f| %>
-           <div class="label my-3">
+           <div class="label my-3" data-controller="geocoder">
               <%= f.label :address, 'Où est ton bar préféré ?', class: "p-2" %>
               <%= f.text_field :address,
                                 placeholder: 'Trouve une adresse',
