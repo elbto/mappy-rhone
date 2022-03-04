@@ -15,8 +15,6 @@ export default class extends Controller {
     .then((data) => {
       const long = data.features[0].center[0];
       const lat = data.features[0].center[1];
-      console.log(long);
-      console.log(lat);
 
       // creating the map in the dom
       mapboxgl.accessToken = token
@@ -49,7 +47,6 @@ export default class extends Controller {
   }
 
   addData() {
-    console.log("je suis dans add data")
     console.log(this.geojson)
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
@@ -64,7 +61,7 @@ export default class extends Controller {
           'source': 'maine',
           'layout': {},
           'paint': {
-              'fill-color': '',
+              'fill-color': ['get', 'color'],
               'fill-opacity': 0.5
           }
       });

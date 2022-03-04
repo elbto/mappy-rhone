@@ -5,6 +5,9 @@ class CommunesController < ApplicationController
   def geojson
     communes = display_commune
     @communes = distance_bet(communes)
+    # @communes.each do |commune|
+    #   color_get(commune)
+    # end
     features = @communes.map do |commune|
       {
         'type': 'Feature',
@@ -13,7 +16,9 @@ class CommunesController < ApplicationController
           'coordinates': commune.polygon
         },
         'properties': {
-          'com_name': commune.name
+          'com_name': commune.name,
+          'color': color_get(commune),
+          'price': commune.price
         }
       }
     end
@@ -24,13 +29,16 @@ class CommunesController < ApplicationController
     }
 
     render json: json
+
   end
 
   private
 
   def display_commune
     @communes = Commune.all
-    @communes = @communes.where('price <= ?', params[:price_query]) if params[:price_query].present?
+    max_price = params[:price_query].to_f * 1.05
+    @communes = @communes.where('price <= ?', max_price) if params[:price_query].present?
+    return @communes
   end
 
   def distance_bet(communes)
@@ -54,5 +62,19 @@ class CommunesController < ApplicationController
       coordonnes << commune.polygon[0]
     end
     coordonnes
+  end
+
+  def color_get(commune)
+    max_price = params[:price_query].to_f * 1.05
+    p max_price
+    price = commune.price
+    p price
+    if price/max_price >= 0.95
+      return '#219F94'
+    elsif price/max_price <= 0.85
+      return '#C1DEAE'
+    else
+      return '#F2F5C8'
+    end
   end
 end
