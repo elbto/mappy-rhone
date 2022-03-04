@@ -3,21 +3,32 @@ class CommunesController < ApplicationController
   end
 
   def geojson
-    @communes = display_comune
-    communes = distance_bet(@communes)
-    json = {
-      'type': 'Feature',
-      'geometry': {
-        'type': 'Polygon',
-        'coordinates': coordonnes_display(communes)
+    communes = display_commune
+    @communes = distance_bet(communes)
+    features = @communes.map do |commune|
+      {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'Polygon',
+          'coordinates': commune.polygon
+        },
+        'properties': {
+          'com_name': commune.name
+        }
       }
+    end
+
+    json = {
+      "type": "FeatureCollection",
+      "features": features
     }
+
     render json: json
   end
 
   private
 
-  def display_comune
+  def display_commune
     @communes = Commune.all
     @communes = @communes.where('price <= ?', params[:price_query]) if params[:price_query].present?
   end
