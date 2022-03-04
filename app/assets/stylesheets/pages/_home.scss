@@ -1,29 +1,48 @@
 // Specific CSS for your home-page
-.section-hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  background-color: #2a6f97;
 
-  .hero {
-    padding: 0 3.2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5.6rem;
-    align-items: center;
+body {
+  background: no-repeat
+      linear-gradient(
+        to bottom,
+        rgba(129, 119, 120, 0.596),
+        rgba(97, 90, 91, 0.856)
+      ),
+    url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+      center center/cover;
 
-    .hero-image {
-      img {
-        width: 100%;
+  .section-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    .hero {
+      padding: 0 3.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5.6rem;
+      align-items: center;
+
+      .hero-image {
+        img {
+          width: 100%;
+        }
+      }
+
+      .hero-title {
+        h1 {
+          font-size: 56px;
+          margin-bottom: 6rem;
+        }
+
+        p {
+          font-size: 24px;
+        }
       }
     }
 
-    .hero-title {
-      h1 {
-        font-size: 48px;
-      }
+    .search-form {
     }
   }
 }
