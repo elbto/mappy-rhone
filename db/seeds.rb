@@ -3,7 +3,7 @@ require 'rgeo/geo_json'
 require 'json'
 
 Ecole.destroy_all
-Pharmacie.destroy_all
+Pharmacy.destroy_all
 Gare.destroy_all
 Commune.destroy_all
 
@@ -127,7 +127,7 @@ CSV.foreach(filepath) do |row|
     commune = Commune.find_by(name: "lyon #{pharma_zip_code[-1]}e arrondissement")
   end
   if commune != nil
-    pharmacie = Pharmacie.new(
+    pharmacie = Pharmacy.new(
       name: pharma_name,
       address: pharma_address,
       zip_code: pharma_zip_code,
