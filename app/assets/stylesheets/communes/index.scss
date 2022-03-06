@@ -1,18 +1,22 @@
 main {
-  display: flex;
+  position: relative;
 
   .mapbox-section {
-    flex: 1;
+    display: flex;
+
     #map {
+      width: 100%;
       height: 100vh;
+    }
+
+    .criteres {
+      position: absolute;
+      height: 100vh;
+      width: 30vw;
+      background-color: lightblue;
+      padding: 0 2.4rem;
     }
   }
 
-  .criteres {
-    height: 100vh;
-    width: 30vw;
-    background-color: lightblue;
-    padding: 0 2.4rem;
-  }
 
 }
