@@ -5,9 +5,6 @@ class CommunesController < ApplicationController
   def geojson
     communes = display_commune
     @communes = distance_bet(communes)
-    # @communes.each do |commune|
-    #   color_get(commune)
-    # end
     features = @communes.map do |commune|
       {
         'type': 'Feature',
@@ -28,7 +25,6 @@ class CommunesController < ApplicationController
     }
 
     render json: json
-
   end
 
   private
@@ -69,11 +65,11 @@ class CommunesController < ApplicationController
     price = commune.price
     p price
     if price / max_price >= 0.98
-      return '#05361a'
+      return '#084594'
     elsif price / max_price <= 0.88
-      return '#5b8a73'
+      return '#008E89'
     else
-      return '#096a32'
+      return '#FFB344'
     end
   end
 end

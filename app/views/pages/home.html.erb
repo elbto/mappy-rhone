@@ -11,7 +11,7 @@
         <div class="card-body from-group p-4">
           <%= form_with url: communes_path, method: :get do |f| %>
            <div class="label my-3" data-controller="geocoder">
-              <%= f.label :address, 'Où est ton bar préféré ?', class: "p-2" %>
+              <%= f.label :address, "Quelle est l'adresse de ton lieu de travail ?", class: "p-2" %>
               <%= f.text_field :address,
                                 placeholder: 'Trouve une adresse',
                                 value: params[:address],
@@ -25,15 +25,15 @@
            <div class="label my-3" data-controller="slider">
               <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
               <div class="d-flex">
-                <%= f.range_field :km, in: 0..20 ,class:"form-range p-3", min:"0", max:"20", step:"1",
+                <%= f.range_field :km, in: 0..30 ,class:"form-range p-3", min:"0", max:"30", step:"2",
                 data: {target: "slider.cursor",
                       action: "change->slider#slide"}
                 %>
-                <span class="text-secondary" data-slider-target="range">10</span>
+                <span class="text-secondary" data-slider-target="range">15</span>
               </div>
 
            </div>
-            <%= f.submit "Search", class:"btn btn-success w-100 mt-4" %>
+            <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
           <% end %>
         </div>
       </div>
