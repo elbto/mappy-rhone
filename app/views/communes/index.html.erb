@@ -39,9 +39,14 @@
               <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
               <%= f.text_field :price_query, class:"form-control " %>
            </div>
-           <div class="label my-3">
+           <div class="label my-3 data-controller="slider"">
               <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
-              <%= f.range_field :km, in: 0..20 ,class:"form-range p-3", min:"0", max:"50", step:"2" %>
+              <div class="d-flex">
+                <%= f.range_field :km, in: 0..20 ,class:"form-range p-3", min:"0", max:"20", step:"1",
+                data: {target: "slider.cursor",
+                      action: "change->slider#slide"}
+                %>
+                <span class="text-secondary" data-slider-target="range">10</span>
            </div>
             <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
           <% end %>
