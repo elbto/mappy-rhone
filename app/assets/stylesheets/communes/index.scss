@@ -9,14 +9,27 @@ main {
       height: 100vh;
     }
 
-    .criteres {
+    .card-criteres {
       position: absolute;
       height: 100vh;
       width: 30vw;
       background-color: lightblue;
       padding: 0 2.4rem;
     }
+
+    .legend {
+      position: absolute;
+      flex-direction: row;
+      padding: 1em;
+      display: grid;
+      grid-template-columns: 60px auto;
+      align-items: center;
+      row-gap: 12px;
+    }
   }
 
+  .color-light {
+    color: #5B8A73;
+  }
 
 }
