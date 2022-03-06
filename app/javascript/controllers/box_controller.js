@@ -42,12 +42,12 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log(this.addressValue);
+    // console.log(this.addressValue);
     this.fetchGeoJson()
   }
 
   addData() {
-    console.log(this.geojson)
+    // console.log(this.geojson)
     this.map.on('load', () => {
       // Add a data source containing GeoJSON data.
       this.map.addSource('maine', {
@@ -73,25 +73,35 @@ export default class extends Controller {
           'layout': {},
           'paint': {
               'line-color': '#000',
-              'line-width': 1
+              'line-width': 0.5
           }
       });
 
-      this.map.on('click', 'maine', (e) => {
-        console.log(e.features[0])
-        new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(e.features[0].properties.description, e.features[0].properties.price)
-        .addTo(this.map);
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
       });
 
-        this.map.on('mouseenter', 'maine', () => {
-          this.map.getCanvas().style.cursor = 'pointer';
-        });
+      this.map.on('mousemove', 'maine', (e) => {
+        this.map.getCanvas().style.cursor = 'pointer';
 
-        this.map.on('mouseleave', 'maine', () => {
-          this.map.getCanvas().style.cursor = '';
-        });
+        const coordinates = e.features[0].geometry.coordinates;
+
+        while (Math.abs(e.lngLat.lng - coordinates) > 180) {
+          coordinates += e.lngLat.lng > coordinates ? 360 : -360;
+        }
+
+        popup
+        .setLngLat(e.lngLat)
+        .setHTML(e.features[0].properties.description)
+        .addTo(this.map);
+
+      });
+
+      this.map.on('mouseleave', 'maine', () => {
+        this.map.getCanvas().style.cursor = '';
+        popup.remove();
+      });
     });
   }
 }
