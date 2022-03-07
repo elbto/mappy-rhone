@@ -17,7 +17,6 @@
     }
   ]
 %>
-
 <main>
   <div class="mapbox-section">
     <div class="mapbox" id="map"
@@ -40,16 +39,21 @@
                                   id: 'geo-address',
                                   class:"form-control p-3" %>
               </div>
-              <div class="label my-3">
-                <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
-                <%= f.text_field :price_query, class:"form-control " %>
-              </div>
+           <div class="label my-3" data-controller="price">
+              <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
+              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre", action: "keyup->price#calcul"}, value: params[:metre_query]%>
+              <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
+              <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"}, value: params[:budget_query] %>
+              <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
+              <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  }, value: params[:price_query] %>
+           </div>
               <div class="label my-3" data-controller="slider">
                 <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
                 <div class="d-flex">
                   <%= f.range_field :km, in: 0..30 ,class:"form-range p-3", min:"0", max:"30", step:"2",
                   data: {target: "slider.cursor",
-                        action: "change->slider#slide"}
+                        action: "change->slider#slide"},
+                  value: params[:km]
                   %>
                   <span class="text-secondary" data-slider-target="range"></span>
                 </div>
