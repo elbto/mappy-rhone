@@ -1,22 +1,21 @@
 // Specific CSS for your home-page
 
 body {
-  background: no-repeat
-      linear-gradient(
-        to bottom,
-        rgba(50, 82, 98, 0.596),
-        rgba(59, 80, 93, 0.856)
-      ),
-    url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-      center center/cover;
-
   .section-hero {
-    // height: calc(100vh - 66px);
-    height: 100vh;
+    height: calc(100vh - 66px);
+    // comment
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    background: no-repeat
+        linear-gradient(
+          to bottom,
+          rgba(50, 82, 98, 0.596),
+          rgba(59, 80, 93, 0.856)
+        ),
+      url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+        center center/cover;
 
     .hero {
       padding: 0 3.2rem;
