@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :communes, only: [:index], path: '/results' do
     get :geojson, on: :collection
   end
+
+  resources :gares, only: [:index]
+
 end

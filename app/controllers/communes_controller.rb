@@ -1,5 +1,12 @@
 class CommunesController < ApplicationController
   def index
+    @gares = Gare.all
+    @gare_markers = @gares.map do |gare|
+      {
+        lat: gare.latitude,
+        lng: gare.longitude
+      }
+    end
   end
 
   def geojson
@@ -22,6 +29,7 @@ class CommunesController < ApplicationController
         }
       }
     end
+
 
     json = {
       "type": "FeatureCollection",

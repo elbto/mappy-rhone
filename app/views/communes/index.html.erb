@@ -18,13 +18,14 @@
   ]
 %>
 <main>
-  <div class="mapbox-section">
-    <div class="mapbox" id="map"
-         data-controller="box"
-         data-box-target="mapContainer"
-         data-box-price-query-value="<%= params[:price_query] %>"
-         data-box-distance-value="<%= params[:km] %>"
-         data-box-address-value="<%= params[:address] %>">
+  <div class="mapbox-section"
+        data-controller="box"
+        data-box-price-query-value="<%= params[:price_query] %>"
+        data-box-distance-value="<%= params[:km] %>"
+        data-box-address-value="<%= params[:address] %>"
+        data-box-gare-active-value="<%= false %>"
+        data-box-gare-marker-value="<%= @gare_markers.to_json %>">
+    <div class="mapbox" id="map" data-box-target="mapContainer" >
     </div>
     <div class="card-criteres">
       <div class="search-form" data-controller="geocoder">
@@ -63,12 +64,19 @@
       </div>
     </div>
 
-    <div class="card-filter">
+    <div class="card-filter" >
       <p>this is the card filter</p>
         <%= form_with do |f| %>
-          <div class="form-check form-switch" data-controller="box">
-            <%= f.label :gare, "Gare", class: "form-check-label" %>
-            <%= f.check_box :gare, {class: "form-check-input"}, false, true %>
+          <div class="form-check form-switch" >
+            <%= f.label :gare, "Gare",for: "toggler", class: "form-check-label" %>
+            <%= f.check_box :gare, {
+                                    id: 'toggler',
+                                    class: "form-check-input",
+                                    checked: false,
+                                    data: {
+                                        action: "click->box#toggleGares"
+                                      }
+                                    }, '0' %>
           </div>
         <% end %>
     </div>

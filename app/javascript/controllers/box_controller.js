@@ -3,17 +3,20 @@ import mapboxgl from "mapbox-gl"
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
 
 export default class extends Controller {
-  static targets = ["mapContainer", "gare"];
+  static targets = ["mapContainer"];
   static values = {
     priceQuery: Number,
     address: String,
     distance: Number,
+    gareMarker: Array,
+    gareActive: Boolean
   };
 
   fetchGeoJson() {
+    console.log(this.addressValue)
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`
-    )
+      )
       .then((response) => response.json())
       .then((data) => {
         const long = data.features[0].center[0];
@@ -28,32 +31,54 @@ export default class extends Controller {
           center: [long, lat], // center based on typed address
         });
 
-        // adding the markers on the map
+        // adding the center on the map
         new mapboxgl.Marker().setLngLat([long, lat]).addTo(this.map);
 
-        // Fetch the coordonnes with the conditions and display them on the index
-        fetch(
-          `/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-            this.geojson = data;
-            this.addData();
-          });
+        this.fetchPolygons(long, lat)
+      });
+    }
+
+
+    fetchPolygons(long, lat) {
+    // Fetch the coordonnes with the conditions and display them on the index
+    fetch(
+      `/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        this.geojson = data;
+        this.addData();
       });
   }
 
   connect() {
-    // console.log(this.addressValue);
     this.fetchGeoJson();
-    console.log(this.gareTarget)
+  }
+
+  toggleGares() {
+    this.gareActiveValue = !this.gareActiveValue
+    if (this.gareActiveValue) {
+      this.addGares()
+    } else {
+      this.currentMarkers.forEach(marker => {
+        marker.remove()
+      });
+    }
+  }
+
+  addGares() {
+    this.currentMarkers = []
+
+    this.gareMarkerValue.forEach(gare => {
+      let gareMarker = new mapboxgl.Marker()
+      .setLngLat([ gare.lng, gare.lat ])
+      .addTo(this.map)
+      this.currentMarkers.push(gareMarker)
+    });
   }
 
   addData() {
-    // console.log(this.geojson)
     this.map.on("load", () => {
-      // Add a data source containing GeoJSON data.
       this.map.addSource("maine", {
         type: "geojson",
         data: this.geojson,
@@ -69,7 +94,7 @@ export default class extends Controller {
           "fill-opacity": 0.8,
         },
       });
-      // Add a black outline around the polygon.
+
       this.map.addLayer({
         id: "outline",
         type: "line",
