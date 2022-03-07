@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
-const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNrejhpZmQ5aDFqajUyd3J4OG15bnh6Y3AifQ.BF_g1YetHVCKTbtg3PUpyA"
+const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
 export default class extends Controller {
   static targets = ['mapContainer']
   static values = {
