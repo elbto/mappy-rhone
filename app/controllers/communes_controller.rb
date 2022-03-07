@@ -67,9 +67,9 @@ class CommunesController < ApplicationController
     if price / max_price >= 0.98
       return '#084594'
     elsif price / max_price <= 0.88
-      return '#008E89'
-    else
       return '#FFB344'
+    else
+      return '#008E89'
     end
   end
 end
