@@ -6,13 +6,17 @@ main {
 
     #map {
       width: 100%;
-      height: 100vh;
+      height: calc(100vh - 66px);
     }
 
     .card-criteres {
       position: absolute;
+<<<<<<< HEAD
       background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+=======
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+>>>>>>> 157a92784835c2b5f75ff495d03743d827d70cf9
       border-radius: 4px;
       width: 400px;
       padding: 1.5rem;
@@ -34,7 +38,7 @@ main {
     .card-legend {
       position: absolute;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
       flex-direction: row;
       padding: 1em;
@@ -64,7 +68,6 @@ main {
   }
 
   .color-light {
-    color: #5B8A73;
+    color: #5b8a73;
   }
-
 }

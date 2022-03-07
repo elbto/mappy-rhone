@@ -1,11 +1,24 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(246, 243, 243);
+  background: #15616d;
 
   a {
     text-decoration: none;
-    color: #5b8a73;
+    color: #f4f1de !important;
     font-weight: bold;
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #fca311;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
   }
 }
 
