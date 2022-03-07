@@ -18,15 +18,19 @@
                                 id: 'geo-address',
                                 class:"form-control p-3" %>
            </div>
-           <div class="label my-3">
+           <div class="label my-3" data-controller="price">
+              <%= f.label :price, 'Combien de mettre carré souhaites-tu ?', class: "p-2" %>
+              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre"}%>
               <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
-              <%= f.text_field :price_query, class:"form-control " %>
+              <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"} %>
+              <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
+              <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  } %>
            </div>
            <div class="label my-3" data-controller="slider">
               <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
               <div class="d-flex">
                 <%= f.range_field :km, in: 0..30 ,class:"form-range p-3", min:"0", max:"30", step:"2",
-                data: {target: "slider.cursor",
+                data: {slider_target: "cursor",
                       action: "change->slider#slide"}
                 %>
                 <span class="text-secondary" data-slider-target="range"></span>
