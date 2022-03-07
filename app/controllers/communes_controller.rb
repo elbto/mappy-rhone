@@ -13,7 +13,11 @@ class CommunesController < ApplicationController
           'coordinates': commune.polygon
         },
         'properties': {
-          'description': "<strong>#{commune.name.capitalize}</strong> <div> 💰 : #{commune.price.to_i} € m² </div> <div> 🏥 : #{commune.pharmacies.count} </div> <div>🚉 : #{commune.gares.count}</div> <div> 🏫 : #{commune.ecoles.count}</div>",
+          'description': "<strong>#{commune.name.capitalize}</strong>
+                          <div> 💰 : #{commune.price.to_i} € m² </div>
+                          <div> 🏥 : #{commune.pharmacies.count} </div>
+                          <div> 🚉 : #{commune.gares.count}</div>
+                          <div> 🏫 : #{commune.ecoles.count}</div>",
           'color': color_get(commune)
         }
       }
