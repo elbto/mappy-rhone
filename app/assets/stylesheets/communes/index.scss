@@ -11,9 +11,23 @@ main {
 
     .card-criteres {
       position: absolute;
+      background-color: white;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       border-radius: 4px;
+      width: 400px;
+      padding: 1rem 2rem;
       left: 10px;
+      top: 20px;
+    }
+
+    .card-filter {
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      width: 400px;
+      padding: 1.5rem;
+      right: 10px;
       top: 20px;
     }
 

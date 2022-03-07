@@ -27,25 +27,24 @@
          data-box-address-value="<%= params[:address] %>">
     </div>
     <div class="card-criteres">
-      <div class="hero-image">
-        <div class="search-form container card" style="width:400px" data-controller="geocoder">
-          <div class="card-body from-group p-4">
-            <%= form_with url: communes_path, method: :get do |f| %>
-              <div class="label my-3">
-                <%= f.label :address, "Quelle est l'adresse de ton lieu de travail ?", class: "p-2" %>
-                <%= f.text_field :address,
-                                  placeholder: 'Trouve une adresse',
-                                  value: params[:address],
-                                  id: 'geo-address',
-                                  class:"form-control p-3" %>
-              </div>
+      <div class="search-form" data-controller="geocoder">
+        <div class="form-group">
+          <%= form_with url: communes_path, method: :get do |f| %>
+            <div class="label my-3">
+              <%= f.label :address, "Quelle est l'adresse de ton lieu de travail ?", class: "p-2" %>
+              <%= f.text_field :address,
+                                placeholder: 'Trouve une adresse',
+                                value: params[:address],
+                                id: 'geo-address',
+                                class:"form-control p-3" %>
+            </div>
            <div class="label my-3" data-controller="price">
               <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
-              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre", action: "keyup->price#calcul"}, value: params[:metre_query]%>
+              <%= f.text_field :metre_query, class:"form-control", data: { price_target: "metre", action: "keyup->price#calcul"}, value: params[:metre_query]%>
               <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
-              <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"}, value: params[:budget_query] %>
+              <%= f.text_field :budget_query, class:"form-control", data: { price_target: "budget", action: "keyup->price#calcul"}, value: params[:budget_query] %>
               <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
-              <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  }, value: params[:price_query] %>
+              <%= f.text_field :price_query, class:"form-control", data: { price_target: "price"  }, value: params[:price_query] %>
            </div>
               <div class="label my-3" data-controller="slider">
                 <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
@@ -59,10 +58,19 @@
                 </div>
               </div>
                 <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
-            <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
+    </div>
+
+    <div class="card-filter">
+      <p>this is the card filter</p>
+        <%= form_with do |f| %>
+          <div class="form-check form-switch" data-controller="box">
+            <%= f.label :gare, "Gare", class: "form-check-label" %>
+            <%= f.check_box :gare, {class: "form-check-input"}, false, true %>
+          </div>
+        <% end %>
     </div>
 
     <div class="card-legend">
