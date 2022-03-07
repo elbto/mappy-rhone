@@ -1,0 +1,2 @@
+class GaresController < ApplicationController
+end
