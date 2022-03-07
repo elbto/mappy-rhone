@@ -5,6 +5,7 @@ export default class extends Controller {
 
   connect() {
     console.log("Hello");
+    this.rangeTarget.textContent = this.cursorTarget.value;
   }
 
   slide() {
