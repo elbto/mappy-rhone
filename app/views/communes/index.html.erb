@@ -40,11 +40,11 @@
             </div>
            <div class="label my-3" data-controller="price">
               <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
-              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre", action: "keyup->price#calcul"}, value: params[:metre_query]%>
+              <%= f.text_field :metre_query, class:"form-control", data: { price_target: "metre", action: "keyup->price#calcul"}, value: params[:metre_query]%>
               <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
-              <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"}, value: params[:budget_query] %>
+              <%= f.text_field :budget_query, class:"form-control", data: { price_target: "budget", action: "keyup->price#calcul"}, value: params[:budget_query] %>
               <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
-              <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  }, value: params[:price_query] %>
+              <%= f.text_field :price_query, class:"form-control", data: { price_target: "price"  }, value: params[:price_query] %>
            </div>
               <div class="label my-3" data-controller="slider">
                 <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
@@ -58,8 +58,7 @@
                 </div>
               </div>
                 <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
-            <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -69,7 +68,7 @@
         <%= form_with do |f| %>
           <div class="form-check form-switch" data-controller="box">
             <%= f.label :gare, "Gare", class: "form-check-label" %>
-            <%= f.check_box :gare, {class: "form-check-input"}, true, false %>
+            <%= f.check_box :gare, {class: "form-check-input"}, false, true %>
           </div>
         <% end %>
     </div>

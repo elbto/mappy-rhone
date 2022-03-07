@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
-=======
 
-import { Controller } from "@hotwired/stimulus";
-import mapboxgl from "mapbox-gl";
-const token =
-  "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw";
-
-
->>>>>>> 157a92784835c2b5f75ff495d03743d827d70cf9
 export default class extends Controller {
-  static targets = ["mapContainer"];
+  static targets = ["mapContainer", "gare"];
   static values = {
     priceQuery: Number,
     address: String,
@@ -56,6 +47,7 @@ export default class extends Controller {
   connect() {
     // console.log(this.addressValue);
     this.fetchGeoJson();
+    console.log(this.gareTarget)
   }
 
   addData() {
