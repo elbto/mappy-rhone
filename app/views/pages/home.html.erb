@@ -11,7 +11,7 @@
         <div class="card-body from-group p-4">
           <%= form_with url: communes_path, method: :get do |f| %>
            <div class="label my-3" data-controller="geocoder">
-              <%= f.label :address, "Quelle est l'adresse de ton lieu de travail ?", class: "p-2" %>
+              <%= f.label :address, "Adresse de votre lieu de travail ?", class: "p-2" %>
               <%= f.text_field :address,
                                 placeholder: 'Trouve une adresse',
                                 value: params[:address],
@@ -19,9 +19,9 @@
                                 class:"form-control p-3" %>
            </div>
            <div class="label my-3" data-controller="price">
-              <%= f.label :price, 'Combien de mettre carré souhaites-tu ?', class: "p-2" %>
+              <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
               <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre"}%>
-              <%= f.label :price, 'Quel budget veux-tu mettre ?', class: "p-2" %>
+              <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
               <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"} %>
               <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
               <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  } %>
