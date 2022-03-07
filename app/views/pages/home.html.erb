@@ -20,7 +20,7 @@
            </div>
            <div class="label my-3" data-controller="price">
               <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
-              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre"}%>
+              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre", action: "keyup->price#calcul"}%>
               <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
               <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"} %>
               <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
