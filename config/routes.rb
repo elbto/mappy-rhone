@@ -4,6 +4,4 @@ Rails.application.routes.draw do
     get :geojson, on: :collection
   end
 
-  resources :gares, only: [:index]
-
 end
