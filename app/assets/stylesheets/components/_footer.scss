@@ -5,8 +5,9 @@ body {
 
   .footer {
     margin-top: 0;
+    margin-bottom: 0;
+    background: $beta;
     height: 67px;
-    background: #001524;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
