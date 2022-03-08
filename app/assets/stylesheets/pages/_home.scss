@@ -2,7 +2,7 @@
 
 body {
   .section-hero {
-    height: calc(100vh - 126px);
+    height: 100vh;
     // comment
     display: flex;
     flex-direction: column;
@@ -60,6 +60,7 @@ body {
     .label-description {
       font-weight: 600;
       font-size: 1.3rem;
+      color: rgb(25, 62, 100);
     }
   }
 
@@ -79,5 +80,9 @@ body {
   .card {
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.513) 0px 5px 30px;
+
+    .card-title {
+      color: rgb(25, 62, 100);
+    }
   }
 }
