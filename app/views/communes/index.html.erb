@@ -1,19 +1,22 @@
 <%
   legends = [
     {
-      color: '#084594',
-      label: 'Un peu au dessus du budget',
-      description: 'Frère, il va falloir négocier'
+      color: '#FFB344',
+      # la couleur est à matcher avec la variable SCSS $charlie dans _colors.scss
+      label: 'Légèrement au dessus du budget',
+      description: 'De 98% à 110% du budget en prix/m²'
+    },
+    {
+      color: '#085E7D',
+      # la couleur est à matcher avec la variable SCSS $echo dans _colors.scss
+      label: 'Dans le budget prévu',
+      description: 'De 88% à 98% du budget en prix/m²'
     },
     {
       color: '#008E89',
-      label: 'Dans le budget',
-      description: 'C\'est bueno, tu peux y aller gros !'
-    },
-    {
-      color: '#FFB344',
+      # la couleur est à matcher avec la variable SCSS $delta dans _colors.scss
       label: 'En dessous du budget',
-      description: 'C\'est cheap mon gars, fonce !'
+      description: 'En dessous du 88% du budget en prix/m²'
     }
   ]
 %>
