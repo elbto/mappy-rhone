@@ -4,7 +4,8 @@ class CommunesController < ApplicationController
     @gare_markers = @gares.map do |gare|
       {
         lat: gare.latitude,
-        lng: gare.longitude
+        lng: gare.longitude,
+        image_url: helpers.asset_url('train.png')
       }
     end
   end
