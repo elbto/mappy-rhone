@@ -4,7 +4,6 @@ export default class extends Controller {
   static targets = [ "metre", "budget", "price" ]
 
   connect() {
-    console.log("Hello from Price");
   }
 
    calcul() {

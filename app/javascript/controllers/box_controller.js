@@ -13,7 +13,6 @@ export default class extends Controller {
   };
 
   fetchGeoJson() {
-    console.log(this.addressValue)
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`
       )
@@ -70,7 +69,18 @@ export default class extends Controller {
     this.currentMarkers = []
 
     this.gareMarkerValue.forEach(gare => {
-      let gareMarker = new mapboxgl.Marker()
+
+      // const customMarker = document.createElement("div")
+      // customMarker.className = "marker"
+      // customMarker.style.backgroundImage = `url('${marker.image_url}')`
+      // customMarker.style.backgroundSize = "contain"
+      // customMarker.style.width = "25px"
+      // customMarker.style.height = "25px"
+
+      // console.log(customMarker)
+
+      let gareMarker = new mapboxgl.Marker({
+        color: "black"})
       .setLngLat([ gare.lng, gare.lat ])
       .addTo(this.map)
       this.currentMarkers.push(gareMarker)
