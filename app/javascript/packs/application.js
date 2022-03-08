@@ -3,22 +3,21 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import Rails from "@rails/ujs";
+import Turbolinks from "turbolinks";
+import * as ActiveStorage from "@rails/activestorage";
+import "channels";
+import "controllers";
+import { initAutocomplete } from "../src/init_autocomplete";
+import "bootstrap";
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import "controllers"
-import { initAutocomplete } from "../src/init_autocomplete"
+const components = require.context("src", true);
+components.keys().forEach(components);
 
-const components = require.context("src", true)
-components.keys().forEach(components)
+Rails.start();
+Turbolinks.start();
+ActiveStorage.start();
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
-
-
-document.addEventListener('turbolinks:load', () => {
-  initAutocomplete()
-})
+document.addEventListener("turbolinks:load", () => {
+  initAutocomplete();
+});
