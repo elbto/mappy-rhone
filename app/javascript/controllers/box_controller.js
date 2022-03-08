@@ -3,7 +3,7 @@ import mapboxgl from "mapbox-gl"
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
 
 export default class extends Controller {
-  static targets = ["mapContainer", "priceInput"];
+  static targets = ["mapContainer", "priceInput", "addressInput"];
   static values = {
     address: String,
     distance: Number,
@@ -12,22 +12,6 @@ export default class extends Controller {
     gareMarker: Array,
     gareActive: Boolean
   };
-
-
-      //   // creating the map in the dom
-      //   mapboxgl.accessToken = token;
-      //   this.map = new mapboxgl.Map({
-      //     container: this.mapContainerTarget,
-      //     style: "mapbox://styles/mapbox/streets-v10",
-      //     zoom: 10,
-      //     center: [long, lat], // center based on typed address
-      //   });
-
-      //   // adding the center on the map
-      //   new mapboxgl.Marker().setLngLat([long, lat]).addTo(this.map);
-
-      //   this.fetchPolygons(long, lat)
-      // });
 
   createMapAddSource() {
     this.map.addSource("maine", {

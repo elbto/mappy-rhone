@@ -19,6 +19,9 @@
                                 value: params[:address],
                                 id: 'geo-address',
                                 class:"form-control p-3" %>
+
+              <%= f.hidden_field :lat, id: 'geo-lat' %>
+              <%= f.hidden_field :long, id: 'geo-long' %>
            </div>
            <div class="label my-2" data-controller="price">
               <%= f.label :price, 'Surface', class: "label-description p-2" %>

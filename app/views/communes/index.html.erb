@@ -37,8 +37,8 @@
 <main>
   <div class="mapbox-section"
        data-controller="box"
-       data-box-lat-value="46.122193"
-       data-box-long-value="4.449082"
+       data-box-lat-value="<%= params[:lat] %>"
+       data-box-long-value="<%= params[:long] %>"
        data-box-distance-value="<%= params[:km] %>"
        data-box-address-value="<%= params[:address] %>"
        data-box-gare-active-value="<%= false %>"
@@ -58,7 +58,7 @@
                                 placeholder: 'Entrez une adresse',
                                 value: params[:address],
                                 id: 'geo-address',
-                                data: { action: "latlngChange->box#updateAddress" },
+                                data: { box_target: "addressInput", action: "latlngChange->box#updateAddress" },
                                 class:"form-control p-3" %>
             </div>
             <div class="label my-3" data-controller="price">
