@@ -2,17 +2,18 @@
 
 body {
   .section-hero {
-    height: calc(100vh - 126px);
+    height: 100vh;
     // comment
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    // background-color: #e76f51;
     background: no-repeat
         linear-gradient(
           to bottom,
-          rgba(50, 82, 98, 0.596),
-          rgba(59, 80, 93, 0.856)
+          rgba(4, 36, 49, 0.877),
+          rgba(7, 35, 61, 0.842)
         ),
       url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
         center center/cover;
@@ -26,22 +27,64 @@ body {
 
       .hero-image {
         background-color: #5b8a73;
+        border-radius: 16px;
       }
 
       .hero-title {
         h1 {
           font-size: 50px;
           margin-bottom: 6rem;
-          font-weight: bold;
-          letter-spacing: 1.5px;
+          font-weight: 700;
+          letter-spacing: 1.8px;
+          line-height: 1.5em;
           color: $light-gray;
         }
 
         p {
           font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          line-height: 1.5em;
           color: $light-gray;
         }
+
+        .highlight {
+          color: #fca311;
+          font-weight: 700;
+        }
       }
+    }
+  }
+
+  .label {
+    .label-description {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: rgb(25, 62, 100);
+    }
+  }
+
+  .btn-recherche {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    background-color: #fca311;
+    border: none;
+    transition: all 0.5s;
+    border-radius: 8px;
+
+    &:hover {
+      color: #fff;
+      background-color: $echo;
+    }
+  }
+  .card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.513) 0px 5px 30px;
+
+    .card-title {
+      color: rgb(25, 62, 100);
     }
   }
 }

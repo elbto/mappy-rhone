@@ -2,33 +2,34 @@
 
   <div class="hero container">
     <div class="hero-title text-light">
-      <h1>MappyRhone vous souhaite la bienvenue</h1>
-      <p>Mappy Rhône est une solution clef-en-mains pour vos projets d'investissement. Visualisez les communes et arrondissements en fonction de votre budget. Planifiez vos trajets domicile-travail pour trouver la perle immobilière !</p>
-      <p> Mappy-Rhône est une solution gratuite.</p>
+      <h1>Une seule <span class="highlight">recherche</span> pour <span class="highlight">investir</span></h1>
+      <p> Des projets d'investissement? Visualisez les <span class="highlight">communes</span> et arrondissements en fonction de votre <span class="highlight">budget</span> et de votre lieu de <span class="highlight">travail</span> sur le Rhône.</p>
+      <p> Mappy-Rhône est une solution <span class="highlight">gratuite</span>.</p>
     </div>
 
     <div class="hero-image">
       <div class="search-form container card" style="width:600px">
         <div class="card-body from-group p-4">
+          <h2 class="card-title text-center border-bottom pb-2 mb-2">Recherchez maintenant</h2>
           <%= form_with url: communes_path, method: :get do |f| %>
-           <div class="label my-3" data-controller="geocoder">
-              <%= f.label :address, "Adresse de votre lieu de travail ?", class: "p-2" %>
+           <div class="label my-2" data-controller="geocoder">
+              <%= f.label :address, "Lieu de travail", class: "label-description p-2" %>
               <%= f.text_field :address,
-                                placeholder: 'Trouve une adresse',
+                                placeholder: 'Entrez une adresse',
                                 value: params[:address],
                                 id: 'geo-address',
                                 class:"form-control p-3" %>
            </div>
-           <div class="label my-3" data-controller="price">
-              <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
-              <%= f.text_field :metre_query, class:"form-control ", data: { price_target: "metre", action: "keyup->price#calcul"}%>
-              <%= f.label :price, 'Votre budget en €?', class: "p-2" %>
-              <%= f.text_field :budget_query, class:"form-control ", data: { price_target: "budget", action: "keyup->price#calcul"} %>
-              <%= f.label :price, 'Votre prix au m²', class: "p-2" %>
-              <%= f.text_field :price_query, class:"form-control ", data: { price_target: "price"  } %>
+           <div class="label my-2" data-controller="price">
+              <%= f.label :price, 'Surface', class: "label-description p-2" %>
+              <%= f.text_field :metre_query, class:"form-control mb-2",placeholder: 'Entrez votre surface en m²', data: { price_target: "metre", action: "keyup->price#calcul"}%>
+              <%= f.label :price, 'Votre budget', class: "label-description p-2" %>
+              <%= f.text_field :budget_query, class:"form-control mb-2",placeholder: 'Entrez votre budget en euros', data: { price_target: "budget", action: "keyup->price#calcul"} %>
+              <%= f.label :price, 'Prix au m² correspondant', class: "label-description p-2" %>
+              <%= f.text_field :price_query, class:"form-control", data: { price_target: "price"  } %>
            </div>
-           <div class="label my-3" data-controller="slider">
-              <%= f.label :km, 'Combien de km es-tu prêt à parcourir ?', class: "p-2" %>
+           <div class="label my-2" data-controller="slider">
+              <%= f.label :km, 'Distance souhaitée en kilomètres', class: "label-description p-2" %>
               <div class="d-flex">
                 <%= f.range_field :km, in: 0..30 ,class:"form-range p-3", min:"0", max:"30", step:"2",
                 data: {slider_target: "cursor",
@@ -38,10 +39,11 @@
               </div>
 
            </div>
-            <%= f.submit "Search", class:"btn btn-primary w-100 mt-4" %>
+            <%= f.submit "Voir les resultats", class:"btn btn-primary w-100 mt-4 btn-recherche" %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </section>
+<%= render 'shared/footer' %>
