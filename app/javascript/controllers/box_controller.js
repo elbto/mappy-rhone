@@ -13,7 +13,6 @@ export default class extends Controller {
   };
 
   fetchGeoJson() {
-    console.log(this.addressValue)
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`
       )
@@ -36,10 +35,10 @@ export default class extends Controller {
 
         this.fetchPolygons(long, lat)
       });
-    }
+  }
 
 
-    fetchPolygons(long, lat) {
+  fetchPolygons(long, lat) {
     // Fetch the coordonnes with the conditions and display them on the index
     fetch(
       `/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`
@@ -70,10 +69,18 @@ export default class extends Controller {
     this.currentMarkers = []
 
     this.gareMarkerValue.forEach(gare => {
-      let gareMarker = new mapboxgl.Marker()
-      .setLngLat([ gare.lng, gare.lat ])
-      .addTo(this.map)
-      this.currentMarkers.push(gareMarker)
+
+    const customMarker = document.createElement("div")
+    customMarker.className = "marker"
+    customMarker.style.backgroundImage = `url('${gare.image_url}')`
+    customMarker.style.backgroundSize = "contain"
+    customMarker.style.width = "20px"
+    customMarker.style.height = "20px"
+
+      let gareMarker = new mapboxgl.Marker(customMarker)
+        .setLngLat([ gare.lng, gare.lat ])
+        .addTo(this.map)
+        this.currentMarkers.push(gareMarker)
     });
   }
 

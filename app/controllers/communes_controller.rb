@@ -4,7 +4,8 @@ class CommunesController < ApplicationController
     @gare_markers = @gares.map do |gare|
       {
         lat: gare.latitude,
-        lng: gare.longitude
+        lng: gare.longitude,
+        image_url: helpers.asset_url('train.png')
       }
     end
   end
@@ -78,10 +79,14 @@ class CommunesController < ApplicationController
     p price
     if price / max_price >= 0.98
       return '#FFB344'
+        # doit retourner '#FFB344', mais n'affiche rien
+        # la couleur est à matcher avec la variable SCSS $echo dans _colors.scss
     elsif price / max_price <= 0.88
       return '#084594'
+        # la couleur est à matcher avec la variable SCSS $charlie dans _colors.scss
     else
       return '#008E89'
+        # la couleur est à matcher avec la variable SCSS $delta dans _colors.scss
     end
   end
 end

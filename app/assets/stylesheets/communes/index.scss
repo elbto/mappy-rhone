@@ -3,32 +3,17 @@ main {
 
   .mapbox-section {
     display: flex;
+    height: calc(100vh - 66px);
 
     #map {
       width: 100%;
-      height: calc(100vh - 66px);
     }
 
     .card-criteres {
-      position: absolute;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
-      width: 400px;
+      width: 500px;
+      height: 100%;
       padding: 1rem 2rem;
-      left: 10px;
-      top: 10px;
-    }
-
-    .card-filter {
-      position: absolute;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      border-radius: 4px;
-      width: 400px;
-      padding: 1.5rem;
-      right: 10px;
-      top: 20px;
     }
 
     .card-legend {
@@ -50,13 +35,12 @@ main {
           padding: 0;
           margin: 0;
           font-weight: bold;
-          font-size: 14px;
         }
 
         .description {
           padding: 0;
           margin: 0;
-          font-size: 12px;
+          font-size: 14px;
           color: #5c5c5c;
         }
       }
