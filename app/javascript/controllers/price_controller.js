@@ -10,9 +10,11 @@ export default class extends Controller {
 
     if (this.priceTarget.value === "NaN" || this.priceTarget.value === "Infinity" ){
       this.priceTarget.value = 0
-    }else {
+    } else {
       (this.priceTarget.value) = ((this.budgetTarget.value)/(this.metreTarget.value)).toFixed(2)
-      console.log(this.priceTarget.value)
     }
-   }
+
+    const event = new Event('input');
+    this.priceTarget.dispatchEvent(event);
+  }
 }

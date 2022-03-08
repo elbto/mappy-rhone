@@ -3,45 +3,131 @@ import mapboxgl from "mapbox-gl"
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
 
 export default class extends Controller {
-  static targets = ["mapContainer"];
+  static targets = ["mapContainer", "priceInput"];
   static values = {
-    priceQuery: Number,
     address: String,
     distance: Number,
+    lat: Number,
+    long: Number,
     gareMarker: Array,
     gareActive: Boolean
   };
 
-  fetchGeoJson() {
-    fetch(
-      `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.addressValue}.json?access_token=${token}`
-      )
-      .then((response) => response.json())
-      .then((data) => {
-        const long = data.features[0].center[0];
-        const lat = data.features[0].center[1];
 
-        // creating the map in the dom
-        mapboxgl.accessToken = token;
-        this.map = new mapboxgl.Map({
-          container: this.mapContainerTarget,
-          style: "mapbox://styles/mapbox/streets-v10",
-          zoom: 10,
-          center: [long, lat], // center based on typed address
-        });
+      //   // creating the map in the dom
+      //   mapboxgl.accessToken = token;
+      //   this.map = new mapboxgl.Map({
+      //     container: this.mapContainerTarget,
+      //     style: "mapbox://styles/mapbox/streets-v10",
+      //     zoom: 10,
+      //     center: [long, lat], // center based on typed address
+      //   });
 
-        // adding the center on the map
-        new mapboxgl.Marker().setLngLat([long, lat]).addTo(this.map);
+      //   // adding the center on the map
+      //   new mapboxgl.Marker().setLngLat([long, lat]).addTo(this.map);
 
-        this.fetchPolygons(long, lat)
-      });
+      //   this.fetchPolygons(long, lat)
+      // });
+
+  createMapAddSource() {
+    this.map.addSource("maine", {
+      type: "geojson",
+      data: {
+        "type": "FeatureCollection",
+        "features": []
+        }
+    });
+  }
+
+  createMapAddLayers() {
+    this.map.addLayer({
+      id: "maine",
+      type: "fill",
+      source: "maine",
+      layout: {},
+      paint: {
+        "fill-color": ["get", "color"],
+        "fill-opacity": 0.8,
+      },
+    });
+
+    this.map.addLayer({
+      id: "outline",
+      type: "line",
+      source: "maine",
+      layout: {},
+      paint: {
+        "line-color": "#000",
+        "line-width": 0.5,
+      },
+    });
+  }
+
+  createMapAddPopup() {
+    this.popupArea = new mapboxgl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+    });
+
+    this.map.on("mousemove", "maine", (e) => {
+      this.map.getCanvas().style.cursor = "pointer";
+
+      const coordinates = e.features[0].geometry.coordinates;
+
+      while (Math.abs(e.lngLat.lng - coordinates) > 180) {
+        coordinates += e.lngLat.lng > coordinates ? 360 : -360;
+      }
+
+      this.popupArea.setLngLat(e.lngLat)
+        .setHTML(e.features[0].properties.description)
+        .addTo(this.map);
+    });
+
+    this.map.on("mouseleave", "maine", () => {
+      this.map.getCanvas().style.cursor = "";
+      this.popupArea.remove();
+    });
+  }
+
+  createMap() {
+    mapboxgl.accessToken = token
+    this.map = new mapboxgl.Map({
+      container: this.mapContainerTarget,
+      style: "mapbox://styles/mapbox/streets-v10",
+      zoom: 10,
+      center: [this.longValue, this.latValue], // center based on typed address
+    });
+
+    this.map.on("load", () => {
+      this.mapLoaded = true
+      this.createMapAddSource()
+      this.createMapAddLayers()
+      this.createMapAddPopup()
+      this.addData()
+    })
+  }
+
+  addHomeMarker() {
+    this.homeMarker = new mapboxgl.Marker().setLngLat([this.longValue, this.latValue]).addTo(this.map);
+  }
+
+  moveHomeMarker() {
+    this.homeMarker.setLngLat([this.longValue, this.latValue])
+    this.map.setCenter([this.longValue, this.latValue])
+  }
+
+  updateAddress(e) { // event from algolia
+    this.longValue = e.detail.long
+    this.latValue = e.detail.lat
+    this.moveHomeMarker()
+    this.fetchGeoJson()
   }
 
 
-  fetchPolygons(long, lat) {
+  fetchGeoJson() {
     // Fetch the coordonnes with the conditions and display them on the index
     fetch(
-      `/results/geojson?price_query=${this.priceQueryValue}&address=${this.addressValue}&long=${long}&lat=${lat}&distance=${this.distanceValue}`
+      `/results/geojson?price_query=${this.priceInputTarget.value}&long=${this.longValue}&lat=${this.latValue}&distance=${this.distanceValue}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -51,7 +137,10 @@ export default class extends Controller {
   }
 
   connect() {
-    this.fetchGeoJson();
+    this.createMap()
+    this.addHomeMarker()
+    this.fetchGeoJson()
+    window.aaa = this
   }
 
   toggleGares() {
@@ -85,58 +174,7 @@ export default class extends Controller {
   }
 
   addData() {
-    this.map.on("load", () => {
-      this.map.addSource("maine", {
-        type: "geojson",
-        data: this.geojson,
-      });
-
-      this.map.addLayer({
-        id: "maine",
-        type: "fill",
-        source: "maine",
-        layout: {},
-        paint: {
-          "fill-color": ["get", "color"],
-          "fill-opacity": 0.8,
-        },
-      });
-
-      this.map.addLayer({
-        id: "outline",
-        type: "line",
-        source: "maine",
-        layout: {},
-        paint: {
-          "line-color": "#000",
-          "line-width": 0.5,
-        },
-      });
-
-      const popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false,
-      });
-
-      this.map.on("mousemove", "maine", (e) => {
-        this.map.getCanvas().style.cursor = "pointer";
-
-        const coordinates = e.features[0].geometry.coordinates;
-
-        while (Math.abs(e.lngLat.lng - coordinates) > 180) {
-          coordinates += e.lngLat.lng > coordinates ? 360 : -360;
-        }
-
-        popup
-          .setLngLat(e.lngLat)
-          .setHTML(e.features[0].properties.description)
-          .addTo(this.map);
-      });
-
-      this.map.on("mouseleave", "maine", () => {
-        this.map.getCanvas().style.cursor = "";
-        popup.remove();
-      });
-    });
+    if (this.geojson && this.mapLoaded)
+      this.map.getSource('maine').setData(this.geojson)
   }
 }
