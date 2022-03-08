@@ -69,7 +69,6 @@ export default class extends Controller {
     this.currentMarkers = []
 
     this.gareMarkerValue.forEach(gare => {
-
       // const customMarker = document.createElement("div")
       // customMarker.className = "marker"
       // customMarker.style.backgroundImage = `url('${marker.image_url}')`
@@ -81,11 +80,11 @@ export default class extends Controller {
 
       let gareMarker = new mapboxgl.Marker({
         color: "black"})
-      .setLngLat([ gare.lng, gare.lat ])
-      .addTo(this.map)
-      this.currentMarkers.push(gareMarker)
-    });
-  }
+        .setLngLat([ gare.lng, gare.lat ])
+        .addTo(this.map)
+        this.currentMarkers.push(gareMarker)
+      });
+    }
 
   addData() {
     this.map.on("load", () => {
