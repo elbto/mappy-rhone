@@ -67,14 +67,16 @@ body {
   .btn-recherche {
     color: #fff;
     font-size: 1.3rem;
-    font-weight: 600;
-    background-color: #be563e;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    background-color: #fca311;
     border: none;
-    text-transform: uppercase;
     transition: all 0.5s;
+    border-radius: 8px;
 
     &:hover {
-      background-color: #a74c36;
+      color: #fff;
+      background-color: $echo;
     }
   }
   .card {

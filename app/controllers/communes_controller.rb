@@ -82,10 +82,10 @@ class CommunesController < ApplicationController
         # doit retourner '#FFB344', mais n'affiche rien
         # la couleur est à matcher avec la variable SCSS $echo dans _colors.scss
     elsif price / max_price <= 0.88
-      return '#084594'
+      return '#008E89'
         # la couleur est à matcher avec la variable SCSS $charlie dans _colors.scss
     else
-      return '#008E89'
+      return '#084594'
         # la couleur est à matcher avec la variable SCSS $delta dans _colors.scss
     end
   end
