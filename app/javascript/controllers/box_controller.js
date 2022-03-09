@@ -122,8 +122,8 @@ export default class extends Controller {
   }
 
   initialize() {
-    this.updateAddress = debounce(this.updateAddress, 400).bind(this)
-    this.fetchGeoJson = debounce(this.fetchGeoJson, 300).bind(this)
+    this.updateAddress = debounce(this.updateAddress, 200).bind(this)
+    this.fetchGeoJson = debounce(this.fetchGeoJson, 200).bind(this)
   }
 
   connect() {
