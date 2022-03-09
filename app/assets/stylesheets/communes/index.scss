@@ -77,16 +77,16 @@ main {
     .card-legend {
       position: absolute;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
+      border-radius: 18px;
       flex-direction: row;
       padding: 1em;
       display: grid;
       grid-template-columns: 45px auto;
       align-items: center;
       row-gap: 12px;
-      right: 10px;
-      bottom: 20px;
+      right: 20px;
+      bottom: 30px;
 
       .text {
         .title {
