@@ -86,9 +86,7 @@ class CommunesController < ApplicationController
 
   def color_get(commune)
     max_price = params[:price_query].to_f * 1.10
-    p max_price
     price = commune.price
-    p price
     if price / max_price >= 0.98
       return '#e6a13d'
         # doit retourner '#FFB344', mais n'affiche rien
