@@ -79,6 +79,8 @@ export default class extends Controller {
       container: this.mapContainerTarget,
       style: "mapbox://styles/mapbox/streets-v10",
       zoom: 10,
+      maxZoom: 15,
+      minZoom: 9,
       center: [this.longValue, this.latValue], // center based on typed address
     });
 
