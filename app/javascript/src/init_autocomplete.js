@@ -5,7 +5,7 @@ const initAutocomplete = () => {
   const latInput = document.querySelector('#geo-lat');
   const longInput = document.querySelector('#geo-long');
   if (addressInput) {
-    const autocomplete = places({ container: addressInput });
+    const autocomplete = places({ container: addressInput, countries: ['fr'] });
 
     autocomplete.on('change', (e) => {
       const event = new CustomEvent('latlngChange', { detail: { lat: e.suggestion.latlng.lat, long: e.suggestion.latlng.lng }});
