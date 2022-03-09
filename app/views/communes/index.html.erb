@@ -1,4 +1,4 @@
-<div data-controller="animation">
+<%# <div data-controller="animation">
   <div class="center" data-animation-target="animated">
     <div class="wave"></div>
     <div class="wave"></div>
@@ -11,7 +11,7 @@
     <div class="wave"></div>
     <div class="wave"></div>
   </div>
-</div>
+</div> %>
 <%
   legends = [
     {
@@ -58,32 +58,40 @@
                                 placeholder: 'Entrez une adresse',
                                 value: params[:address],
                                 id: 'geo-address',
-                                data: { box_target: "addressInput", action: "latlngChange->box#updateAddress" },
+                                data: {
+                                        box_target: "addressInput",
+                                        action: "latlngChange->box#updateAddress"
+                                      },
                                 class:"form-control p-3" %>
             </div>
-            <div class="label my-3" data-controller="price">
-                <%= f.label :price, 'Surface en m² souhaitée?', class: "p-2" %>
+            <div class="label my-2" data-controller="price">
+                <%= f.label :price, 'Surface en m² souhaitée?', class: "label-description p-2" %>
                 <%= f.text_field :metre_query,
                                  class:"form-control my-2",
                                  placeholder: 'Entrez votre surface en m²',
                                  data: {
-                                        price_target: "metre",
-                                        action: "keyup->price#calcul change->box#tmp"
-                                        },
+                                         price_target: "metre",
+                                         action: "keyup->price#calcul"
+                                       },
                                  value: params[:metre_query]%>
                 <%= f.label :price, 'Votre budget', class: "label-description p-2" %>
                 <%= f.text_field :budget_query,
                                  class:"form-control mb-2",
                                  placeholder: 'Entrez votre budget en euros',
                                  data: {
-                                        price_target: "budget",
-                                        action: "keyup->price#calcul change->box#tmp"
-                                        },
+                                         price_target: "budget",
+                                         action: "keyup->price#calcul"
+                                       },
                                  value: params[:budget_query] %>
                 <%= f.label :price, 'Prix au m² correspondant', class: "label-description p-2" %>
                 <%= f.text_field :price_query,
                                  class:"form-control",
-                                 data: { price_target: "price", box_target: "priceInput", action: 'input->box#fetchGeoJson' },
+                                 disabled: true,
+                                 data: {
+                                         price_target: "price",
+                                         box_target: "priceInput",
+                                         action: 'input->box#fetchGeoJson'
+                                       },
                                  value: params[:price_query] %>
             </div>
             <div class="label my-2" data-controller="slider">
@@ -96,34 +104,31 @@
                                   max:"30",
                                   step:"2",
                                   data: {
-                                        slider_target: "cursor",
-                                        action: "change->slider#slide change->box#tmp"
-                                         },
+                                          slider_target: "cursor",
+                                          box_target: "distanceInput",
+                                          action: "change->slider#slide input->box#fetchGeoJson"
+                                        },
                                   value: params[:km] %>
                 <span class="text-secondary" data-slider-target="range"></span>
               </div>
             </div>
           <% end %>
 
-            <span class="btn btn-primary w-100 mt-4" data-action="click->box#fetchGeoJson">
-              Search
-            </span>
-
-            <%= form_with do |f| %>
-              <div class="form-check form-switch pt-4 switch-block" >
-                <div>
-                  <%= f.label :gare, "Afficher les gares",for: "toggler", class: "form-check-label label-description-text" %>
-                </div>
-                <div>
-                  <%= f.check_box :gare, {
-                                        id: 'toggler',
-                                        class: "form-check-input",
-                                        checked: false,
-                                        data: { action: "click->box#toggleGares" }
-                                        }, '0' %>
-                </div>
+          <%= form_with do |f| %>
+            <div class="form-check form-switch pt-4 switch-block" >
+              <div>
+                <%= f.label :gare, "Afficher les gares",for: "toggler", class: "form-check-label label-description-text" %>
+              </div>
+              <div>
+                <%= f.check_box :gare, {
+                                         id: 'toggler',
+                                         class: "form-check-input",
+                                         checked: false,
+                                         data: { action: "click->box#toggleGares" }
+                                       }, '0' %>
+              </div>
             </div>
-           <% end %>
+          <% end %>
         </div>
       </div>
     </div>

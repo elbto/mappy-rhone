@@ -1,12 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
+import debounce from 'lodash.debounce'
+
 const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
 
 export default class extends Controller {
-  static targets = ["mapContainer", "priceInput", "addressInput"];
+  static targets = ["mapContainer", "priceInput", "distanceInput"];
   static values = {
-    address: String,
-    distance: Number,
     lat: Number,
     long: Number,
     gareMarker: Array,
@@ -92,7 +92,7 @@ export default class extends Controller {
   }
 
   addHomeMarker() {
-    this.homeMarker = new mapboxgl.Marker().setLngLat([this.longValue, this.latValue]).addTo(this.map);
+    this.homeMarker = new mapboxgl.Marker({ "color": "#f95738" }).setLngLat([this.longValue, this.latValue]).addTo(this.map);
   }
 
   moveHomeMarker() {
@@ -107,17 +107,21 @@ export default class extends Controller {
     this.fetchGeoJson()
   }
 
-
   fetchGeoJson() {
     // Fetch the coordonnes with the conditions and display them on the index
     fetch(
-      `/results/geojson?price_query=${this.priceInputTarget.value}&long=${this.longValue}&lat=${this.latValue}&distance=${this.distanceValue}`
+      `/results/geojson?price_query=${this.priceInputTarget.value}&long=${this.longValue}&lat=${this.latValue}&distance=${this.distanceInputTarget.value}`
     )
       .then((response) => response.json())
       .then((data) => {
         this.geojson = data;
         this.addData();
       });
+  }
+
+  initialize() {
+    this.updateAddress = debounce(this.updateAddress, 400).bind(this)
+    this.fetchGeoJson = debounce(this.fetchGeoJson, 300).bind(this)
   }
 
   connect() {
