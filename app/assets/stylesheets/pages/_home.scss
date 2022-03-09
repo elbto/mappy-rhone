@@ -88,3 +88,24 @@ body {
     }
   }
 }
+
+.slide-right {
+  width: 100%;
+  overflow: hidden;
+
+  h1 {
+    animation: 2s slide-right 0.5s forwards;
+    transform: translateX(-100%);
+  }
+
+  p {
+    animation: 2s slide-right 1.5s forwards;
+    transform: translateX(-100%);
+  }
+
+  @keyframes slide-right {
+    to {
+      transform: translateX(0);
+    }
+  }
+}

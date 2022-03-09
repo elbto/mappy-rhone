@@ -1,14 +1,14 @@
 <section class="section-hero">
 
   <div class="hero container">
-    <div class="hero-title text-light">
-      <h1>Une seule <span class="highlight">recherche</span> pour <span class="highlight">investir</span></h1>
+    <div class="hero-title text-light slide-right">
+      <h1 class="title">Une seule <span class="highlight">recherche</span> pour <span class="highlight">investir</span></h1>
       <p> Des projets d'investissement? Visualisez les <span class="highlight">communes</span> et arrondissements en fonction de votre <span class="highlight">budget</span> et de votre lieu de <span class="highlight">travail</span> sur le Rhône.</p>
       <p> Mappy-Rhône est une solution <span class="highlight">gratuite</span>.</p>
     </div>
 
-    <div class="hero-image">
-      <div class="search-form container card" style="width:600px">
+    <div class="hero-image slide-left">
+      <div class="search-form card " style="width:600px">
         <div class="card-body from-group p-4">
           <h2 class="card-title text-center border-bottom pb-2 mb-2">Recherchez maintenant</h2>
           <%= form_with url: communes_path, method: :get do |f| %>
