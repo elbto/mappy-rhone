@@ -127,10 +127,12 @@ export default class extends Controller {
   }
 
   connect() {
-    this.createMap()
-    this.addHomeMarker()
-    this.fetchGeoJson()
-    window.aaa = this
+    setTimeout(() => {
+      this.createMap()
+      this.addHomeMarker()
+      this.fetchGeoJson()
+      this.mapContainerTarget.classList.remove('hidden')
+    }, 4100);
   }
 
   toggleGares() {
