@@ -1,13 +1,3 @@
-<div class="animation" data-controller="animation" data-animation-target="animated">
-  <div class="wrapper">
-    <div class="static-txt">On cherche vos</div>
-    <ul class="dynamic-txt">
-      <li><span class="vert">communes</span></li>
-      <li><span class="bleu">gares</span></li>
-      <li><span class="jaune">écoles</span></li>
-    </ul>
-  </div>
-</div>
 <%
   legends = [
     {
@@ -31,7 +21,7 @@
   ]
 %>
 <main>
-  <div class="mapbox-section"
+  <div class="results"
        data-controller="box"
        data-box-lat-value="<%= params[:lat] %>"
        data-box-long-value="<%= params[:long] %>"
@@ -55,7 +45,7 @@
                                 value: params[:address],
                                 id: 'geo-address',
                                 data: {
-                                        box_target: "addressInput",
+                                  box_target: "addressInput",
                                         action: "latlngChange->box#updateAddress"
                                       },
                                 class:"form-control p-3" %>
@@ -66,7 +56,7 @@
                                  class:"form-control my-2",
                                  placeholder: 'Entrez votre surface en m²',
                                  data: {
-                                         price_target: "metre",
+                                   price_target: "metre",
                                          action: "keyup->price#calcul"
                                        },
                                  value: params[:metre_query]%>
@@ -75,7 +65,7 @@
                                  class:"form-control mb-2",
                                  placeholder: 'Entrez votre budget en euros',
                                  data: {
-                                         price_target: "budget",
+                                   price_target: "budget",
                                          action: "keyup->price#calcul"
                                        },
                                  value: params[:budget_query] %>
@@ -84,7 +74,7 @@
                                  class:"form-control",
                                  disabled: true,
                                  data: {
-                                         price_target: "price",
+                                   price_target: "price",
                                          box_target: "priceInput",
                                          action: 'input->box#fetchGeoJson'
                                        },
@@ -100,7 +90,7 @@
                                   max:"50",
                                   step:"2",
                                   data: {
-                                          slider_target: "cursor",
+                                    slider_target: "cursor",
                                           box_target: "distanceInput",
                                           action: "change->slider#slide input->box#fetchGeoJson"
                                         },
@@ -129,18 +119,30 @@
       </div>
     </div>
 
+    <div class="hidden mapbox" data-box-target="mapContainer">
 
-    <div class="mapbox" id="map" data-box-target="mapContainer"></div>
+      <div class="animation" data-controller="animation" data-animation-target="animated">
+        <div class="wrapper">
+          <div class="static-txt">On cherche vos</div>
+          <ul class="dynamic-txt">
+            <li><span class="vert">communes</span></li>
+            <li><span class="bleu">gares</span></li>
+            <li><span class="jaune">écoles</span></li>
+          </ul>
+        </div>
+      </div>
 
-
-    <div class="card-legend">
-      <% legends.each do |legend| %>
-        <div style="background: <%= legend[:color] %>; width: 30px; height: 20px; "></div>
-          <div class="text">
-            <p class="title"><%= legend[:label] %></p>
-            <p class="description"><%= legend[:description] %></p>
-          </div>
-      <% end %>
+      <div class="card-legend">
+        <% legends.each do |legend| %>
+          <div style="background: <%= legend[:color] %>; width: 30px; height: 20px; "></div>
+            <div class="text">
+              <p class="title"><%= legend[:label] %></p>
+              <p class="description"><%= legend[:description] %></p>
+            </div>
+        <% end %>
+      </div>
     </div>
+
+
   </div>
 </main>

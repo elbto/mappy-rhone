@@ -1,12 +1,45 @@
 main {
   position: relative;
 
-  .mapbox-section {
+  .results {
     display: flex;
     height: 100vh;
 
-    #map {
+    .mapbox {
       width: 100%;
+      position: relative;
+
+      .card-legend {
+        position: absolute;
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
+        border-radius: 18px;
+        flex-direction: row;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: 45px auto;
+        align-items: center;
+        row-gap: 12px;
+        right: 20px;
+        bottom: 30px;
+
+        .text {
+          .title {
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 16px;
+          }
+
+          .description {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            color: #5c5c5c;
+          }
+        }
+      }
     }
 
     .card-criteres {
@@ -74,35 +107,6 @@ main {
       }
     }
 
-    .card-legend {
-      position: absolute;
-      background-color: white;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
-      border-radius: 18px;
-      flex-direction: row;
-      padding: 1em;
-      display: grid;
-      grid-template-columns: 45px auto;
-      align-items: center;
-      row-gap: 12px;
-      right: 20px;
-      bottom: 30px;
-
-      .text {
-        .title {
-          padding: 0;
-          margin: 0;
-          font-weight: bold;
-        }
-
-        .description {
-          padding: 0;
-          margin: 0;
-          font-size: 14px;
-          color: #5c5c5c;
-        }
-      }
-    }
   }
 
   .color-light {
