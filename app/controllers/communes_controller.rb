@@ -21,11 +21,23 @@ class CommunesController < ApplicationController
           'coordinates': commune.polygon
         },
         'properties': {
-          'description': "<strong>#{commune.name.capitalize}</strong>
-                          <div> 💰 : #{commune.price.to_i} € m² </div>
-                          <div> 🏥 : #{commune.pharmacies.count} </div>
-                          <div> 🚉 : #{commune.gares.count}</div>
-                          <div> 🏫 : #{commune.ecoles.count}</div>",
+          'description': "<h4>#{commune.name.capitalize}</h4>
+                          <div class='pop-flex'>
+                            <h5>Prix €/m²</h5>
+                            <p>#{commune.price.to_i}</p>
+                          </div>
+                          <div class='pop-flex'>
+                            <h5>Pharmacies</h5>
+                            <p>#{commune.pharmacies.count}</p>
+                          </div>
+                          <div class='pop-flex'>
+                            <h5>Gares</h5>
+                            <p>#{commune.gares.count}</p>
+                          </div>
+                          <div class='pop-flex'>
+                            <h5>Ecoles</h5>
+                            <p>#{commune.ecoles.count}</p>
+                          </div>",
           'color': color_get(commune)
         }
       }

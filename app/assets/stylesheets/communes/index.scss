@@ -7,9 +7,6 @@ main {
 
     #map {
       width: 100%;
-
-
-
     }
 
     .card-criteres {
@@ -110,5 +107,47 @@ main {
 
   .color-light {
     color: #5b8a73;
+  }
+
+  .mapboxgl-popup-content {
+    width: 220px;
+
+    padding: 0;
+    border-radius: 16px !important;
+
+    h4 {
+      text-align: center;
+      color: #fff;
+      padding: 20px 0;
+      font-weight: 700;
+      background: no-repeat
+          linear-gradient(
+            to bottom,
+            rgba(4, 36, 49, 0.877),
+            rgba(7, 35, 61, 0.842)
+          ),
+        url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+          center center/cover;
+
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+
+    .pop-flex {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 20px;
+
+      h5 {
+        color: rgb(25, 62, 100);
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 16px;
+        color: rgb(25, 62, 100);
+        font-weight: 600;
+      }
+    }
   }
 }
