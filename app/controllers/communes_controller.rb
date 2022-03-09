@@ -85,15 +85,15 @@ class CommunesController < ApplicationController
   end
 
   def color_get(commune)
-    max_price = params[:price_query].to_f * 1.10
+    max_price = params[:price_query].to_f * 1.20
     p max_price
     price = commune.price
     p price
-    if price / max_price >= 0.98
+    if price / max_price >= 1.1
       return '#FFB344'
         # doit retourner '#FFB344', mais n'affiche rien
         # la couleur est à matcher avec la variable SCSS $echo dans _colors.scss
-    elsif price / max_price <= 0.88
+    elsif price / max_price <= 0.8
       return '#084594'
         # la couleur est à matcher avec la variable SCSS $charlie dans _colors.scss
     else
