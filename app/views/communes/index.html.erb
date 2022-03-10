@@ -82,7 +82,7 @@
             </div>
             <div class="label my-2" data-controller="slider">
               <%= f.label :km, 'Distance souhaitée en km', class: "label-description p-2" %>
-              <div class="d-flex">
+              <div class="d-flex align-items-center">
                 <%= f.range_field :km,
                                   in: 0..50 ,
                                   class:"form-range p-3",
@@ -95,7 +95,7 @@
                                           action: "change->slider#slide input->box#fetchGeoJson"
                                         },
                                   value: params[:km] %>
-                <span class="text-secondary" data-slider-target="range"></span>
+                <span class="kilometers text-secondary fw-bold" data-slider-target="range"></span>
               </div>
             </div>
           <% end %>
@@ -123,7 +123,7 @@
 
       <div class="animation" data-controller="animation" data-animation-target="animated">
         <div class="wrapper">
-          <div class="static-txt">On cherche vos</div>
+          <div class="static-txt">On cherche vos</div> <!--  Texte à changer + ajouter un peu de time + afffinage des résultats -->
           <ul class="dynamic-txt">
             <li><span class="vert">communes</span></li>
             <li><span class="bleu">gares</span></li>
