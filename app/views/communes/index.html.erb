@@ -1,26 +1,33 @@
+
 <%
+  min = (params[:price_query].to_i * 0.88).round(-1)
+  mid = (params[:price_query].to_i * 0.98).round(-1)
+  max = (params[:price_query].to_i * 1.1).round(-1)
+
   legends = [
     {
       color: '#e6a13d',
       # la couleur est à matcher avec la variable SCSS $charlie dans _colors.scss
-      label: 'Au dessus du budget',
-      description: 'De 98% à 110% du budget en prix/m²'
+      label: "Entre <span data-legend-target=\"mid\">#{mid}</span> et <span data-legend-target=\"max\">#{max}</span> /m²".html_safe,
+      description: ""
     },
     {
       color: '#00726e',
       # la couleur est à matcher avec la variable SCSS $echo dans _colors.scss
-      label: 'Dans le budget',
-      description: 'De 88% à 98% du budget en prix/m²'
+      label: "Entre <span data-legend-target=\"min\">#{min}</span> et <span data-legend-target=\"mid\">#{mid}</span> /m²".html_safe,
+      description: ""
     },
     {
       color: '#58a4b7',
       # la couleur est à matcher avec la variable SCSS $delta dans _colors.scss
-      label: 'En dessous du budget',
-      description: 'En dessous du 88% du budget en prix/m²'
+      label: "En dessous de <span data-legend-target=\"min\">#{min}</span> /m²".html_safe,
+      description: ""
     }
   ]
 %>
-<main>
+
+
+<main data-controller="legend">
   <div class="results"
        data-controller="box"
        data-box-lat-value="<%= params[:lat] %>"
@@ -76,7 +83,8 @@
                                  data: {
                                    price_target: "price",
                                          box_target: "priceInput",
-                                         action: 'input->box#fetchGeoJson'
+                                         legend_target: 'range',
+                                         action: 'input->box#fetchGeoJson input->legend#updateRange'
                                        },
                                  value: params[:price_query] %>
             </div>
