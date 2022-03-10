@@ -12,7 +12,7 @@ export default class extends Controller {
   disparition() {
     setTimeout(() => {
       (this.animatedTarget.classList.value = "center_hidden")
-    }, 4100);
+    }, 4400);
   }
 
 
