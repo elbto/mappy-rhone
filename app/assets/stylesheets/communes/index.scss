@@ -7,6 +7,7 @@ main {
 
     .mapbox {
       width: 100%;
+      height: 100%;
       position: relative;
 
       .card-legend {
@@ -44,8 +45,8 @@ main {
 
     .card-criteres {
       background-color: white;
-      width: 650px;
-      height: 100%;
+      width: 500px;
+      height: 100vh;
       background: no-repeat
           linear-gradient(
             to bottom,
@@ -149,6 +150,19 @@ main {
           width: 30px;
         }
       }
+    }
+
+    .right-section {
+      height: 100vh;
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .animation {
+      position: absolute;
+      width: 100%;
+      // opacity: 0.8;
+      z-index: 2;
     }
   }
 
