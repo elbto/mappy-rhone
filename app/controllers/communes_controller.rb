@@ -27,16 +27,16 @@ class CommunesController < ApplicationController
                             <p>#{commune.price.to_i}</p>
                           </div>
                           <div class='pop-flex'>
-                            <h5>Pharmacies</h5>
-                            <p>#{commune.pharmacies.count}</p>
-                          </div>
-                          <div class='pop-flex'>
                             <h5>Gares</h5>
                             <p>#{commune.gares.count}</p>
                           </div>
                           <div class='pop-flex'>
                             <h5>Ecoles</h5>
                             <p>#{commune.ecoles.count}</p>
+                          </div>
+                          <div class='pop-flex'>
+                          <h5>Pharmacies</h5>
+                          <p>#{commune.pharmacies.count}</p>
                           </div>",
           'color': color_get(commune)
         }
