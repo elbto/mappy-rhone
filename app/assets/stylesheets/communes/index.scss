@@ -104,9 +104,52 @@ main {
             color: rgb(25, 62, 100);
           }
         }
+
+        .form-control {
+          border: 1px solid rgb(25, 62, 100);
+          border-radius: 8px;
+        }
+
+        input[type="range"] {
+          height: 32px;
+          -webkit-appearance: none;
+          margin: 10px 0;
+          width: 100%;
+        }
+        input[type="range"]:focus {
+          outline: none;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 16px;
+          cursor: pointer;
+          animate: 0.2s;
+          box-shadow: 0px 0px 0px #000000;
+          background: #b6b6b6;
+          border-radius: 25px;
+          border: 1px solid #8a8a8a;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+          box-shadow: 1px 1px 1px #828282;
+          border: 1px solid #8a8a8a;
+          height: 24px;
+          width: 35px;
+          border-radius: 6px;
+          background: rgb(43, 80, 117);
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -5px;
+        }
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+          background: #b6b6b6;
+        }
+
+        .kilometers {
+          display: inline-block;
+          width: 30px;
+        }
       }
     }
-
   }
 
   .color-light {
@@ -125,13 +168,11 @@ main {
       padding: 20px 0;
       font-weight: 700;
       background: no-repeat
-          linear-gradient(
-            to bottom,
-            rgba(4, 36, 49, 0.877),
-            rgba(7, 35, 61, 0.842)
-          ),
-        url("https://images.unsplash.com/photo-1603466183710-70b84997a93f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-          center center/cover;
+        linear-gradient(
+          to bottom,
+          rgba(4, 36, 49, 0.877),
+          rgba(7, 35, 61, 0.842)
+        );
 
       border-top-left-radius: 14px;
       border-top-right-radius: 14px;
