@@ -105,7 +105,6 @@ export default class extends Controller {
 
   moveHomeMarker() {
     this.homeMarker.setLngLat([this.longValue, this.latValue])
-    // this.map.setCenter([this.longValue, this.latValue])
 
     this.map.flyTo({
       center: [this.longValue, this.latValue],

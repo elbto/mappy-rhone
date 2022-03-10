@@ -4,8 +4,6 @@ export default class extends Controller {
   static targets = [ "animated" ]
 
   connect() {
-    console.log('hello from animation');
-    //setTimeout(this.disparition(),4000);
     this.disparition()
   }
 
