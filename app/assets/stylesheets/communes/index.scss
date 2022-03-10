@@ -117,9 +117,11 @@ main {
           margin: 10px 0;
           width: 100%;
         }
+
         input[type="range"]:focus {
           outline: none;
         }
+
         input[type="range"]::-webkit-slider-runnable-track {
           width: 100%;
           height: 16px;
@@ -130,6 +132,7 @@ main {
           border-radius: 25px;
           border: 1px solid #8a8a8a;
         }
+
         input[type="range"]::-webkit-slider-thumb {
           box-shadow: 1px 1px 1px #828282;
           border: 1px solid #8a8a8a;
@@ -141,6 +144,7 @@ main {
           -webkit-appearance: none;
           margin-top: -5px;
         }
+
         input[type="range"]:focus::-webkit-slider-runnable-track {
           background: #b6b6b6;
         }
