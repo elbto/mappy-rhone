@@ -14,7 +14,7 @@ main {
         position: absolute;
         z-index: 1;
         background-color: white;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.589);
+        box-shadow: 0 0 10px rgba(25, 62, 100, 0.671);
         border-radius: 18px;
         flex-direction: row;
         padding: 1em;
@@ -31,13 +31,14 @@ main {
             margin: 0;
             font-weight: bold;
             font-size: 16px;
+            color: rgb(25, 62, 100);
           }
 
           .description {
             padding: 0;
             margin: 0;
             font-size: 14px;
-            color: #5c5c5c;
+            color: rgb(25, 62, 100);
           }
         }
       }
