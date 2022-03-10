@@ -1,8 +1,9 @@
-import { Controller } from "@hotwired/stimulus"
-import mapboxgl from "mapbox-gl"
-import debounce from 'lodash.debounce'
+import { Controller } from "@hotwired/stimulus";
+import mapboxgl from "mapbox-gl";
+import debounce from "lodash.debounce";
 
-const token = "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw"
+const token =
+  "pk.eyJ1Ijoiam9sYXp6IiwiYSI6ImNsMGdneTk4dTA5dHMzY3F0amMwZzZkNTcifQ.m4ON2zTQBuLgH4v2oiJSAw";
 
 export default class extends Controller {
   static targets = ["mapContainer", "priceInput", "distanceInput"];
@@ -10,7 +11,7 @@ export default class extends Controller {
     lat: Number,
     long: Number,
     gareMarker: Array,
-    gareActive: Boolean
+    gareActive: Boolean,
   };
 
   emptyGeojson = {
@@ -43,8 +44,8 @@ export default class extends Controller {
       source: "maine",
       layout: {},
       paint: {
-        "line-color": "#000",
-        "line-width": 0.5,
+        "line-color": "#efe9e1",
+        "line-width": 2,
       },
     });
   }
@@ -64,7 +65,8 @@ export default class extends Controller {
         coordinates += e.lngLat.lng > coordinates ? 360 : -360;
       }
 
-      this.popupArea.setLngLat(e.lngLat)
+      this.popupArea
+        .setLngLat(e.lngLat)
         .setHTML(e.features[0].properties.description)
         .addTo(this.map);
     });
@@ -76,7 +78,7 @@ export default class extends Controller {
   }
 
   createMap() {
-    mapboxgl.accessToken = token
+    mapboxgl.accessToken = token;
     this.map = new mapboxgl.Map({
       container: this.mapContainerTarget,
       style: "mapbox://styles/mapbox/streets-v10",
@@ -87,16 +89,18 @@ export default class extends Controller {
     });
 
     this.map.on("load", () => {
-      this.mapLoaded = true
-      this.createMapAddSource()
-      this.createMapAddLayers()
-      this.createMapAddPopup()
-      this.addData()
-    })
+      this.mapLoaded = true;
+      this.createMapAddSource();
+      this.createMapAddLayers();
+      this.createMapAddPopup();
+      this.addData();
+    });
   }
 
   addHomeMarker() {
-    this.homeMarker = new mapboxgl.Marker({ "color": "#f95738" }).setLngLat([this.longValue, this.latValue]).addTo(this.map);
+    this.homeMarker = new mapboxgl.Marker({ color: "#f95738" })
+      .setLngLat([this.longValue, this.latValue])
+      .addTo(this.map);
   }
 
   moveHomeMarker() {
@@ -122,6 +126,7 @@ export default class extends Controller {
     this.fetchGeoJson()
   }
 
+
   fetchGeoJson() {
     // Fetch the coordonnes with the conditions and display them on the index
     fetch(
@@ -145,37 +150,36 @@ export default class extends Controller {
   }
 
   toggleGares() {
-    this.gareActiveValue = !this.gareActiveValue
+    this.gareActiveValue = !this.gareActiveValue;
     if (this.gareActiveValue) {
-      this.addGares()
+      this.addGares();
     } else {
-      this.currentMarkers.forEach(marker => {
-        marker.remove()
+      this.currentMarkers.forEach((marker) => {
+        marker.remove();
       });
     }
   }
 
   addGares() {
-    this.currentMarkers = []
+    this.currentMarkers = [];
 
-    this.gareMarkerValue.forEach(gare => {
-
-    const customMarker = document.createElement("div")
-    customMarker.className = "marker"
-    customMarker.style.backgroundImage = `url('${gare.image_url}')`
-    customMarker.style.backgroundSize = "contain"
-    customMarker.style.width = "20px"
-    customMarker.style.height = "20px"
+    this.gareMarkerValue.forEach((gare) => {
+      const customMarker = document.createElement("div");
+      customMarker.className = "marker";
+      customMarker.style.backgroundImage = `url('${gare.image_url}')`;
+      customMarker.style.backgroundSize = "contain";
+      customMarker.style.width = "20px";
+      customMarker.style.height = "20px";
 
       let gareMarker = new mapboxgl.Marker(customMarker)
-        .setLngLat([ gare.lng, gare.lat ])
-        .addTo(this.map)
-        this.currentMarkers.push(gareMarker)
+        .setLngLat([gare.lng, gare.lat])
+        .addTo(this.map);
+      this.currentMarkers.push(gareMarker);
     });
   }
 
   addData() {
     if (this.geojson && this.mapLoaded)
-      this.map.getSource('maine').setData(this.geojson)
+      this.map.getSource("maine").setData(this.geojson);
   }
 }
