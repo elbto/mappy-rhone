@@ -13,13 +13,15 @@ export default class extends Controller {
     gareActive: Boolean
   };
 
+  emptyGeojson = {
+    "type": "FeatureCollection",
+    "features": []
+  }
+
   createMapAddSource() {
     this.map.addSource("maine", {
       type: "geojson",
-      data: {
-        "type": "FeatureCollection",
-        "features": []
-        }
+      data: this.emptyGeojson
     });
   }
 
@@ -99,12 +101,23 @@ export default class extends Controller {
 
   moveHomeMarker() {
     this.homeMarker.setLngLat([this.longValue, this.latValue])
-    this.map.setCenter([this.longValue, this.latValue])
+    // this.map.setCenter([this.longValue, this.latValue])
+
+    this.map.flyTo({
+      center: [this.longValue, this.latValue],
+      speed: 0.2
+    })
+  }
+
+  removeData() {
+    this.geojson = this.emptyGeojson;
+    this.addData();
   }
 
   updateAddress(e) { // event from algolia
     this.longValue = e.detail.long
     this.latValue = e.detail.lat
+    this.removeData()
     this.moveHomeMarker()
     this.fetchGeoJson()
   }
@@ -122,17 +135,13 @@ export default class extends Controller {
   }
 
   initialize() {
-    this.updateAddress = debounce(this.updateAddress, 200).bind(this)
-    this.fetchGeoJson = debounce(this.fetchGeoJson, 200).bind(this)
+    this.fetchGeoJson = debounce(this.fetchGeoJson, 400)
   }
 
   connect() {
-    setTimeout(() => {
-      this.createMap()
-      this.addHomeMarker()
-      this.fetchGeoJson()
-      this.mapContainerTarget.classList.remove('hidden')
-    }, 4100);
+    this.createMap()
+    this.addHomeMarker()
+    this.fetchGeoJson()
   }
 
   toggleGares() {
