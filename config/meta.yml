@@ -1,0 +1,5 @@
+meta_product_name: "MappyRhône"
+meta_title: "MappyRhône - Votre achat immobilier en une recherche"
+meta_description: "Un projet d'achat immobilier ? Visualisez les communes et arrondissements en fonction de votre budget et de votre lieu de travail sur le Rhône."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
